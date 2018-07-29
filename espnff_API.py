@@ -1,5 +1,5 @@
 from espnff import League
-league_id = 125878
+league_id = 413011  # random league that works: 125878
 year = 2017
 league = League(league_id, year)
 print(league.teams)
