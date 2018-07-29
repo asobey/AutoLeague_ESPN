@@ -25,7 +25,7 @@ def open_and_login():
     source_front = browser.page_source
     #print(source_front)
     soup = BeautifulSoup(source_front, 'html.parser')
-
+    soup.find('td', text = 'QB')
 
 
 def scrape_front_page():
