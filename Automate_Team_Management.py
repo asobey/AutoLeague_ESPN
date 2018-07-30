@@ -22,10 +22,20 @@ def open_and_login():
     if browser.title != 'The Big D- Sobauchery - ESPN':
         print('You are on the wrong page!')
 
-    source_front = browser.page_source
-    #print(source_front)
-    soup = BeautifulSoup(source_front, 'html.parser')
-    soup.find('td', text = 'QB')
+    return browser
+
+def read_front_table(browser):
+    print('Read Front Table Started')
+    source_front = browser.page_source # save page source
+    soup = BeautifulSoup(source_front, 'html.parser') # start parse with BS
+    #print(soup.prettify())
+
+    #soup.find('td', text = 'QB')
+    print(soup.find("tr", id="plyr12483"))
+    soup.find("tr", {"class": "pncPlayerRow playerTableBgRow0"})
+    soup.find("tr", {"class": "pncPlayerRow"}).text
+    for player in range(12):
+        print(soup.find("tr", {"class": f"pncPlayerRow playerTableBgRow{player}"}).text)
 
 
 def scrape_front_page():
@@ -35,7 +45,7 @@ def scrape_front_page():
         print('results.status_code error. Alert owner!')
 
     c = results.content
-    print(c)
+    #print(c)
     #soup
 
 
@@ -46,10 +56,11 @@ if __name__ == '__main__':
         except yaml.YAMLError as exc:
             print(exc)
 
-    open_and_login()
+    browser = open_and_login()
 
-    time.sleep(10)
+    time.sleep(2)
 
-    scrape_front_page()
+    read_front_table(browser)
+
 
 

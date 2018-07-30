@@ -1,0 +1,833 @@
+updateScoringPeriodNav();
+                  </script>
+                  <br clear="all" style="line-height: 12px"/>
+                  <table border="0" cellpadding="0" cellspacing="0" id="playertableFrameOuterShell" width="970px">
+                   <tbody>
+                    <tr>
+                     <td class="playerTableTabsCell clubhousePlayerTableTabsCell" valign="bottom">
+                      <div id="playerTableHeader">
+                       <ul>
+                        <li id="current">
+                         <a ;="" href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2015&amp;view=overview&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;">
+                          Overview
+                         </a>
+                        </li>
+                        <li>
+                         <a ;="" href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2015&amp;view=stats&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;">
+                          Stats
+                         </a>
+                        </li>
+                       </ul>
+                       <span class="playerTableTabSpinner" id="playerTableTabSpinner" style="display: none;">
+                        <img src="http://g.espncdn.com/s/ffllm/14/images/playerTableTabLoad.gif"/>
+                       </span>
+                      </div>
+                     </td>
+                     <td align="right" class="playerTableSubmitCell" valign="top">
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                  <table border="0" cellpadding="0" cellspacing="0" class="playertableFrameBorder" width="970px">
+                   <tbody>
+                    <tr>
+                     <td class="playertableFrameInnerShell" colspan="2">
+                      <table border="0" cellpadding="0" cellspacing="1" class="playerTableTable tableBody" id="playertable_0">
+                       <tbody>
+                        <tr class="playerTableBgRowHead tableHead playertableSectionHeader">
+                         <th class="playertableSectionHeaderFirst" colspan="2">
+                          STARTERS
+                         </th>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <th colspan="4">
+                          2015 SEASON
+                         </th>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <th colspan="5">
+                          Offseason
+                         </th>
+                        </tr>
+                        <tr class="playerTableBgRowSubhead tableSubHead">
+                         <td width="65px">
+                          SLOT
+                         </td>
+                         <td>
+                          PLAYER, TEAM POS
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData" title="Position Rank">
+                          PRK
+                         </td>
+                         <td class="playertableStat appliedPoints" title="Fantasy Points">
+                          PTS
+                         </td>
+                         <td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">
+                          AVG
+                         </td>
+                         <td class="playertableStat appliedPoints" title="Fantasy Points">
+                          LAST
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints" title="ESPN Projection">
+                          PROJ
+                         </td>
+                         <td class="playertableData" title="Opponent Rank">
+                          OPRK
+                         </td>
+                         <td class="playertableData" title="Percent Started">
+                          %ST
+                         </td>
+                         <td class="playertableData" title="Percent Owned">
+                          %OWN
+                         </td>
+                         <td class="playertableData" title="Change in Percent Owned">
+                          +/-
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr2580">
+                         <td class="slot_ playerSlot" id="slot_2580" style="font-weight: bold;">
+                          QB
+                         </td>
+                         <td class="playertablePlayerName" id="playername_2580" style="">
+                          Drew Brees, NO QB
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          6
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          16.4
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          18.3
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           60.5
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           97.6
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.4
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow1" id="plyr11278">
+                         <td class="slot_ playerSlot" id="slot_11278" style="font-weight: bold;">
+                          RB
+                         </td>
+                         <td class="playertablePlayerName" id="playername_11278" style="">
+                          Matt Forte, NYJ RB
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          9
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          17
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          11
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           72.9
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           98.9
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.1
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr13587">
+                         <td class="slot_ playerSlot" id="slot_13587" style="font-weight: bold;">
+                          RB
+                         </td>
+                         <td class="playertablePlayerName" id="playername_13587" style="">
+                          Chris Ivory, Jax RB
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          8
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          8.1
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          10.7
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           57.9
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           96.0
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.4
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow1" id="plyr13934">
+                         <td class="slot_ playerSlot" id="slot_13934" style="font-weight: bold;">
+                          RB/WR
+                         </td>
+                         <td class="playertablePlayerName" id="playername_13934" style="">
+                          Antonio Brown, Pit WR
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          1
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          22.7
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          14.8
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           95.6
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           99.9
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           +0
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr14924">
+                         <td class="slot_ playerSlot" id="slot_14924" style="font-weight: bold;">
+                          WR
+                         </td>
+                         <td class="playertablePlayerName" id="playername_14924" style="">
+                          T.Y. Hilton, Ind WR
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          23
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          4.4
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          7
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           38.9
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           95.1
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.8
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow1" id="plyr13271">
+                         <td class="slot_ playerSlot" id="slot_13271" style="font-weight: bold;">
+                          WR
+                         </td>
+                         <td class="playertablePlayerName" id="playername_13271" style="">
+                          Eric Decker, NYJ WR
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          10
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          11
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          11
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           73.9
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           93.7
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.4
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr15860">
+                         <td class="slot_ playerSlot" id="slot_15860" style="font-weight: bold;">
+                          TE
+                         </td>
+                         <td class="playertablePlayerName" id="playername_15860" style="">
+                          Jordan Reed, Wsh TE
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          3
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          4.5
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          3.5
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           61.5
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           91.0
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:green">
+                            +0.5
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow1" id="plyr14908">
+                         <td class="slot_ playerSlot" id="slot_14908" style="font-weight: bold;">
+                          FLEX
+                         </td>
+                         <td class="playertablePlayerName" id="playername_14908" style="">
+                          Michael Floyd, Ari WR
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          32
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          1.6
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          7.7
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           44.0
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           85.6
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.3
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr60020">
+                         <td class="slot_ playerSlot" id="slot_60020" style="font-weight: bold;">
+                          D/ST
+                         </td>
+                         <td class="playertablePlayerName" id="playername_60020" style="">
+                          Jets D/ST, NYJ D/ST
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          11
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          6
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          6.6
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           42.1
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           79.0
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -4.1
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow1" id="plyr15918">
+                         <td class="slot_ playerSlot" id="slot_15918" style="font-weight: bold;">
+                          K
+                         </td>
+                         <td class="playertablePlayerName" id="playername_15918" style="">
+                          Caleb Sturgis, Phi K
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          25
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          5
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          8
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           4.2
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           7.4
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -7.3
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="playerTableBgRowHead tableHead playertableSectionHeader">
+                         <th class="playertableSectionHeaderFirst" colspan="2">
+                          BENCH
+                         </th>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <th colspan="4">
+                          2015 SEASON
+                         </th>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <th colspan="5">
+                          Offseason
+                         </th>
+                        </tr>
+                        <tr class="playerTableBgRowSubhead tableSubHead">
+                         <td width="65px">
+                          SLOT
+                         </td>
+                         <td>
+                          PLAYER, TEAM POS
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData" title="Position Rank">
+                          PRK
+                         </td>
+                         <td class="playertableStat appliedPoints" title="Fantasy Points">
+                          PTS
+                         </td>
+                         <td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">
+                          AVG
+                         </td>
+                         <td class="playertableStat appliedPoints" title="Fantasy Points">
+                          LAST
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints" title="ESPN Projection">
+                          PROJ
+                         </td>
+                         <td class="playertableData" title="Opponent Rank">
+                          OPRK
+                         </td>
+                         <td class="playertableData" title="Percent Started">
+                          %ST
+                         </td>
+                         <td class="playertableData" title="Percent Owned">
+                          %OWN
+                         </td>
+                         <td class="playertableData" title="Change in Percent Owned">
+                          +/-
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr15009">
+                         <td class="slot_ playerSlot" id="slot_15009" style="font-weight: bold;">
+                          Bench
+                         </td>
+                         <td class="playertablePlayerName" id="playername_15009" style="">
+                          Alfred Morris, Dal RB
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          47
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          10
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          4.4
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           15.1
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           43.6
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:green">
+                            +1.3
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow1" id="plyr15847">
+                         <td class="slot_ playerSlot" id="slot_15847" style="font-weight: bold;">
+                          Bench
+                         </td>
+                         <td class="playertablePlayerName" id="playername_15847" style="">
+                          Travis Kelce, KC TE
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          7
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          1
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          7
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           60.7
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           95.2
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -0.5
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                        <tr class="pncPlayerRow playerTableBgRow0" id="plyr12483">
+                         <td class="slot_ playerSlot" id="slot_12483" style="font-weight: bold;">
+                          Bench
+                         </td>
+                         <td class="playertablePlayerName" id="playername_12483" style="">
+                          Matthew Stafford, Det QB
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableData">
+                          9
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          --
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          24.9
+                         </td>
+                         <td class="sectionLeadingSpacer">
+                         </td>
+                         <td class="playertableStat appliedPoints">
+                          18.8
+                         </td>
+                         <td class="playertableData">
+                          --
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           42.5
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           80.1
+                          </nobr>
+                         </td>
+                         <td class="playertableData">
+                          <nobr>
+                           <span style="color:red">
+                            -2.6
+                           </span>
+                          </nobr>
+                         </td>
+                        </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                  <br/>
+                 </div>
+                </div>
+               </div>
+               <div class="games-footercol">
+                <script src="http://a.espncdn.com/legacy/transitionalHeader/1.0.76/js/nav-external.js">
+                </script>
+                <style type="text/css">
+                 .needHelpModule button {border-radius: 5px; background-color: #0066cc; padding: 10px 30px; font-size: 15px; color: #f3f3f3; margin: 15px auto; cursor: pointer; text-decoration: none; border: none; font-family: Tahoma, Geneva, sans-serif; display: block;}
+		.needHelpModule.spanFooter {width: 99%;}
+		div.gamesmain .needHelpModule h1, div.gamesmain .needHelpModule p {margin: 10px;}
+		.needHelpModule p {color: #606261; line-height: 16px; font-size: 12px;}
+		.needHelpModule.pencil {background-color: #f3f3f3; padding: 10px; margin-bottom: 20px; display: flex; align-items: center;}
+		.needHelpModule.pencil h1 {font-family: verdana, helvetica, sans-serif; font-weight: 500; font-size: 20px; margin-bottom: 0;}
+		.needHelpModule.pencil button {display: inline-block;}
+		.needHelpModule.pencil .content {flex-grow: 1; flex-basis: 0; color: #6d7172;}
+		.needHelpModule.lo-sidebar-box .content {margin-bottom:10px;}
+		.needHelpModule ul {float: left; margin: 0 15px;}
+		.needHelpModule ul li{padding: 5px 0; font-weight: 700;}
+                </style>
+                <div class="pencil needHelpModule">
+                 <div class="content">
+                  <h1>
+                   Need Help?
+                  </h1>
+                  <p class="contentBody">
+                  </p>
+                  <ul>
+                   <li>
+                    <a href="https://support.espn.com/hc/en-us/articles/115003847771-Username-and-Password-Help">
+                     Username and Password Help
+                    </a>
+                   </li>
+                   <li>
+                    <a href="https://support.espn.com/hc/en-us/articles/115003847751-Login-and-Account-Issues">
+                     Login and Account Issues
+                    </a>
+                   </li>
+                   <li>
+                    <a href="https://support.espn.com/hc/en-us/articles/115003860452-Change-Email-Address">
+                     Change Email Address
+                    </a>
+                   </li>
+                  </ul>
+                  <ul>
+                   <li>
+                    <a href="https://support.espn.com/hc/en-us/articles/360000140991-Reset-Draft">
+                     Reset Draft
+                    </a>
+                   </li>
+                   <li>
+                    <a href="https://support.espn.com/hc/en-us/articles/115003915472-Issues-Joining-a-League">
+                     Issues Joining a League
+                    </a>
+                   </li>
+                   <li>
+                    <a href="https://support.espn.com/hc/en-us/articles/115003859972-Find-Your-Team">
+                     Find Your Team
+                    </a>
+                   </li>
+                  </ul>
+                  <p>
+                  </p>
+                 </div>
+                 <p>
+                  <a href="https://support.espn.com/">
+                   <button>
+                    Fantasy Football Help
+                   </button>
+                  </a>
+                 </p>
+                </div>
+                <div id="ob_holder" style="display: none;">
+                 <iframe id="ob_iframe" src="http://widgets.outbrain.com/nanoWidget/externals/obFrame/obFrame.htm#pid=6767&amp;
