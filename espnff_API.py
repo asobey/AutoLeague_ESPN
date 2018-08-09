@@ -17,4 +17,4 @@ print(team1.points_for)
 print(team1.schedule)
 print(type(team1))
 
-print(team1.get_roster(week=5))
+#print(team1.get_roster(week=5))
