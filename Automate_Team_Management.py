@@ -36,6 +36,12 @@ def read_front_table(page_source):
     print(soup.find("tr", id="plyr12483"))
     soup.find("tr", {"class": "pncPlayerRow playerTableBgRow0"})
     soup.find("tr", {"class": "pncPlayerRow"}).text
+
+    #used to save a copy of soup for finding variables.
+    #Soup = open('front_page_soup', 'w')
+    #PSoup.write(soup.prettify())
+    #PSoup.close()
+
     for player in range(12):
         print(soup.find("tr", {"class": f"pncPlayerRow playerTableBgRow{player}"}).text)
 
@@ -63,6 +69,8 @@ if __name__ == '__main__':
         PS = open('front_page_source', 'w')
         PS.write(page_source)
         PS.close()
+
+    # if 'offline', program starts here
     PS = open('front_page_source', 'r')
     read_front_table(PS)
 
