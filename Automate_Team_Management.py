@@ -16,18 +16,20 @@ import requests, time, yaml
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
+work = 'offline' # 'offline' or 'online'
+
 def open_and_login():
     browser = webdriver.Firefox()
     browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2015#')
     if browser.title != 'The Big D- Sobauchery - ESPN':
         print('You are on the wrong page!')
+    else:
+        print('FF Page Opened.')
+    return browser.page_source #r eturn page source
 
-    return browser
-
-def read_front_table(browser):
-    print('Read Front Table Started')
-    source_front = browser.page_source # save page source
-    soup = BeautifulSoup(source_front, 'html.parser') # start parse with BS
+def read_front_table(page_source):
+    print('Read Front Table Started...')
+    soup = BeautifulSoup(page_source, 'html.parser') # start parse with BS
     #print(soup.prettify())
 
     #soup.find('td', text = 'QB')
@@ -50,17 +52,19 @@ def scrape_front_page():
 
 
 if __name__ == '__main__':
-    with open('espn_creds.yaml', 'r') as private:
-        try:
-            privateData = yaml.load(private)
-        except yaml.YAMLError as exc:
-            print(exc)
+    if work == 'online':
+        with open('espn_creds.yaml', 'r') as private:
+            try:
+                privateData = yaml.load(private)
+            except yaml.YAMLError as exc:
+                print(exc)
 
-    browser = open_and_login()
-
-    time.sleep(2)
-
-    read_front_table(browser)
+        page_source = open_and_login()
+        PS = open('front_page_source', 'w')
+        PS.write(page_source)
+        PS.close()
+    PS = open('front_page_source', 'r')
+    read_front_table(PS)
 
 
 
