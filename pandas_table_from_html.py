@@ -19,7 +19,7 @@ soup = BeautifulSoup(PS, 'lxml')
 
 table = soup.find_all('table')[0]  # Grab the first table
 
-new_table = pd.DataFrame(columns=range(0, 30), index=[0])  # I know the size
+new_table = pd.DataFrame(columns=range(0, 11), index=[10])  # I know the size, need to find size
 
 row_marker = 0
 for row in table.find_all('tr'):
