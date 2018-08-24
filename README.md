@@ -1,7 +1,6 @@
 # AutoLeague_ESPN
 ESPN Fantasy Football Robot in Python3
 
-<<<<<<< HEAD
 After the draft, let the AutoLeague take care of your team for you. You have too much
 on your plate. Sit back and relax while AutoLeage takes care of the thinking. Starting
 with ESPN.
@@ -97,4 +96,4 @@ def msg_bot(team, msg):
     send msg to team
     
 ####LeagueTrade.py
->>>>>>> 34184ba60341a6ee69e79a4b8604f0841fbc5a39
+
