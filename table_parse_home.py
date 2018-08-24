@@ -1,7 +1,7 @@
 import requests
 from lxml import html
 from selenium import webdriver
-working = 'offline'
+working = 'online'
 if working == 'online':
     browser = webdriver.Firefox()
     browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2015#')
