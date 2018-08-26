@@ -2549,10 +2549,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
   	
 		
 		
-		<a itemprop="url" href="http://www.espn.com/mlb/beisbolexperience/" name="&amp;lpos=sitenavdefault+mlb_mlbbéisbol_experience">
+		<a itemprop="url" href="http://www.espn.com/mlb/beisbolexperience/" name="&amp;lpos=sitenavdefault+mlb_mlbbÃ©isbol_experience">
 		<span>
-			<span class="link-text">Béisbol Experience</span>
-			<span class="link-text-short">Béisbol Experience</span>
+			<span class="link-text">BÃ©isbol Experience</span>
+			<span class="link-text-short">BÃ©isbol Experience</span>
 		</span>
 		</a>
 	
@@ -4515,10 +4515,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
   	
 		
 		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/227/club-america" class="sprite-soccer-teams-25 sprite-25-team-227" name="&amp;lpos=subnav+subnav_soccer_team_américa" data-teamid="227" data-type="team" data-sport="soccer">
+		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/227/club-america" class="sprite-soccer-teams-25 sprite-25-team-227" name="&amp;lpos=subnav+subnav_soccer_team_amÃ©rica" data-teamid="227" data-type="team" data-sport="soccer">
 		<span>
-			<span class="link-text">América</span>
-			<span class="link-text-short">América</span>
+			<span class="link-text">AmÃ©rica</span>
+			<span class="link-text-short">AmÃ©rica</span>
 		</span>
 		</a>
 	
@@ -5498,10 +5498,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 						
 					</div>
 			
-				<a itemprop="url" href="/soccer/club/_/id/227/club-america" class="sprite-soccer-teams-25 sprite-25-team-227" name="&amp;lpos=subnav+subnav_soccer_team_américa" data-teamid="227" data-type="team" data-sport="soccer">
+				<a itemprop="url" href="/soccer/club/_/id/227/club-america" class="sprite-soccer-teams-25 sprite-25-team-227" name="&amp;lpos=subnav+subnav_soccer_team_amÃ©rica" data-teamid="227" data-type="team" data-sport="soccer">
 					<span>
-						<span class="link-text">América</span>
-						<span class="link-text-short">América</span>
+						<span class="link-text">AmÃ©rica</span>
+						<span class="link-text-short">AmÃ©rica</span>
 					</span>
 				</a>
 		 	</li>
@@ -5523,8 +5523,8 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		
 		<a itemprop="url" href="#" data-mobile="false">
 		<span>
-			<span class="link-text">…</span>
-			<span class="link-text-short">…</span>
+			<span class="link-text">Â…</span>
+			<span class="link-text-short">Â…</span>
 		</span>
 		</a>
 	
@@ -6734,7 +6734,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 			</ul>
-		</div><div class="footer-wrapper"><ul class="footer"><li class="footer label"><span class="link-text">© 2018 ESPN Internet Ventures. <a href="http://disneytermsofuse.com/" rel="nofollow">Terms of Use</a>, <a href="http://disneyprivacycenter.com/" rel="nofollow">Privacy Policy</a>, <a href="https://disneyprivacycenter.com/notice-to-california-residents/" rel="nofollow">Your California Privacy Rights</a>, <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a> and <a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-Based Ads</a> are applicable to you. All rights reserved.</span><span class="link-text-short">Footer</span></li></ul></div></div>
+		</div><div class="footer-wrapper"><ul class="footer"><li class="footer label"><span class="link-text">Â© 2018 ESPN Internet Ventures. <a href="http://disneytermsofuse.com/" rel="nofollow">Terms of Use</a>, <a href="http://disneyprivacycenter.com/" rel="nofollow">Privacy Policy</a>, <a href="https://disneyprivacycenter.com/notice-to-california-residents/" rel="nofollow">Your California Privacy Rights</a>, <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a> and <a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-Based Ads</a> are applicable to you. All rights reserved.</span><span class="link-text-short">Footer</span></li></ul></div></div>
 	
 	
 </li>
@@ -7707,7 +7707,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 <div class="header-ad"><div class="header-ad-wrapper" style="min-height:90px;">
 <div class="ad-slot ad-slot-pencil_top" data-slot-type="pencil_top" data-slot-kvps="pos=pencil_top"></div></div></div><div class="nav-main-breadcrumbs-row" style="height: 28px;">
 <div class="nav-main-breadcrumbs">
-<a href="http://www.espn.com">ESPN</a> » <a href="http://www.espn.com/fantasy/football/">Free Fantasy Football</a> » <a href="/ffl/leagueoffice?leagueId=413011">Red Rocket</a></div>
+<a href="http://www.espn.com">ESPN</a> Â» <a href="http://www.espn.com/fantasy/football/">Free Fantasy Football</a> Â» <a href="/ffl/leagueoffice?leagueId=413011">Red Rocket</a></div>
 <div class="playerSearchDiv"><form class="playerSearchForm" name="playerSearch" id="playerSearch" action="/ffl/freeagency" onsubmit="return playerSuggester.submitSelectedPlayer();" method="GET"><div><input name="leagueId" value="413011" type="hidden"><input name="avail" value="-1" type="hidden"><input name="slotCategoryGroup" value="-1" type="hidden">Find a Player: <input class="playerSearchNameInput" id="playerName" name="search" onkeyup="playerSuggester.handleKeyUp(event, this.value);" value="Name" style="color:#999;" onfocus="playerSuggester.focus();" onblur="playerSuggester.blur();" autocomplete="off" type="text"></div></form><div style="margin: 0px;"><div id="playerSuggestions" style="display: none;" onmouseover="playerSuggester.suggestDivOver();" onmouseout="playerSuggester.suggestDivOut();"></div></div></div><script type="text/javascript">playerSearchObj=new Object();playerSearchObj.varName = "playerSuggester";playerSearchObj.suggestDiv = "playerSuggestions";playerSearchObj.inputField = "playerName";playerSearchObj.cssPrefix = "";playerSearchObj.statId = null;playerSearchObj.chartSplitType = null;var playerSuggester = new PlayerSuggester(playerSearchObj);</script><div class="comparePlayersLinkDiv"><a id="comparePlayersLauncher" href="" instance="_comparePlayers" content="ajax#/ffl/playertable/prebuilt/compareplayers?leagueId=413011&amp;teamId=-2147483648&amp;playerCompare=true" class="flexpop" modal="true" fpopstyle="modal">Compare Players</a> (<span id="comparePlayersCount">0</span>)</div><div class="clear"></div></div>
 <div class="games-nav"><ul id="games-tabs"><li class=" "><a onclick="" href="/ffl/leagueoffice?leagueId=413011&amp;seasonId=2015">League</a></li><li class=" "><a onclick="" href="/ffl/freeagency?leagueId=413011&amp;seasonId=2015">Players</a></li><li class=" "><a onclick="mixpanel.people.increment('standings')" href="/ffl/standings?leagueId=413011&amp;seasonId=2015">Standings</a></li><li class=" "><a onclick="mixpanel.people.increment('scoreboard')" href="/ffl/scoreboard?leagueId=413011&amp;seasonId=2015">Scoreboard</a></li><li class=" games-teams-btn"><a aria-haspopup="true" href="#">Teams</a><div class="clear"></div><ul id="games-tabs1"><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=1&amp;seasonId=2015">The Big D- Sobauchery <span class="alt-info">(SOBE)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=3&amp;seasonId=2015">Flacco  Seagulls <span class="alt-info">(FS)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=6&amp;seasonId=2015">Team Burger <span class="alt-info">(BURG)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=8&amp;seasonId=2015">Turbo Kong <span class="alt-info">(TK)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=9&amp;seasonId=2015">Turn Your Head and Coughlin <span class="alt-info">(FARA)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=10&amp;seasonId=2015">Underground Hole Sliders <span class="alt-info">(MORE)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=11&amp;seasonId=2015">Deflate  Deez Nuts <span class="alt-info">(CURT)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=12&amp;seasonId=2015">No Homo 4 Romo Maybe a li... <span class="alt-info">(MILE)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=13&amp;seasonId=2015">Looky No Touchy <span class="alt-info">(ESNE)</span></a></li><li><a onclick="mixpanel.people.increment('competing_team')" href="/ffl/clubhouse?leagueId=413011&amp;teamId=15&amp;seasonId=2015">Suns Up Kliffs Up In Me <span class="alt-info">(GIRL)</span></a></li></ul></li></ul></div><div class="gamesmain container">
 <div class="games-innercol">
@@ -7864,10 +7864,10 @@ updateScoringPeriodNav();
 
       <span class="ob-unit ob-rec-image-container" data-type="Image">
   <div class="ob-image-ratio"></div>
-    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjJlMWZkNGM5YWQ1ZGU4ZWU1ZjM3NTA3MmE4M2RhMzQwZjgzMGZiNTE0N2E1NjAyY2FmM2Q0ZWIxMzg2YmZiY2UiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words" title="[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words" onerror="OBR.extern.imageError(this)">
+    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjJlMWZkNGM5YWQ1ZGU4ZWU1ZjM3NTA3MmE4M2RhMzQwZjgzMGZiNTE0N2E1NjAyY2FmM2Q0ZWIxMzg2YmZiY2UiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words" title="[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words" onerror="OBR.extern.imageError(this)">
           </span>
 
-      <span class="ob-unit ob-rec-text" data-type="Title" title="[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words">[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words</span>
+      <span class="ob-unit ob-rec-text" data-type="Title" title="[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words">[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words</span>
       <span class="ob-unit ob-rec-source" data-type="Source">Absolutehistory</span>
 
           </a>
@@ -7913,7 +7913,7 @@ updateScoringPeriodNav();
 <div id="trans-footer" class="container">
 <p><strong><a href="http://www.espn.com">ESPN.com</a></strong>  |  <a href="https://r.espn.com/espn/memberServices">Member Services</a> | <a href="http://games.espn.com/frontpage">Fantasy Games</a> | <a href="http://games.espn.com/ffl/content?page=fflrulesindex2015">Help</a> | <a href="http://preferences.truste.com/2.0/?type=espn&amp;affiliateId=148" onclick="window.open('http://preferences.truste.com/2.0/?type=espn&amp;affiliateId=148','popup','width=986,height=878,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0'); return false">Interest-Based Ads</a></p>
 
-<p>Copyright ©2015 ESPN Internet Ventures.  <a href="http://disneytermsofuse.com/">Terms of Use</a>  and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to this site.<br><br>Officially Licensed Product of NFL PLAYERS. Visit <a href="http://www.nflplayers.com" target="new">www.nflplayers.com</a>.</p></div>
+<p>Copyright Â©2015 ESPN Internet Ventures.  <a href="http://disneytermsofuse.com/">Terms of Use</a>  and <a href="http://disney.go.com/corporate/privacy/pp_espn.html">Privacy Policy and Safety Information/Your California Privacy Rights</a> are applicable to this site.<br><br>Officially Licensed Product of NFL PLAYERS. Visit <a href="http://www.nflplayers.com" target="new">www.nflplayers.com</a>.</p></div>
 <!-- end transitional elements wrapper -->
 <!--[if lte IE 8]></div><![endif]-->
 </div>
