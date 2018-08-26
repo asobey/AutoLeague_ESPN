@@ -2274,13 +2274,13 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
                 </a>
                </li>
                <li class="sub" itemprop="name" style="display: none;">
-                <a href="http://www.espn.com/mlb/beisbolexperience/" itemprop="url" name="&amp;lpos=sitenavdefault+mlb_mlbbéisbol_experience">
+                <a href="http://www.espn.com/mlb/beisbolexperience/" itemprop="url" name="&amp;lpos=sitenavdefault+mlb_mlbbÃ©isbol_experience">
                  <span>
                   <span class="link-text">
-                   Béisbol Experience
+                   BÃ©isbol Experience
                   </span>
                   <span class="link-text-short">
-                   Béisbol Experience
+                   BÃ©isbol Experience
                   </span>
                  </span>
                 </a>
@@ -3846,13 +3846,13 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
                    <div class="nav-logo-wrap">
                     <img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/227.png&amp;w=100&amp;h=100"/>
                    </div>
-                   <a class="sprite-soccer-teams-25 sprite-25-team-227" data-sport="soccer" data-teamid="227" data-type="team" href="http://www.espn.com/soccer/club/_/id/227/club-america" itemprop="url" name="&amp;lpos=subnav+subnav_soccer_team_américa">
+                   <a class="sprite-soccer-teams-25 sprite-25-team-227" data-sport="soccer" data-teamid="227" data-type="team" href="http://www.espn.com/soccer/club/_/id/227/club-america" itemprop="url" name="&amp;lpos=subnav+subnav_soccer_team_amÃ©rica">
                     <span>
                      <span class="link-text">
-                      América
+                      AmÃ©rica
                      </span>
                      <span class="link-text-short">
-                      América
+                      AmÃ©rica
                      </span>
                     </span>
                    </a>
@@ -4677,13 +4677,13 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
                     <div class="nav-logo-wrap">
                      <img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/227.png&amp;w=50&amp;h=50"/>
                     </div>
-                    <a class="sprite-soccer-teams-25 sprite-25-team-227" data-sport="soccer" data-teamid="227" data-type="team" href="/soccer/club/_/id/227/club-america" itemprop="url" name="&amp;lpos=subnav+subnav_soccer_team_américa">
+                    <a class="sprite-soccer-teams-25 sprite-25-team-227" data-sport="soccer" data-teamid="227" data-type="team" href="/soccer/club/_/id/227/club-america" itemprop="url" name="&amp;lpos=subnav+subnav_soccer_team_amÃ©rica">
                      <span>
                       <span class="link-text">
-                       América
+                       AmÃ©rica
                       </span>
                       <span class="link-text-short">
-                       América
+                       AmÃ©rica
                       </span>
                      </span>
                     </a>
@@ -4699,10 +4699,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
              <a data-mobile="false" href="#" itemprop="url">
               <span>
                <span class="link-text">
-                …
+                Â…
                </span>
                <span class="link-text-short">
-                …
+                Â…
                </span>
               </span>
              </a>
@@ -5673,7 +5673,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
                <ul class="footer">
                 <li class="footer label">
                  <span class="link-text">
-                  © 2018 ESPN Internet Ventures.
+                  Â© 2018 ESPN Internet Ventures.
                   <a href="http://disneytermsofuse.com/" rel="nofollow">
                    Terms of Use
                   </a>
@@ -6532,11 +6532,11 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
              <a href="http://www.espn.com">
               ESPN
              </a>
-             »
+             Â»
              <a href="http://www.espn.com/fantasy/football/">
               Free Fantasy Football
              </a>
-             »
+             Â»
              <a href="/ffl/leagueoffice?leagueId=413011">
               Red Rocket
              </a>
@@ -6963,7 +6963,7 @@ updateScoringPeriodNav();
                           QB
                          </td>
                          <td class="playertablePlayerName" id="playername_2580" style="">
-                          Drew Brees, NO QB
+                          Drew Brees, NOÂ QB
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7010,7 +7010,7 @@ updateScoringPeriodNav();
                           RB
                          </td>
                          <td class="playertablePlayerName" id="playername_11278" style="">
-                          Matt Forte, NYJ RB
+                          Matt Forte, NYJÂ RB
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7057,7 +7057,7 @@ updateScoringPeriodNav();
                           RB
                          </td>
                          <td class="playertablePlayerName" id="playername_13587" style="">
-                          Chris Ivory, Jax RB
+                          Chris Ivory, JaxÂ RB
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7104,7 +7104,7 @@ updateScoringPeriodNav();
                           RB/WR
                          </td>
                          <td class="playertablePlayerName" id="playername_13934" style="">
-                          Antonio Brown, Pit WR
+                          Antonio Brown, PitÂ WR
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7149,7 +7149,7 @@ updateScoringPeriodNav();
                           WR
                          </td>
                          <td class="playertablePlayerName" id="playername_14924" style="">
-                          T.Y. Hilton, Ind WR
+                          T.Y. Hilton, IndÂ WR
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7196,7 +7196,7 @@ updateScoringPeriodNav();
                           WR
                          </td>
                          <td class="playertablePlayerName" id="playername_13271" style="">
-                          Eric Decker, NYJ WR
+                          Eric Decker, NYJÂ WR
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7243,7 +7243,7 @@ updateScoringPeriodNav();
                           TE
                          </td>
                          <td class="playertablePlayerName" id="playername_15860" style="">
-                          Jordan Reed, Wsh TE
+                          Jordan Reed, WshÂ TE
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7290,7 +7290,7 @@ updateScoringPeriodNav();
                           FLEX
                          </td>
                          <td class="playertablePlayerName" id="playername_14908" style="">
-                          Michael Floyd, Ari WR
+                          Michael Floyd, AriÂ WR
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7337,7 +7337,7 @@ updateScoringPeriodNav();
                           D/ST
                          </td>
                          <td class="playertablePlayerName" id="playername_60020" style="">
-                          Jets D/ST, NYJ D/ST
+                          Jets D/ST, NYJÂ D/ST
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7384,7 +7384,7 @@ updateScoringPeriodNav();
                           K
                          </td>
                          <td class="playertablePlayerName" id="playername_15918" style="">
-                          Caleb Sturgis, Phi K
+                          Caleb Sturgis, PhiÂ K
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7485,7 +7485,7 @@ updateScoringPeriodNav();
                           Bench
                          </td>
                          <td class="playertablePlayerName" id="playername_15009" style="">
-                          Alfred Morris, Dal RB
+                          Alfred Morris, DalÂ RB
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7532,7 +7532,7 @@ updateScoringPeriodNav();
                           Bench
                          </td>
                          <td class="playertablePlayerName" id="playername_15847" style="">
-                          Travis Kelce, KC TE
+                          Travis Kelce, KCÂ TE
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7579,7 +7579,7 @@ updateScoringPeriodNav();
                           Bench
                          </td>
                          <td class="playertablePlayerName" id="playername_12483" style="">
-                          Matthew Stafford, Det QB
+                          Matthew Stafford, DetÂ QB
                          </td>
                          <td class="sectionLeadingSpacer">
                          </td>
@@ -7818,10 +7818,10 @@ updateScoringPeriodNav();
                       <span class="ob-unit ob-rec-image-container" data-type="Image">
                        <div class="ob-image-ratio">
                        </div>
-                       <img alt="[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words" aria-hidden="true" class="ob-rec-image ob-show" onerror="OBR.extern.imageError(this)" onload="this.className+=' ob-show'" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjJlMWZkNGM5YWQ1ZGU4ZWU1ZjM3NTA3MmE4M2RhMzQwZjgzMGZiNTE0N2E1NjAyY2FmM2Q0ZWIxMzg2YmZiY2UiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" title="[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words"/>
+                       <img alt="[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words" aria-hidden="true" class="ob-rec-image ob-show" onerror="OBR.extern.imageError(this)" onload="this.className+=' ob-show'" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjJlMWZkNGM5YWQ1ZGU4ZWU1ZjM3NTA3MmE4M2RhMzQwZjgzMGZiNTE0N2E1NjAyY2FmM2Q0ZWIxMzg2YmZiY2UiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" title="[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words"/>
                       </span>
-                      <span class="ob-unit ob-rec-text" data-type="Title" title="[Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words">
-                       [Gallery] Son saves up to buy deceased dad's squad car—but man outbids him and turns around says 3 words
+                      <span class="ob-unit ob-rec-text" data-type="Title" title="[Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words">
+                       [Gallery] Son saves up to buy deceased dad's squad carÂ—but man outbids him and turns around says 3 words
                       </span>
                       <span class="ob-unit ob-rec-source" data-type="Source">
                        Absolutehistory
@@ -7911,7 +7911,7 @@ updateScoringPeriodNav();
               </a>
              </p>
              <p>
-              Copyright ©2015 ESPN Internet Ventures.
+              Copyright Â©2015 ESPN Internet Ventures.
               <a href="http://disneytermsofuse.com/">
                Terms of Use
               </a>
