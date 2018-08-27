@@ -28,6 +28,8 @@ ESPNUserName: xxxxxxxxxx@xxxxxxxxx.com
 routerPassword: xxxxxxxxxxxx
 "
 
+*This file is currently not required. If you have the ESPN login info saved in your Firefox browser (though cookies maybe?) everything should work (no need to login).
+
 #Desired Methods organized within Files
 
 ###TeamManagement.py
