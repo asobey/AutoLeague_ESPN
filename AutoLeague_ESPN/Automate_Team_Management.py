@@ -16,11 +16,12 @@ import requests, time, yaml
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-work = 'offline' # 'offline' or 'online'
+work = 'online' # 'offline' or 'online'
 
 def open_and_login():
     browser = webdriver.Firefox()
-    browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2015#')
+    #browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2015#')
+    browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2018')
     if browser.title != 'The Big D- Sobauchery - ESPN':
         print('You are on the wrong page!')
     else:

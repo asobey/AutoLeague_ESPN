@@ -1,3 +1,6 @@
 /.idea/
 .idea/workspace.xml
 geckodriver.log
+espn_creds.yaml
+test_scripts.py
+/.cache/

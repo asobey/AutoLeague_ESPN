@@ -4,18 +4,19 @@ from selenium import webdriver
 working = 'online'
 if working == 'online':
     browser = webdriver.Firefox()
-    browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2015#')
+    #browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2015#')
+    browser.get('http://games.espn.com/ffl/clubhouse?leagueId=413011&teamId=1&seasonId=2018')
     if browser.title != 'The Big D- Sobauchery - ESPN':
         print('You are on the wrong page!')
     else:
         print('FF Page Opened.')
-    page_source = open('front_page_content', 'w')
+    page_source = open('..\\offline_webpages\\front_page_source', 'w')
     page_source.write(browser.page_source)
     page_source.close()
 
 #browser2 = webdriver.Firefox()
 #browser2.get('file://front_page_content')
-browser2 = open('front_page_source', 'r')
+browser2 = open('..\\offline_webpages\\front_page_source', 'r')
 
 for player_starting in range(3,12):
     print(browser2.find_element_by_xpath(
