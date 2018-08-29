@@ -1,2 +1,6 @@
-ESPNUserName: xxxxxxxxxx@xxxxxxxxx.com
-routerPassword: xxxxxxxxxxxx
+# Use file as template.
+# Fill in your username and password.
+# Rename file to: 'espn_creds.yaml'
+
+user: xxxxxxxxxx@xxxxxxxxx.com #email or username
+pass: xxxxxxxxxxxx
