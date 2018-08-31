@@ -1,4 +1,4 @@
-<html style="" class="js no-touch history video localstorage js  js no-touch history video localstorage wf-espnicons-n4-active"><head><script async="" src="http://cdn-gl.imrworldwide.com/conf/undefined.js#name=/ffl/clubhouse&amp;ns=NOLBUNDLE"></script><script type="text/javascript" src="http://odb.outbrain.com/utils/get?url=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;srcUrl=http%3A%2F%2Fgames.espn.com%2Fffl%2Fleaguefeed%3FleagueId%3D413011%26teamId%3D1&amp;settings=true&amp;recs=true&amp;widgetJSId=AR_9&amp;key=NANOWDGT01&amp;idx=0&amp;version=01005003&amp;ref=&amp;apv=false&amp;sig=dWWwIIvh&amp;format=html&amp;rand=51841&amp;winW=1284&amp;winH=930&amp;scrW=1920&amp;scrH=1080&amp;adblck=false" charset="UTF-8" async=""></script>
+<html style="overflow: hidden;" class="js no-touch history video localstorage wf-espnicons-n4-active oneid-lightbox-open"><head><script async="" src="http://cdn-gl.imrworldwide.com/conf/undefined.js#name=/ffl/clubhouse&amp;ns=NOLBUNDLE"></script><script type="text/javascript" src="http://odb.outbrain.com/utils/get?url=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;srcUrl=http%3A%2F%2Fgames.espn.com%2Fffl%2Fleaguefeed%3FleagueId%3D413011%26teamId%3D1&amp;settings=true&amp;recs=true&amp;widgetJSId=AR_9&amp;key=NANOWDGT01&amp;idx=0&amp;version=01005100&amp;ref=&amp;apv=false&amp;sig=549H56SG&amp;format=html&amp;rand=31463&amp;winW=1284&amp;winH=930&amp;scrW=1920&amp;scrH=1080&amp;adblck=false" charset="UTF-8" async=""></script>
 <title>The Big D- Sobauchery -  ESPN</title>
 <!-- N7-1221:2775--> 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -30,7 +30,7 @@
 		for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
 		mixpanel.init("6893c4491047e14ee49156ed3f91c9a5");</script><!-- end Mixpanel -->
 		<link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=fantasy_reset.r1.css,base.r234.css,modules.r422.css,global_header.r38.css,modules/global_nav.r52.css,modules/insider_enhanced.200910131831.css,registration/facebook.button.v2.css,modules/browser-alert.r7.css,universal_overlay/universal_overlay.css" type="text/css" media="screen" charset="utf-8">
-<link rel="stylesheet" href="http://a.espncdn.com/legacy/transitionalHeader/1.0.76/css/transitional-header.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="http://a.espncdn.com/legacy/transitionalHeader/1.1.0/css/transitional-header.css" type="text/css" media="screen" charset="utf-8">
 <link rel="stylesheet" href="http://a.espncdn.com/combiner/c?css=espn.teams.r3.css" type="text/css" media="screen" charset="utf-8">
 <style type="text/css">
 #content{width:990px !important;}
@@ -49,7 +49,7 @@
 <script><!-- these are the vars for setting the kvps -->var ad_site="espn.us.com.games",ad_zone="football",ad_kvps="pgn=ClubhouseTheBigD-Sobauchery;pgtyp=clubhouse;lang=en;gm=ffl;mnr=f;",ad_swid="",ad_counter=1,ad_ord=Math.floor(9999999999*Math.random()),ad_seg="",ad_mnr=-1<document.cookie.indexOf("grif=1")?"t":"f",ad_ref="other",ad_sp="ffl",ad_pgtyp="clubhouse",ad_pgn="TheBigD-Sobauchery",ref=document.referrer,refsMap={"facebook.com":"facebook","twitter.com|t.co":"twitter","plus.url.google.com|plus.google.com":"googleplus","google.com":"google","bing.com":"bing","yahoo.com":"yahoo","www.espn.com":"espn"},refKey;for(refKey in refsMap)ref.match(refKey)&&(ad_ref=refsMap[refKey]);ad_kvps=ad_kvps+"ref="+ad_ref+";mnr="+ad_mnr+";";var ad_u="";null!=ad_swid&&""!=ad_swid&&(ad_u="swid="+ad_swid+";");	
 	var siteProp = "GRMC88";
 	var apiURL = "http://sds.livesegmentservice.com/segments?prop="+siteProp";
-	var adsExternalJs = "http://a.espncdn.com/legacy/transitionalHeader/1.0.76/js/espn-ads-external.js";
+	var adsExternalJs = "http://a.espncdn.com/legacy/transitionalHeader/1.1.0/js/espn-ads-external.js";
 	
 	jQuery.ajax({ url: apiURL, success: 
 			function(res) { 
@@ -100,7 +100,7 @@ com = { espn: {
 	}
 }};
 
-com.espn.games.isLeagueManager = false;com.espn.games.isLeagueCreator = false;com.espn.games.isLeagueMember = false;com.espn.games.userLoggedIn = false;var GAMEROOT = "ffl";var host = location.hostname;var gameRoot = "ffl";var leagueId = 413011;var teamId = -2147483648;</script><script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/libraries?v=1217525"></script>
+com.espn.games.isLeagueManager = false;com.espn.games.isLeagueCreator = false;com.espn.games.isLeagueMember = false;com.espn.games.userLoggedIn = false;var GAMEROOT = "ffl";var host = location.hostname;var gameRoot = "ffl";var leagueId = 413011;var teamId = -2147483648;</script><script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/libraries?v=1817525"></script>
 <script type="text/javascript" src="http://g.espncdn.com/ffl/static/js/everyDay?v=23162332"></script>
 <script type="text/javascript">
 
@@ -136,7 +136,7 @@ function dkTrack(linkGroup) {
 				}
 			})();
 		</script><link rel="stylesheet" href="http://a.espncdn.com/redesign/fonts/base64-woff-v5.css">
-<style id="disneyid-style" type="text/css">div#disneyid-wrapper{position:fixed;display:none;opacity:0;top:0;left:0;width:100%;height:100%;}div#disneyid-wrapper.state-active {z-index:9999999;opacity:1;transition:opacity 300ms;-webkit-transition:opacity 300ms;}iframe#disneyid-iframe{width:100%;height:100%;}</style><script async="" src="http://cdn-gl.imrworldwide.com/novms/js/2/configs/glcfg510.js"></script><style type="text/css">.ob-tcolor{color:#555} .ob-lcolor{color:rgb(0, 0, 0)} .ob-bgtcolor{background-color:#555} .item-link-container:hover .ob-tcolor{border-color:#555} </style></head><body class="trans-fantasy context-clubhouse games-ad-300 transitional" data-sport="ffl">
+<style id="disneyid-style" type="text/css">div#disneyid-wrapper{position:fixed;display:none;opacity:0;top:0;left:0;width:100%;height:100%;}div#disneyid-wrapper.state-active {z-index:9999999;opacity:1;transition:opacity 300ms;-webkit-transition:opacity 300ms;}iframe#disneyid-iframe{width:100%;height:100%;}</style><script async="" src="http://cdn-gl.imrworldwide.com/novms/js/2/configs/glcfg510.js"></script><style type="text/css">.ob-tcolor{color:#555} .ob-lcolor{color:rgb(0, 0, 0)} .ob-bgtcolor{background-color:#555} .item-link-container:hover .ob-tcolor{border-color:#555} </style></head><body class="trans-fantasy context-clubhouse games-ad-300 transitional" data-sport="ffl" style="overflow: hidden;">
 
 <div class="ad-slot ad-slot-exclusions" data-slot-type="exclusions" data-slot-kvps="pos=exclusions"></div><!--[if IE 6]><div class="ie ie6"><![endif]-->
 <!--[if IE 7]><div class="ie ie7"><![endif]-->
@@ -243,7 +243,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 <a href="#" class="icon-font-after icon-search-solid-after" id="global-search-trigger"></a>
 <div id="global-search" class="global-search">
 	<input class="search-box" placeholder="Search Sports, Teams or Players..." type="text"><input class="btn-search" type="submit">
-</div></li><li class="user" data-behavior="favorites_mgmt"><a href="#" id="global-user-trigger" data-route="false">Log In</a><div class="global-user"><div class="global-user-container"><ul class="account-management"><li class="display-user">Welcome!</li><li><a data-behavior="tv_provider">TV Provider</a></li><li><a data-behavior="video_settings">Video Settings</a></li><li><a data-affiliatename="espn" data-language="en" data-regformid="espn" tref="/members/v3_1/login" data-behavior="overlay" data-route="false" href="#">Log In</a></li></ul><ul class="favs" data-behavior="favorites_mgmt"><li><div class="current-favorites"><h2 class="feed-title favorites">Favorites<span class="settings open-favs">Edit</span></h2><div class="message"><p>No teams in your favorites yet.</p><p>Add some for quick access!</p><a class="button sm open-favs" data-behavior="favorites_mgmt" data-language="en" tref="/personalization/v3_1/personalization">+Add favorites</a></div></div></li></ul></div></div></li><li id="scores-link"><a href="#" id="global-scoreboard-trigger" data-route="false">Scores</a></li></ul>
+</div></li><li class="user" data-behavior="favorites_mgmt"><a href="#" id="global-user-trigger" data-route="false" style="">Log In</a><div class="global-user"><div class="global-user-container"><ul class="account-management"><li class="display-user">Welcome!</li><li><a data-behavior="tv_provider">TV Provider</a></li><li><a data-behavior="video_settings">Video Settings</a></li><li><a data-affiliatename="espn" data-language="en" data-regformid="espn" tref="/members/v3_1/login" data-behavior="overlay" data-route="false" href="#" style="">Log In</a></li></ul><ul class="favs" data-behavior="favorites_mgmt"><li><div class="current-favorites"><h2 class="feed-title favorites">Favorites<span class="settings open-favs">Edit</span></h2><div class="message"><p>No teams in your favorites yet.</p><p>Add some for quick access!</p><a class="button sm open-favs" data-behavior="favorites_mgmt" data-language="en" tref="/personalization/v3_1/personalization">+Add favorites</a></div></div></li></ul></div><div class="footer-wrapper"><div class="footer-links"> <ul class="more-more pipes"><li><a href="http://disneytermsofuse.com/">Terms of Use</a></li><li><a href="http://disneyprivacycenter.com/">Privacy Policy</a></li><li><a href="https://disneyprivacycenter.com/notice-to-california-residents/">CA Privacy Rights</a></li><li><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a></li><li><a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-based Ads</a></li><li><a href="http://www.nielsen.com/digitalprivacy">About Nielsen Measurement</a></li></ul></div><div class="footer-note"><ul class="footer"><li class="footer label"><span class="link-text">© 2018 ESPN Internet Ventures. All rights reserved.</span></li></ul></div></div></div></li><li id="scores-link"><a href="#" id="global-scoreboard-trigger" data-route="false">Scores</a></li></ul>
 	</div>
 	
 <nav id="global-nav" data-loadtype="client" data-wayfindsport=""><ul class="espn-en" itemscope="" itemtype="http://www.schema.org/SiteNavigationElement" style="display: block;"><li class="sports menu-nfl" itemprop="name">
@@ -260,7 +260,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li class="sub" itemprop="name">
 	
@@ -336,7 +336,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -420,7 +420,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -593,7 +593,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
-<li class="insider sub" itemprop="name" style="display: none;">
+<li class="espnplus sub" itemprop="name" style="display: none;">
 	
 
   	
@@ -715,7 +715,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 			</ul>
-		<ul><li class="teams nfl" itemprop="name">
+		<ul class=""><li class="teams nfl" itemprop="name">
 	
 
   	
@@ -725,7 +725,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 		<div>
 			
-		<ul><li class="conference label group" itemprop="name">
+		<ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -792,7 +792,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -859,7 +859,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -926,7 +926,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -993,7 +993,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -1060,7 +1060,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -1127,7 +1127,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -1194,7 +1194,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -1282,7 +1282,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li class="sub" itemprop="name">
 	
@@ -1373,7 +1373,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -1547,7 +1547,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -1720,7 +1720,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
-<li class="insider sub" itemprop="name" style="display: none;">
+<li class="espnplus sub" itemprop="name" style="display: none;">
 	
 
   	
@@ -1752,7 +1752,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 			</ul>
-		<ul><li class="teams nba" itemprop="name">
+		<ul class=""><li class="teams nba" itemprop="name">
 	
 
   	
@@ -1762,7 +1762,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 		<div>
 			
-		<ul><li class="conference label group" itemprop="name">
+		<ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -1843,7 +1843,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -1924,7 +1924,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -2005,7 +2005,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -2086,7 +2086,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -2167,7 +2167,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -2269,7 +2269,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li class="sub" itemprop="name">
 	
@@ -2603,7 +2603,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
-<li class="insider sub" itemprop="name" style="display: none;">
+<li class="espnplus sub" itemprop="name" style="display: none;">
 	
 
   	
@@ -2647,7 +2647,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -2912,7 +2912,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 			</ul>
-		<ul><li class="teams mlb" itemprop="name">
+		<ul class=""><li class="teams mlb" itemprop="name">
 	
 
   	
@@ -2922,7 +2922,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 		<div>
 			
-		<ul><li class="conference label group" itemprop="name">
+		<ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -3003,7 +3003,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -3084,7 +3084,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -3165,7 +3165,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -3246,7 +3246,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -3327,7 +3327,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 	
-</li></ul><ul><li class="conference label group" itemprop="name">
+</li></ul><ul class=""><li class="conference label group" itemprop="name">
 	
 
   	
@@ -3429,7 +3429,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li class="sub" itemprop="name">
 	
@@ -3475,7 +3475,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -3572,7 +3572,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -3639,9 +3639,9 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
-			<li class="insider" itemprop="name">
+			<li class="espnplus" itemprop="name">
 	
 
   	
@@ -3691,7 +3691,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -3924,7 +3924,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
-<li class="insider sub" itemprop="name" style="display: none;">
+<li class="espnplus sub" itemprop="name" style="display: none;">
 	
 
   	
@@ -3969,6 +3969,21 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
+<li class="sub" itemprop="name" style="display: none;">
+	
+
+  	
+		
+		
+		<a itemprop="url" href="http://www.espn.com/college-football/story/_/page/Fan-Happiness-Index/espn-college-football-fan-happiness-index" name="&amp;lpos=sitenavdefault+ncf_ncffan_happiness_index">
+		<span>
+			<span class="link-text">Fan Happiness Index</span>
+			<span class="link-text-short">Fan Happiness Index</span>
+		</span>
+		</a>
+	
+	
+</li>
 <li class="external sub" itemprop="name" style="display: none;">
 	
 
@@ -4005,1232 +4020,6 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
-<li class="sports menu-soccer" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/" name="&amp;lpos=sitenavdefault+sitenav_soccer" data-icon="soccer">
-		<span>
-			<span class="link-text">Soccer</span>
-			<span class="link-text-short">Soccer</span>
-		</span>
-		</a>
-	
-		<div>
-			<ul> 
-			
-			<li class="sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/" name="&amp;lpos=sitenavdefault+soccer_soccerindex" data-mobile="false" data-breakpoints="desktop,desktop-lg">
-		<span>
-			<span class="link-text">Home</span>
-			<span class="link-text-short">Home</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/scoreboard" name="&amp;lpos=sitenavdefault+soccer_soccerscoreboard">
-		<span>
-			<span class="link-text">Scores</span>
-			<span class="link-text-short">Scores</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/transfers" name="&amp;lpos=sitenavdefault+soccer_soccertransfers">
-		<span>
-			<span class="link-text">Transfers</span>
-			<span class="link-text-short">Transfers</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="none sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/story/_/id/21087319/soccer-teams" name="&amp;lpos=sitenavdefault+soccer_soccerteams">
-		<span>
-			<span class="link-text">Teams</span>
-			<span class="link-text-short">Teams</span>
-		</span>
-		</a>
-	
-		<div>
-			<ul> 
-			
-			<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/359.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/359/arsenal" class="sprite-soccer-teams-25 sprite-25-team-359" name="&amp;lpos=subnav+subnav_soccer_team_arsenal_" data-teamid="359" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Arsenal </span>
-			<span class="link-text-short">Arsenal</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/363.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/363/chelsea" class="sprite-soccer-teams-25 sprite-25-team-363" name="&amp;lpos=subnav+subnav_soccer_team_chelsea" data-teamid="363" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Chelsea</span>
-			<span class="link-text-short">Chelsea</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/364.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/364/liverpool" class="sprite-soccer-teams-25 sprite-25-team-364" name="&amp;lpos=subnav+subnav_soccer_team_liverpool" data-teamid="364" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Liverpool</span>
-			<span class="link-text-short">Liverpool</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/382.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/382/manchester-city" class="sprite-soccer-teams-25 sprite-25-team-382" name="&amp;lpos=subnav+subnav_soccer_team_manchester_city" data-teamid="382" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Manchester City</span>
-			<span class="link-text-short">Manchester City</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/360.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/360/Manchester-United/" class="sprite-soccer-teams-25 sprite-25-team-360" name="&amp;lpos=subnav+subnav_soccer_team_manchester_united_" data-teamid="360" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Manchester United </span>
-			<span class="link-text-short">Manchester United</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/367.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/367/tottenham-hotspur" class="sprite-soccer-teams-25 sprite-25-team-367" name="&amp;lpos=subnav+subnav_soccer_team_tottenham_hotspur" data-teamid="367" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Tottenham Hotspur</span>
-			<span class="link-text-short">Tottenham Hotspur</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/83.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/83/Barcelona/" class="sprite-soccer-teams-25 sprite-25-team-83" name="&amp;lpos=subnav+subnav_soccer_team_barcelona" data-teamid="83" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Barcelona</span>
-			<span class="link-text-short">Barcelona</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/86.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/86/" class="sprite-soccer-teams-25 sprite-25-team-86" name="&amp;lpos=subnav+subnav_soccer_team_real_madrid" data-teamid="86" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Real Madrid</span>
-			<span class="link-text-short">Real Madrid</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/1068.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/1068/Atletico-Madrid/" class="sprite-soccer-teams-25 sprite-25-team-1068" name="&amp;lpos=subnav+subnav_soccer_team_atletico_madrid" data-teamid="1068" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Atletico Madrid</span>
-			<span class="link-text-short">Atletico Madrid</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/132.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/132/" class="sprite-soccer-teams-25 sprite-25-team-132" name="&amp;lpos=subnav+subnav_soccer_team_bayern_munich" data-teamid="132" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Bayern Munich</span>
-			<span class="link-text-short">Bayern Munich</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/124.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/124/" class="sprite-soccer-teams-25 sprite-25-team-124" name="&amp;lpos=subnav+subnav_soccer_team_borussia_dortmund" data-teamid="124" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Borussia Dortmund</span>
-			<span class="link-text-short">Borussia Dortmund</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/111.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/111/" class="sprite-soccer-teams-25 sprite-25-team-111" name="&amp;lpos=subnav+subnav_soccer_team_juventus" data-teamid="111" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Juventus</span>
-			<span class="link-text-short">Juventus</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/160.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/team/_/id/160/" class="sprite-soccer-teams-25 sprite-25-team-160" name="&amp;lpos=subnav+subnav_soccer_team_psg" data-teamid="160" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">PSG</span>
-			<span class="link-text-short">PSG</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/219.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/219/guadalajara" class="sprite-soccer-teams-25 sprite-25-team-219" name="&amp;lpos=subnav+subnav_soccer_team_guadalajara" data-teamid="219" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">Guadalajara</span>
-			<span class="link-text-short">Guadalajara</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="team" itemprop="name">
-	
-		<div class="nav-logo-wrap">
-			
-				<img class="main lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/227.png&amp;w=100&amp;h=100">
-					 
-		</div>
- 	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/227/club-america" class="sprite-soccer-teams-25 sprite-25-team-227" name="&amp;lpos=subnav+subnav_soccer_team_américa" data-teamid="227" data-type="team" data-sport="soccer">
-		<span>
-			<span class="link-text">América</span>
-			<span class="link-text-short">América</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/espn/story/_/id/21087319/soccer-teams" name="&amp;lpos=sitenavdefault+soccer_soccersee_more_teams">
-		<span>
-			<span class="link-text">See more teams</span>
-			<span class="link-text-short">More teams</span>
-		</span>
-		</a>
-	
-	
-</li>
-
-			</ul>
-		</div>
-	
-	
-</li>
-<li class="sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/club/_/id/660/united-states" name="&amp;lpos=sitenavdefault+soccer_soccerusmnt">
-		<span>
-			<span class="link-text">USMNT</span>
-			<span class="link-text-short">USMNT</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/schedule" name="&amp;lpos=sitenavdefault+soccer_soccerschedule">
-		<span>
-			<span class="link-text">Schedule</span>
-			<span class="link-text-short">Schedule</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="none sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/eng.1" name="&amp;lpos=sitenavdefault+soccer_soccertables">
-		<span>
-			<span class="link-text">Tables</span>
-			<span class="link-text-short">Tables</span>
-		</span>
-		</a>
-	
-		<div>
-			<ul> 
-			
-			<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/eng.1" name="&amp;lpos=sitenavdefault+soccer_soccerpremier_league">
-		<span>
-			<span class="link-text">Premier League</span>
-			<span class="link-text-short">Premier League</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/usa.1" name="&amp;lpos=sitenavdefault+soccer_soccermajor_league_soccer">
-		<span>
-			<span class="link-text">Major League Soccer</span>
-			<span class="link-text-short">MLS</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/mex.1" name="&amp;lpos=sitenavdefault+soccer_soccerliga_mx">
-		<span>
-			<span class="link-text">Liga MX</span>
-			<span class="link-text-short">Liga MX</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/esp.1" name="&amp;lpos=sitenavdefault+soccer_soccerla_liga">
-		<span>
-			<span class="link-text">La Liga</span>
-			<span class="link-text-short">La Liga</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/uefa.champions" name="&amp;lpos=sitenavdefault+soccer_soccerchampions_league">
-		<span>
-			<span class="link-text">Champions League</span>
-			<span class="link-text-short">UCL</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/table/_/league/uefa.europa" name="&amp;lpos=sitenavdefault+soccer_soccereuropa_league">
-		<span>
-			<span class="link-text">Europa League</span>
-			<span class="link-text-short">UEL</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/story/_/id/21087321/soccer-leagues-competitions  " name="&amp;lpos=sitenavdefault+soccer_soccersee_more_tables">
-		<span>
-			<span class="link-text">See more tables</span>
-			<span class="link-text-short">More tables</span>
-		</span>
-		</a>
-	
-	
-</li>
-
-			</ul>
-		</div>
-	
-	
-</li>
-<li class="none sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/story/_/id/21087321/soccer-leagues-competitions" name="&amp;lpos=sitenavdefault+soccer_soccerleagues_&amp;_cups">
-		<span>
-			<span class="link-text">Leagues &amp; Cups</span>
-			<span class="link-text-short">Leagues &amp; Cups</span>
-		</span>
-		</a>
-	
-		<div>
-			<ul> 
-			
-			<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/eng.1/" name="&amp;lpos=sitenavdefault+soccer_soccerpremier_league" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/23.png&amp;w=50&amp;h=50&amp;transparent=true">
-		<span>
-			<span class="link-text">Premier League</span>
-			<span class="link-text-short">Premier League</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/usa.1/" name="&amp;lpos=sitenavdefault+soccer_soccermajor_league_soccer" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/19.png&amp;w=50&amp;h=50&amp;transparent=true">
-		<span>
-			<span class="link-text">Major League Soccer</span>
-			<span class="link-text-short">MLS</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/uefa.champions" name="&amp;lpos=sitenavdefault+soccer_soccerchampions_league" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png&amp;w=50&amp;h=50&amp;transparent=true">
-		<span>
-			<span class="link-text">Champions League</span>
-			<span class="link-text-short">Champions League</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/ita.1/" name="&amp;lpos=sitenavdefault+soccer_soccerserie_a" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/12.png">
-		<span>
-			<span class="link-text">Serie A</span>
-			<span class="link-text-short">Serie A</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/esp.1" name="&amp;lpos=sitenavdefault+soccer_soccerla_liga" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/15.png&amp;w=50&amp;h=50&amp;transparent=true">
-		<span>
-			<span class="link-text">La Liga</span>
-			<span class="link-text-short">La Liga</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/mex.1/" name="&amp;lpos=sitenavdefault+soccer_soccerliga_mx" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/22.png&amp;w=50&amp;h=50&amp;transparent=true">
-		<span>
-			<span class="link-text">Liga MX</span>
-			<span class="link-text-short">Liga MX</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/ger.1" name="&amp;lpos=sitenavdefault+soccer_soccerbundesliga" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2310.png&amp;transparent=true&amp;w=30&amp;h=30">
-		<span>
-			<span class="link-text">Bundesliga</span>
-			<span class="link-text-short">Bundesliga</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/fra.1" name="&amp;lpos=sitenavdefault+soccer_soccerligue_1">
-		<span>
-			<span class="link-text">Ligue 1</span>
-			<span class="link-text-short">Ligue 1</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/uefa.europa" name="&amp;lpos=sitenavdefault+soccer_soccereuropa_league">
-		<span>
-			<span class="link-text">Europa League</span>
-			<span class="link-text-short">Europa League</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/fifa.world" name="&amp;lpos=sitenavdefault+soccer_soccerfifa_world_cup" data-image="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png&amp;w=50&amp;h=50&amp;transparent=true">
-		<span>
-			<span class="link-text">FIFA World Cup</span>
-			<span class="link-text-short">World Cup</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/soccer/league/_/name/global.champs_cup" name="&amp;lpos=sitenavdefault+soccer_soccerinternational_champions_cup">
-		<span>
-			<span class="link-text">International Champions Cup</span>
-			<span class="link-text-short">ICC</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://www.espn.com/espn/story/_/id/21087321/soccer-leagues-competitions" name="&amp;lpos=sitenavdefault+soccer_soccersee_more_leagues">
-		<span>
-			<span class="link-text">See more leagues</span>
-			<span class="link-text-short">More leagues</span>
-		</span>
-		</a>
-	
-	
-</li>
-
-			</ul>
-		</div>
-	
-	
-</li>
-<div>
-	
-</div><li class="external sub" itemprop="name">
-	
-
-  	
-		
-		
-		<a itemprop="url" target="_blank" href="http://www.espnfc.us/video" name="&amp;lpos=sitenavdefault+soccer_soccervideo">
-		<span>
-			<span class="link-text">Video</span>
-			<span class="link-text-short">Video</span>
-		</span>
-		</a>
-	
-	
-</li>
-<li class="insider sub" itemprop="name" style="display: none;">
-	
-
-  	
-		
-		
-		<a itemprop="url" href="http://insider.espn.com/insider/pickcenter/index?sport=soccer" name="&amp;lpos=sitenavdefault+soccer_soccerpickcenter">
-		<span>
-			<span class="link-text">PickCenter</span>
-			<span class="link-text-short">PickCenter</span>
-		</span>
-		</a>
-	
-	
-</li>
-
-			</ul>
-		<ul class="dropdown-group">
-		<li class="teams soccer">
-			<div class="dropdown-container">
-				<div class="teams soccer">
-					
-					<ul class="column-top ">
-						
-											<li class="conference">
-									 			<span class="link-text">
-									 				Top Leagues
-									 			</span>
-									 		</li>
-											
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/23.png&amp;w=50&amp;h=50&amp;transparent=true">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/eng.1/" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_premier_league">
-					<span>
-						<span class="link-text">Premier League</span>
-						<span class="link-text-short">Premier League</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/19.png&amp;w=50&amp;h=50&amp;transparent=true">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/usa.1/" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_major_league_soccer">
-					<span>
-						<span class="link-text">Major League Soccer</span>
-						<span class="link-text-short">MLS</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/22.png&amp;w=50&amp;h=50&amp;transparent=true">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/mex.1/" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_liga_mx">
-					<span>
-						<span class="link-text">Liga MX</span>
-						<span class="link-text-short">Liga MX</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/15.png&amp;w=50&amp;h=50&amp;transparent=true">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/esp.1" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_la_liga">
-					<span>
-						<span class="link-text">La Liga</span>
-						<span class="link-text-short">La Liga</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2.png&amp;w=50&amp;h=50&amp;transparent=true">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/uefa.champions" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_champions_league">
-					<span>
-						<span class="link-text">Champions League</span>
-						<span class="link-text-short">Champions League</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/2310.png&amp;transparent=true&amp;w=30&amp;h=30">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/uefa.europa" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_europa_league">
-					<span>
-						<span class="link-text">Europa League</span>
-						<span class="link-text-short">Europa League</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/leaguelogos/soccer/500/4.png&amp;w=50&amp;h=50&amp;transparent=true">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/league/_/name/fifa.world" class="sprite--teams-25 sprite-25-team-" name="&amp;lpos=subnav+subnav__team_fifa_world_cup">
-					<span>
-						<span class="link-text">FIFA World Cup</span>
-						<span class="link-text-short">World Cup</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-
-										
-												</ul><ul class="column-top">
-											
-											<li class="conference">
-									 			<span class="link-text">
-									 				Top Teams
-									 			</span>
-									 		</li>
-											
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/660.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/660/united-states" class="sprite-soccer-teams-25 sprite-25-team-660" name="&amp;lpos=subnav+subnav_soccer_team_usmnt" data-teamid="660" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">USMNT</span>
-						<span class="link-text-short">USMNT</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/2765.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/2765/united-states" class="sprite-soccer-teams-25 sprite-25-team-2765" name="&amp;lpos=subnav+subnav_soccer_team_uswnt" data-teamid="2765" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">USWNT</span>
-						<span class="link-text-short">USWNT</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/359.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/359/arsenal" class="sprite-soccer-teams-25 sprite-25-team-359" name="&amp;lpos=subnav+subnav_soccer_team_arsenal_" data-teamid="359" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Arsenal </span>
-						<span class="link-text-short">Arsenal</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/363.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/363/chelsea" class="sprite-soccer-teams-25 sprite-25-team-363" name="&amp;lpos=subnav+subnav_soccer_team_chelsea" data-teamid="363" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Chelsea</span>
-						<span class="link-text-short">Chelsea</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/364.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/364/liverpool" class="sprite-soccer-teams-25 sprite-25-team-364" name="&amp;lpos=subnav+subnav_soccer_team_liverpool" data-teamid="364" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Liverpool</span>
-						<span class="link-text-short">Liverpool</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/382.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/382/manchester-city" class="sprite-soccer-teams-25 sprite-25-team-382" name="&amp;lpos=subnav+subnav_soccer_team_manchester_city" data-teamid="382" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Manchester City</span>
-						<span class="link-text-short">Manchester City</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/360.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/360/Manchester-United/" class="sprite-soccer-teams-25 sprite-25-team-360" name="&amp;lpos=subnav+subnav_soccer_team_manchester_united_" data-teamid="360" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Manchester United </span>
-						<span class="link-text-short">Manchester United</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-		 		</ul><ul>
-			 
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/367.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/367/tottenham-hotspur" class="sprite-soccer-teams-25 sprite-25-team-367" name="&amp;lpos=subnav+subnav_soccer_team_tottenham_hotspur" data-teamid="367" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Tottenham Hotspur</span>
-						<span class="link-text-short">Tottenham Hotspur</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/83.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/83/Barcelona/" class="sprite-soccer-teams-25 sprite-25-team-83" name="&amp;lpos=subnav+subnav_soccer_team_barcelona" data-teamid="83" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Barcelona</span>
-						<span class="link-text-short">Barcelona</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/86.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/86/" class="sprite-soccer-teams-25 sprite-25-team-86" name="&amp;lpos=subnav+subnav_soccer_team_real_madrid" data-teamid="86" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Real Madrid</span>
-						<span class="link-text-short">Real Madrid</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/1068.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/1068/Atletico-Madrid/" class="sprite-soccer-teams-25 sprite-25-team-1068" name="&amp;lpos=subnav+subnav_soccer_team_atletico_madrid" data-teamid="1068" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Atletico Madrid</span>
-						<span class="link-text-short">Atletico Madrid</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/132.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/132/" class="sprite-soccer-teams-25 sprite-25-team-132" name="&amp;lpos=subnav+subnav_soccer_team_bayern_munich" data-teamid="132" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Bayern Munich</span>
-						<span class="link-text-short">Bayern Munich</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/124.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/124/" class="sprite-soccer-teams-25 sprite-25-team-124" name="&amp;lpos=subnav+subnav_soccer_team_borussia_dortmund" data-teamid="124" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Borussia Dortmund</span>
-						<span class="link-text-short">Borussia Dortmund</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/111.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/111/" class="sprite-soccer-teams-25 sprite-25-team-111" name="&amp;lpos=subnav+subnav_soccer_team_juventus" data-teamid="111" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Juventus</span>
-						<span class="link-text-short">Juventus</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-		 		</ul><ul>
-			 
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/160.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/team/_/id/160/" class="sprite-soccer-teams-25 sprite-25-team-160" name="&amp;lpos=subnav+subnav_soccer_team_psg" data-teamid="160" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">PSG</span>
-						<span class="link-text-short">PSG</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/219.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/219/guadalajara" class="sprite-soccer-teams-25 sprite-25-team-219" name="&amp;lpos=subnav+subnav_soccer_team_guadalajara" data-teamid="219" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">Guadalajara</span>
-						<span class="link-text-short">Guadalajara</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-			<li class="team">
-			
-					<div class="nav-logo-wrap">
-						
-							<img class="main team-logo lazyload" data-lazyload="true" data-src="http://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/227.png&amp;w=50&amp;h=50">
-						
-					</div>
-			
-				<a itemprop="url" href="/soccer/club/_/id/227/club-america" class="sprite-soccer-teams-25 sprite-25-team-227" name="&amp;lpos=subnav+subnav_soccer_team_américa" data-teamid="227" data-type="team" data-sport="soccer">
-					<span>
-						<span class="link-text">América</span>
-						<span class="link-text-short">América</span>
-					</span>
-				</a>
-		 	</li>
-		 	
-
-										</ul>
-				</div>
-			</div>
-		</li>
-	</ul></div>
-	
-	
-</li>
 <li class="none more" itemprop="name">
 	
 
@@ -5245,9 +4034,24 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul class="split"> 
+			<ul class="split three"> 
 			
-			<li class="sports menu-tennis" itemprop="name">
+			<li class="sports menu-soccer" itemprop="name">
+	
+
+  	
+		
+		
+		<a itemprop="url" href="http://www.espn.com/soccer/" name="&amp;lpos=sitenavdefault+moresports_soccer" data-icon="soccer">
+		<span>
+			<span class="link-text">Soccer</span>
+			<span class="link-text-short">Soccer</span>
+		</span>
+		</a>
+	
+	
+</li>
+<li class="sports menu-tennis" itemprop="name">
 	
 
   	
@@ -6435,7 +5239,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 			</ul>
-		</div><div class="footer-wrapper"><ul class="footer"><li class="footer label"><span class="link-text">© 2018 ESPN Internet Ventures. <a href="http://disneytermsofuse.com/" rel="nofollow">Terms of Use</a>, <a href="http://disneyprivacycenter.com/" rel="nofollow">Privacy Policy</a>, <a href="https://disneyprivacycenter.com/notice-to-california-residents/" rel="nofollow">Your California Privacy Rights</a>, <a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a> and <a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-Based Ads</a> are applicable to you. All rights reserved.</span><span class="link-text-short">Footer</span></li></ul></div></div>
+		</div></div>
 	
 	
 </li>
@@ -6453,7 +5257,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -6658,7 +5462,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 			</ul>
-		<ul><li class="teams fantasy" itemprop="name">
+		<ul class=""><li class="teams fantasy" itemprop="name">
 	
 
   	
@@ -6681,7 +5485,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -6793,7 +5597,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li itemprop="name">
 	
@@ -6906,21 +5710,21 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 	
 	
 </li>
-<li class="pillar logo espnplus espn+" itemprop="name">
+<li class="pillar logo espnplus watch-now" itemprop="name">
 	
 
   	
 		
 		
-		<a itemprop="url" href="http://www.espn.com/watch/espnplus/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+sitenav_espn+" data-logo="espnplus">
+		<a itemprop="url" href="http://www.espn.com/watch/espnplus/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+sitenav_watch_now" data-logo="espnplus">
 		<span>
-			<span class="link-text">ESPN+</span>
-			<span class="link-text-short">ESPN+</span>
+			<span class="link-text">Watch Now</span>
+			<span class="link-text-short">Watch Now</span>
 		</span>
 		</a>
 	
 		<div>
-			<ul> 
+			<ul class=""> 
 			
 			<li class="logo espnplus" itemprop="name">
 	
@@ -6928,10 +5732,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
   	
 		
 		
-		<a itemprop="url" href="http://www.espn.com/watch/espnplus/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+espn+_espn+espn+" data-logo="espnplus">
+		<a itemprop="url" href="http://www.espn.com/watch/espnplus/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+watch_now_watch_nowwatch_now" data-logo="espnplus">
 		<span>
-			<span class="link-text">ESPN+</span>
-			<span class="link-text-short">ESPN+</span>
+			<span class="link-text">Watch Now</span>
+			<span class="link-text-short">Watch Now</span>
 		</span>
 		</a>
 	
@@ -6943,10 +5747,40 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
   	
 		
 		
-		<a itemprop="url" href="https://r.espn.com/espnPlus/subscription?om_navmethod=topnav" name="&amp;lpos=sitenavdefault+espn+_espn+espn+_subscriptions">
+		<a itemprop="url" href="http://espn.com/insider" name="&amp;lpos=sitenavdefault+watch_now_watch_nowstories">
 		<span>
-			<span class="link-text">ESPN+ Subscriptions</span>
-			<span class="link-text-short">ESPN+ Subscriptions</span>
+			<span class="link-text">Stories</span>
+			<span class="link-text-short">Stories</span>
+		</span>
+		</a>
+	
+	
+</li>
+<li itemprop="name">
+	
+
+  	
+		
+		
+		<a itemprop="url" href="http://insider.espn.com/insider/tools/index" name="&amp;lpos=sitenavdefault+watch_now_watch_nowtools">
+		<span>
+			<span class="link-text">Tools</span>
+			<span class="link-text-short">Tools</span>
+		</span>
+		</a>
+	
+	
+</li>
+<li itemprop="name">
+	
+
+  	
+		
+		
+		<a itemprop="url" href="https://r.espn.com/espnPlus/subscription?om_navmethod=topnav" name="&amp;lpos=sitenavdefault+watch_now_watch_nowmanage_subscription">
+		<span>
+			<span class="link-text">Manage Subscription</span>
+			<span class="link-text-short">Manage Subscription</span>
 		</span>
 		</a>
 	
@@ -6958,10 +5792,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
   	
 		
 		
-		<a itemprop="url" target="_blank" href="http://espn.com/plus-terms/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+espn+_espn+espn+_terms">
+		<a itemprop="url" target="_blank" href="https://support.espn.com/hc/en-us/articles/360002464711-ESPN-Subscriber-Agreement" name="&amp;lpos=sitenavdefault+watch_now_watch_nowsubscriber_agreement">
 		<span>
-			<span class="link-text">ESPN+ Terms</span>
-			<span class="link-text-short">ESPN+ Terms</span>
+			<span class="link-text">Subscriber Agreement</span>
+			<span class="link-text-short">Subscriber Agreement</span>
 		</span>
 		</a>
 	
@@ -6973,10 +5807,10 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
   	
 		
 		
-		<a itemprop="url" href="http://www.espn.com/plus-blackouts/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+espn+_espn+espn+_blackout_policy">
+		<a itemprop="url" href="http://www.espn.com/plus-blackouts/?om-navmethod=topnav" name="&amp;lpos=sitenavdefault+watch_now_watch_nowblackout_policy">
 		<span>
-			<span class="link-text">ESPN+ Blackout Policy</span>
-			<span class="link-text-short">ESPN+ Blackout Policy</span>
+			<span class="link-text">Blackout Policy</span>
+			<span class="link-text-short">Blackout Policy</span>
 		</span>
 		</a>
 	
@@ -7279,7 +6113,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </li>
 
 							
-								<li class="insider sub " itemprop="name">
+								<li class="espnplus sub " itemprop="name">
 
 	
 
@@ -7417,7 +6251,7 @@ monthNamesLong: ["January","February","March","April","May","June","July","Augus
 </div>
 </nav>
 
-</header></div><div class="global-user"><div class="global-user-container"><ul class="account-management"><li class="display-user">Welcome!</li><li><a data-behavior="tv_provider">TV Provider</a></li><li><a data-behavior="video_settings">Video Settings</a></li><li><a data-affiliatename="espn" data-language="en" data-regformid="espn" tref="/members/v3_1/login" data-behavior="overlay" data-route="false" href="#">Log In</a></li></ul><ul class="favs" data-behavior="favorites_mgmt"><li><div class="current-favorites"><h2 class="feed-title favorites">Favorites<span class="settings open-favs">Edit</span></h2><div class="message"><p>No teams in your favorites yet.</p><p>Add some for quick access!</p><a class="button sm open-favs" data-behavior="favorites_mgmt" data-language="en" tref="/personalization/v3_1/personalization">+Add favorites</a></div></div></li></ul></div></div></div>
+</header></div><div class="global-user"><div class="global-user-container"><ul class="account-management"><li class="display-user">Welcome!</li><li><a data-behavior="tv_provider">TV Provider</a></li><li><a data-behavior="video_settings">Video Settings</a></li><li><a data-affiliatename="espn" data-language="en" data-regformid="espn" tref="/members/v3_1/login" data-behavior="overlay" data-route="false" href="#">Log In</a></li></ul><ul class="favs" data-behavior="favorites_mgmt"><li><div class="current-favorites"><h2 class="feed-title favorites">Favorites<span class="settings open-favs">Edit</span></h2><div class="message"><p>No teams in your favorites yet.</p><p>Add some for quick access!</p><a class="button sm open-favs" data-behavior="favorites_mgmt" data-language="en" tref="/personalization/v3_1/personalization">+Add favorites</a></div></div></li></ul></div><div class="footer-wrapper"><div class="footer-links"> <ul class="more-more pipes"><li><a href="http://disneytermsofuse.com/">Terms of Use</a></li><li><a href="http://disneyprivacycenter.com/">Privacy Policy</a></li><li><a href="https://disneyprivacycenter.com/notice-to-california-residents/">CA Privacy Rights</a></li><li><a href="https://disneyprivacycenter.com/kids-privacy-policy/english/">Children's Online Privacy Policy</a></li><li><a href="http://preferences-mgr.truste.com/?type=espn&amp;affiliateId=148">Interest-based Ads</a></li><li><a href="http://www.nielsen.com/digitalprivacy">About Nielsen Measurement</a></li></ul></div><div class="footer-note"><ul class="footer"><li class="footer label"><span class="link-text">© 2018 ESPN Internet Ventures. All rights reserved.</span></li></ul></div></div></div></div>
 <script>
 	(function() { 
 		var path = window.location.pathname;
@@ -7493,7 +6327,7 @@ updateScoringPeriodNav = function() {
 };
 updateScoringPeriodNav();
 </script>
-<br style="line-height: 12px" clear="all"><table id="playertableFrameOuterShell" width="970px" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="playerTableTabsCell clubhousePlayerTableTabsCell" valign="bottom"><div id="playerTableHeader"><ul><li id="current"><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=overview&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Overview</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=stats&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Stats</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=news&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">News</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=projections&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Projections</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=upcomingschedule&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Schedule</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=ranks&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Ranks</a></li></ul><span style="display: none;" class="playerTableTabSpinner" id="playerTableTabSpinner"><img src="http://g.espncdn.com/s/ffllm/14/images/playerTableTabLoad.gif"></span></div></td><td class="playerTableSubmitCell" valign="top" align="right"></td></tr></tbody></table><table class="playertableFrameBorder" width="970px" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td colspan="2" class="playertableFrameInnerShell"><table class="playerTableTable tableBody" id="playertable_0" cellspacing="1" cellpadding="0" border="0"><tbody><tr class="playerTableBgRowHead tableHead playertableSectionHeader"><th colspan="2" class="playertableSectionHeaderFirst">STARTERS</th><td class="sectionLeadingSpacer"></td><th colspan="2">Wk 1</th><td class="sectionLeadingSpacer"></td><th colspan="4">2017 SEASON</th><td class="sectionLeadingSpacer"></td><th colspan="5">Week 1</th></tr><tr class="playerTableBgRowSubhead tableSubHead"><td width="65px">SLOT</td><td>PLAYER, TEAM POS</td><td class="sectionLeadingSpacer"></td><td title="Opponent">OPP</td><td title="Game Status">STATUS ET</td><td class="sectionLeadingSpacer"></td><td class="playertableData" title="Position Rank">PRK</td><td class="playertableStat appliedPoints" title="Fantasy Points">PTS</td><td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">AVG</td><td class="playertableStat appliedPoints" title="Fantasy Points">LAST</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints" title="ESPN Projection">PROJ</td><td class="playertableData" title="Opponent Rank">OPRK</td><td class="playertableData" title="Percent Started">%ST</td><td class="playertableData" title="Percent Owned">%OWN</td><td class="playertableData" title="Change in Percent Owned">+/-</td></tr><tr id="plyr2580" class="pncPlayerRow playerTableBgRow0"><td id="slot_2580" class="slot_0 playerSlot" style="font-weight: bold;">QB</td><td class="playertablePlayerName" id="playername_2580" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="2580" teamid="-2147483648" seasonid="2018" cache="true">Drew Brees</a>, NO&nbsp;QB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="2580" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=1&amp;playerId=70127&amp;seasonId=2018" class="flexpop" instance="_ppc">TB</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909018_18" href="http://www.espn.com/nfl/game?gameId=401030713" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">8</td><td class="playertableStat appliedPoints">252.6</td><td class="playertableStat appliedPoints">15.8</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">17</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=1&amp;playerId=70127&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">22nd</span></a></td><td class="playertableData"><nobr>70.5</nobr></td><td class="playertableData"><nobr>95.8</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.1</span></nobr></td></tr><tr id="plyr17919" class="pncPlayerRow playerTableBgRow1"><td id="slot_17919" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td class="playertablePlayerName" id="playername_17919" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="17919" teamid="-2147483648" seasonid="2018" cache="true">Jordan Howard</a>, Chi&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="17919" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70209&amp;seasonId=2018" class="flexpop" instance="_ppc">@GB</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909009_3" href="http://www.espn.com/nfl/game?gameId=401030726" target="_blank">Sun 8:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">12</td><td class="playertableStat appliedPoints">188.2</td><td class="playertableStat appliedPoints">11.8</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">10.9</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70209&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">22nd</span></a></td><td class="playertableData"><nobr>90.0</nobr></td><td class="playertableData"><nobr>99.0</nobr></td><td class="playertableData"><nobr><span style="color:green">+0.5</span></nobr></td></tr><tr id="plyr18193" class="pncPlayerRow playerTableBgRow0"><td id="slot_18193" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td class="playertablePlayerName" id="playername_18193" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="18193" teamid="-2147483648" seasonid="2018" cache="true">Joe Mixon</a>, Cin&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="18193" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70211&amp;seasonId=2018" class="flexpop" instance="_ppc">@Ind</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909011_4" href="http://www.espn.com/nfl/game?gameId=401030717" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">35</td><td class="playertableStat appliedPoints">126.3</td><td class="playertableStat appliedPoints">7.9</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">12.3</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70211&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">23rd</span></a></td><td class="playertableData"><nobr>91.2</nobr></td><td class="playertableData"><nobr>98.7</nobr></td><td class="playertableData"><nobr><span style="color:green">+0.5</span></nobr></td></tr><tr id="plyr10456" class="pncPlayerRow playerTableBgRow1"><td id="slot_10456" class="slot_3 playerSlot" style="font-weight: bold;">RB/WR</td><td class="playertablePlayerName" id="playername_10456" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="10456" teamid="-2147483648" seasonid="2018" cache="true">Marshawn Lynch</a>, Oak&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70214&amp;seasonId=2018" class="flexpop" instance="_ppc">LAR</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380910013_13" href="http://www.espn.com/nfl/game?gameId=401030751" target="_blank">Mon 10:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">20</td><td class="playertableStat appliedPoints">154.2</td><td class="playertableStat appliedPoints">9.6</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.2</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70214&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">30th</span></a></td><td class="playertableData"><nobr>62.1</nobr></td><td class="playertableData"><nobr>96.6</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.2</span></nobr></td></tr><tr id="plyr15795" class="pncPlayerRow playerTableBgRow0"><td id="slot_15795" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td class="playertablePlayerName" id="playername_15795" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="15795" teamid="-2147483648" seasonid="2018" cache="true">DeAndre Hopkins</a>, Hou&nbsp;WR<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="15795" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70317&amp;seasonId=2018" class="flexpop" instance="_ppc">@NE</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_34" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">1</td><td class="playertableStat appliedPoints">261.8</td><td class="playertableStat appliedPoints">16.4</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">15.1</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70317&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">29th</span></a></td><td class="playertableData"><nobr>99.4</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr14402" class="pncPlayerRow playerTableBgRow1"><td id="slot_14402" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td class="playertablePlayerName" id="playername_14402" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="14402" teamid="-2147483648" seasonid="2018" cache="true">Chris Hogan</a>, NE&nbsp;WR<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="14402" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70334&amp;seasonId=2018" class="flexpop" instance="_ppc">Hou</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_17" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">60</td><td class="playertableStat appliedPoints">92.6</td><td class="playertableStat appliedPoints">5.8</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">11.7</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70334&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">27th</span></a></td><td class="playertableData"><nobr>69.4</nobr></td><td class="playertableData"><nobr>95.9</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.6</span></nobr></td></tr><tr id="plyr13229" class="pncPlayerRow playerTableBgRow0"><td id="slot_13229" class="slot_6 playerSlot" style="font-weight: bold;">TE</td><td class="playertablePlayerName" id="playername_13229" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="13229" teamid="-2147483648" seasonid="2018" cache="true">Rob Gronkowski</a>, NE&nbsp;TE<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="13229" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=4&amp;playerId=70434&amp;seasonId=2018" class="flexpop" instance="_ppc">Hou</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_17" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">1</td><td class="playertableStat appliedPoints">192.9</td><td class="playertableStat appliedPoints">12.1</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">13.1</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=4&amp;playerId=70434&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">28th</span></a></td><td class="playertableData"><nobr>99.5</nobr></td><td class="playertableData"><nobr>99.9</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr16725" class="pncPlayerRow playerTableBgRow1"><td id="slot_16725" class="slot_23 playerSlot" style="font-weight: bold;">FLEX</td><td class="playertablePlayerName" id="playername_16725" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="16725" teamid="-2147483648" seasonid="2018" cache="true">Sammy Watkins</a>, KC&nbsp;WR<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="16725" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_breaking.png" style="margin:0 6px 0 6px" title="Breaking News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70324&amp;seasonId=2018" class="flexpop" instance="_ppc">@LAC</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909024_12" href="http://www.espn.com/nfl/game?gameId=401030720" target="_blank">Sun 4:05</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">38</td><td class="playertableStat appliedPoints">126.8</td><td class="playertableStat appliedPoints">7.9</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.8</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70324&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">7th</span></a></td><td class="playertableData"><nobr>30.5</nobr></td><td class="playertableData"><nobr>93.4</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.3</span></nobr></td></tr><tr id="plyr60024" class="pncPlayerRow playerTableBgRow0"><td id="slot_60024" class="slot_16 playerSlot" style="font-weight: bold;">D/ST</td><td class="playertablePlayerName" id="playername_60024" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="60024" teamid="-2147483648" seasonid="2018" cache="true">Chargers D/ST</a>&nbsp;D/ST</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=16&amp;playerId=71612&amp;seasonId=2018" class="flexpop" instance="_ppc">KC</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909024_24" href="http://www.espn.com/nfl/game?gameId=401030720" target="_blank">Sun 4:05</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">5</td><td class="playertableStat appliedPoints">152</td><td class="playertableStat appliedPoints">9.5</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">6.6</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=16&amp;playerId=71612&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">2nd</span></a></td><td class="playertableData"><nobr>73.5</nobr></td><td class="playertableData"><nobr>87.2</nobr></td><td class="playertableData"><nobr><span style="color:green">+0.8</span></nobr></td></tr><tr id="plyr9704" class="pncPlayerRow playerTableBgRow1"><td id="slot_9704" class="slot_17 playerSlot" style="font-weight: bold;">K</td><td class="playertablePlayerName" id="playername_9704" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="9704" teamid="-2147483648" seasonid="2018" cache="true">Stephen Gostkowski</a>, NE&nbsp;K<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="9704" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_breaking.png" style="margin:0 6px 0 6px" title="Breaking News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=5&amp;playerId=70534&amp;seasonId=2018" class="flexpop" instance="_ppc">Hou</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_17" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">2</td><td class="playertableStat appliedPoints">167</td><td class="playertableStat appliedPoints">10.4</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.2</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=5&amp;playerId=70534&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">31st</span></a></td><td class="playertableData"><nobr>96.5</nobr></td><td class="playertableData"><nobr>99.4</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr class="playerTableBgRowHead tableHead playertableSectionHeader"><th colspan="2" class="playertableSectionHeaderFirst">BENCH</th><td class="sectionLeadingSpacer"></td><th colspan="2">Wk 1</th><td class="sectionLeadingSpacer"></td><th colspan="4">2017 SEASON</th><td class="sectionLeadingSpacer"></td><th colspan="5">Week 1</th></tr><tr class="playerTableBgRowSubhead tableSubHead"><td width="65px">SLOT</td><td>PLAYER, TEAM POS</td><td class="sectionLeadingSpacer"></td><td title="Opponent">OPP</td><td title="Game Status">STATUS ET</td><td class="sectionLeadingSpacer"></td><td class="playertableData" title="Position Rank">PRK</td><td class="playertableStat appliedPoints" title="Fantasy Points">PTS</td><td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">AVG</td><td class="playertableStat appliedPoints" title="Fantasy Points">LAST</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints" title="ESPN Projection">PROJ</td><td class="playertableData" title="Opponent Rank">OPRK</td><td class="playertableData" title="Percent Started">%ST</td><td class="playertableData" title="Percent Owned">%OWN</td><td class="playertableData" title="Change in Percent Owned">+/-</td></tr><tr id="plyr18415" class="pncPlayerRow playerTableBgRow0"><td id="slot_18415" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_18415" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="18415" teamid="-2147483648" seasonid="2018" cache="true">Cooper Kupp</a>, LAR&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70313&amp;seasonId=2018" class="flexpop" instance="_ppc">@Oak</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380910013_14" href="http://www.espn.com/nfl/game?gameId=401030751" target="_blank">Mon 10:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">26</td><td class="playertableStat appliedPoints">145.9</td><td class="playertableStat appliedPoints">9.1</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.6</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70313&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">14th</span></a></td><td class="playertableData"><nobr>18.7</nobr></td><td class="playertableData"><nobr>88.7</nobr></td><td class="playertableData"><nobr><span style="color:green">+2.3</span></nobr></td></tr><tr id="plyr18597" class="pncPlayerRow playerTableBgRow1"><td id="slot_18597" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_18597" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="18597" teamid="-2147483648" seasonid="2018" cache="true">Ronald Jones</a>, TB&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="18597" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70218&amp;seasonId=2018" class="flexpop" instance="_ppc">@NO</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909018_27" href="http://www.espn.com/nfl/game?gameId=401030713" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">4.6</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70218&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">14th</span></a></td><td class="playertableData"><nobr>8.4</nobr></td><td class="playertableData"><nobr>87.4</nobr></td><td class="playertableData"><nobr><span style="color:red">-5.7</span></nobr></td></tr><tr id="plyr16016" class="pncPlayerRow playerTableBgRow0"><td id="slot_16016" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_16016" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="16016" teamid="-2147483648" seasonid="2018" cache="true">Kenny Stills</a>, Mia&nbsp;WR<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="16016" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70310&amp;seasonId=2018" class="flexpop" instance="_ppc">Ten</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909015_15" href="http://www.espn.com/nfl/game?gameId=401030716" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">27</td><td class="playertableStat appliedPoints">145.7</td><td class="playertableStat appliedPoints">9.1</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.3</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70310&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">20th</span></a></td><td class="playertableData"><nobr>7.5</nobr></td><td class="playertableData"><nobr>74.6</nobr></td><td class="playertableData"><nobr><span style="color:green">+5.8</span></nobr></td></tr><tr id="plyr17611" class="pncPlayerRow playerTableBgRow1"><td id="slot_17611" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_17611" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="17611" teamid="-2147483648" seasonid="2018" cache="true">Ty Montgomery</a>, GB&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="17611" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70203&amp;seasonId=2018" class="flexpop" instance="_ppc">Chi</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909009_9" href="http://www.espn.com/nfl/game?gameId=401030726" target="_blank">Sun 8:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">52</td><td class="playertableStat appliedPoints">80.1</td><td class="playertableStat appliedPoints">5.0</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.4</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70203&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">12th</span></a></td><td class="playertableData"><nobr>9.4</nobr></td><td class="playertableData"><nobr>69.8</nobr></td><td class="playertableData"><nobr><span style="color:red">-1.2</span></nobr></td></tr><tr class="pncPlayerRow irRow playerTableBgRow0"><td class="slot_21 playerSlot" style="font-weight: bold;">IR</td><td>&nbsp;</td><td class="sectionLeadingSpacer"></td><td></td><td></td><td class="sectionLeadingSpacer"></td><td class="playertableData">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData">--</td><td class="playertableData">--</td><td class="playertableData">--</td></tr></tbody></table></td></tr></tbody></table><br></div></div></div><div class="games-footercol"><script src="http://a.espncdn.com/legacy/transitionalHeader/1.0.76/js/nav-external.js"></script>
+<br style="line-height: 12px" clear="all"><table id="playertableFrameOuterShell" width="970px" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td class="playerTableTabsCell clubhousePlayerTableTabsCell" valign="bottom"><div id="playerTableHeader"><ul><li id="current"><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=overview&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Overview</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=stats&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Stats</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=news&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">News</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=projections&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Projections</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=upcomingschedule&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Schedule</a></li><li><a href="#" onclick="players('leagueId=413011&amp;teamId=1&amp;seasonId=2018&amp;view=ranks&amp;context=clubhouse&amp;ajaxPath=playertable/prebuilt/manageroster&amp;managingIr=false&amp;droppingPlayers=false&amp;asLM=false');return false;" ;="">Ranks</a></li></ul><span style="display: none;" class="playerTableTabSpinner" id="playerTableTabSpinner"><img src="http://g.espncdn.com/s/ffllm/14/images/playerTableTabLoad.gif"></span></div></td><td class="playerTableSubmitCell" valign="top" align="right"></td></tr></tbody></table><table class="playertableFrameBorder" width="970px" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td colspan="2" class="playertableFrameInnerShell"><table class="playerTableTable tableBody" id="playertable_0" cellspacing="1" cellpadding="0" border="0"><tbody><tr class="playerTableBgRowHead tableHead playertableSectionHeader"><th colspan="2" class="playertableSectionHeaderFirst">STARTERS</th><td class="sectionLeadingSpacer"></td><th colspan="2">Wk 1</th><td class="sectionLeadingSpacer"></td><th colspan="4">2017 SEASON</th><td class="sectionLeadingSpacer"></td><th colspan="5">Week 1</th></tr><tr class="playerTableBgRowSubhead tableSubHead"><td width="65px">SLOT</td><td>PLAYER, TEAM POS</td><td class="sectionLeadingSpacer"></td><td title="Opponent">OPP</td><td title="Game Status">STATUS ET</td><td class="sectionLeadingSpacer"></td><td class="playertableData" title="Position Rank">PRK</td><td class="playertableStat appliedPoints" title="Fantasy Points">PTS</td><td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">AVG</td><td class="playertableStat appliedPoints" title="Fantasy Points">LAST</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints" title="ESPN Projection">PROJ</td><td class="playertableData" title="Opponent Rank">OPRK</td><td class="playertableData" title="Percent Started">%ST</td><td class="playertableData" title="Percent Owned">%OWN</td><td class="playertableData" title="Change in Percent Owned">+/-</td></tr><tr id="plyr2580" class="pncPlayerRow playerTableBgRow0"><td id="slot_2580" class="slot_0 playerSlot" style="font-weight: bold;">QB</td><td class="playertablePlayerName" id="playername_2580" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="2580" teamid="-2147483648" seasonid="2018" cache="true">Drew Brees</a>, NO&nbsp;QB</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=1&amp;playerId=70127&amp;seasonId=2018" class="flexpop" instance="_ppc">TB</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909018_18" href="http://www.espn.com/nfl/game?gameId=401030713" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">8</td><td class="playertableStat appliedPoints">252.6</td><td class="playertableStat appliedPoints">15.8</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">17.1</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=1&amp;playerId=70127&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">22nd</span></a></td><td class="playertableData"><nobr>72.2</nobr></td><td class="playertableData"><nobr>96.2</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.3</span></nobr></td></tr><tr id="plyr17919" class="pncPlayerRow playerTableBgRow1"><td id="slot_17919" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td class="playertablePlayerName" id="playername_17919" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="17919" teamid="-2147483648" seasonid="2018" cache="true">Jordan Howard</a>, Chi&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70209&amp;seasonId=2018" class="flexpop" instance="_ppc">@GB</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909009_3" href="http://www.espn.com/nfl/game?gameId=401030726" target="_blank">Sun 8:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">12</td><td class="playertableStat appliedPoints">188.2</td><td class="playertableStat appliedPoints">11.8</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">10.9</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70209&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">22nd</span></a></td><td class="playertableData"><nobr>91.0</nobr></td><td class="playertableData"><nobr>99.1</nobr></td><td class="playertableData"><nobr><span style="color:green">+0.5</span></nobr></td></tr><tr id="plyr18193" class="pncPlayerRow playerTableBgRow0"><td id="slot_18193" class="slot_2 playerSlot" style="font-weight: bold;">RB</td><td class="playertablePlayerName" id="playername_18193" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="18193" teamid="-2147483648" seasonid="2018" cache="true">Joe Mixon</a>, Cin&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="18193" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70211&amp;seasonId=2018" class="flexpop" instance="_ppc">@Ind</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909011_4" href="http://www.espn.com/nfl/game?gameId=401030717" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">35</td><td class="playertableStat appliedPoints">126.3</td><td class="playertableStat appliedPoints">7.9</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">12.3</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70211&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">23rd</span></a></td><td class="playertableData"><nobr>92.2</nobr></td><td class="playertableData"><nobr>98.9</nobr></td><td class="playertableData"><nobr><span style="color:green">+0.6</span></nobr></td></tr><tr id="plyr10456" class="pncPlayerRow playerTableBgRow1"><td id="slot_10456" class="slot_3 playerSlot" style="font-weight: bold;">RB/WR</td><td class="playertablePlayerName" id="playername_10456" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="10456" teamid="-2147483648" seasonid="2018" cache="true">Marshawn Lynch</a>, Oak&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="10456" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70214&amp;seasonId=2018" class="flexpop" instance="_ppc">LAR</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380910013_13" href="http://www.espn.com/nfl/game?gameId=401030751" target="_blank">Mon 10:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">20</td><td class="playertableStat appliedPoints">154.2</td><td class="playertableStat appliedPoints">9.6</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.1</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70214&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">30th</span></a></td><td class="playertableData"><nobr>62.7</nobr></td><td class="playertableData"><nobr>96.9</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.4</span></nobr></td></tr><tr id="plyr15795" class="pncPlayerRow playerTableBgRow0"><td id="slot_15795" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td class="playertablePlayerName" id="playername_15795" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="15795" teamid="-2147483648" seasonid="2018" cache="true">DeAndre Hopkins</a>, Hou&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70317&amp;seasonId=2018" class="flexpop" instance="_ppc">@NE</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_34" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">1</td><td class="playertableStat appliedPoints">261.8</td><td class="playertableStat appliedPoints">16.4</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">15.1</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70317&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">29th</span></a></td><td class="playertableData"><nobr>99.5</nobr></td><td class="playertableData"><nobr>100.0</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr14402" class="pncPlayerRow playerTableBgRow1"><td id="slot_14402" class="slot_4 playerSlot" style="font-weight: bold;">WR</td><td class="playertablePlayerName" id="playername_14402" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="14402" teamid="-2147483648" seasonid="2018" cache="true">Chris Hogan</a>, NE&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70334&amp;seasonId=2018" class="flexpop" instance="_ppc">Hou</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_17" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">60</td><td class="playertableStat appliedPoints">92.6</td><td class="playertableStat appliedPoints">5.8</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">11.8</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70334&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">27th</span></a></td><td class="playertableData"><nobr>72.4</nobr></td><td class="playertableData"><nobr>96.4</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.8</span></nobr></td></tr><tr id="plyr13229" class="pncPlayerRow playerTableBgRow0"><td id="slot_13229" class="slot_6 playerSlot" style="font-weight: bold;">TE</td><td class="playertablePlayerName" id="playername_13229" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="13229" teamid="-2147483648" seasonid="2018" cache="true">Rob Gronkowski</a>, NE&nbsp;TE<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="13229" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_breaking.png" style="margin:0 6px 0 6px" title="Breaking News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=4&amp;playerId=70434&amp;seasonId=2018" class="flexpop" instance="_ppc">Hou</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_17" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">1</td><td class="playertableStat appliedPoints">192.9</td><td class="playertableStat appliedPoints">12.1</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">13.1</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=4&amp;playerId=70434&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">28th</span></a></td><td class="playertableData"><nobr>99.6</nobr></td><td class="playertableData"><nobr>99.9</nobr></td><td class="playertableData"><nobr>+0</nobr></td></tr><tr id="plyr16725" class="pncPlayerRow playerTableBgRow1"><td id="slot_16725" class="slot_23 playerSlot" style="font-weight: bold;">FLEX</td><td class="playertablePlayerName" id="playername_16725" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="16725" teamid="-2147483648" seasonid="2018" cache="true">Sammy Watkins</a>, KC&nbsp;WR<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="16725" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70324&amp;seasonId=2018" class="flexpop" instance="_ppc">@LAC</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909024_12" href="http://www.espn.com/nfl/game?gameId=401030720" target="_blank">Sun 4:05</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">38</td><td class="playertableStat appliedPoints">126.8</td><td class="playertableStat appliedPoints">7.9</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.8</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70324&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">7th</span></a></td><td class="playertableData"><nobr>31.5</nobr></td><td class="playertableData"><nobr>93.9</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.6</span></nobr></td></tr><tr id="plyr60024" class="pncPlayerRow playerTableBgRow0"><td id="slot_60024" class="slot_16 playerSlot" style="font-weight: bold;">D/ST</td><td class="playertablePlayerName" id="playername_60024" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="60024" teamid="-2147483648" seasonid="2018" cache="true">Chargers D/ST</a>&nbsp;D/ST</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=16&amp;playerId=71612&amp;seasonId=2018" class="flexpop" instance="_ppc">KC</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909024_24" href="http://www.espn.com/nfl/game?gameId=401030720" target="_blank">Sun 4:05</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">5</td><td class="playertableStat appliedPoints">152</td><td class="playertableStat appliedPoints">9.5</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">6.5</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=16&amp;playerId=71612&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">2nd</span></a></td><td class="playertableData"><nobr>74.2</nobr></td><td class="playertableData"><nobr>87.6</nobr></td><td class="playertableData"><nobr><span style="color:green">+1.3</span></nobr></td></tr><tr id="plyr9704" class="pncPlayerRow playerTableBgRow1"><td id="slot_9704" class="slot_17 playerSlot" style="font-weight: bold;">K</td><td class="playertablePlayerName" id="playername_9704" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="9704" teamid="-2147483648" seasonid="2018" cache="true">Stephen Gostkowski</a>, NE&nbsp;K<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="9704" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_recent.png" style="margin:0 6px 0 6px" title="Recent News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=5&amp;playerId=70534&amp;seasonId=2018" class="flexpop" instance="_ppc">Hou</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909017_17" href="http://www.espn.com/nfl/game?gameId=401030714" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">2</td><td class="playertableStat appliedPoints">167</td><td class="playertableStat appliedPoints">10.4</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.2</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=5&amp;playerId=70534&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">31st</span></a></td><td class="playertableData"><nobr>97.0</nobr></td><td class="playertableData"><nobr>99.5</nobr></td><td class="playertableData"><nobr><span style="color:green">+0.1</span></nobr></td></tr><tr class="playerTableBgRowHead tableHead playertableSectionHeader"><th colspan="2" class="playertableSectionHeaderFirst">BENCH</th><td class="sectionLeadingSpacer"></td><th colspan="2">Wk 1</th><td class="sectionLeadingSpacer"></td><th colspan="4">2017 SEASON</th><td class="sectionLeadingSpacer"></td><th colspan="5">Week 1</th></tr><tr class="playerTableBgRowSubhead tableSubHead"><td width="65px">SLOT</td><td>PLAYER, TEAM POS</td><td class="sectionLeadingSpacer"></td><td title="Opponent">OPP</td><td title="Game Status">STATUS ET</td><td class="sectionLeadingSpacer"></td><td class="playertableData" title="Position Rank">PRK</td><td class="playertableStat appliedPoints" title="Fantasy Points">PTS</td><td class="playertableStat appliedPoints" title="Average Fantasy Points Per Game">AVG</td><td class="playertableStat appliedPoints" title="Fantasy Points">LAST</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints" title="ESPN Projection">PROJ</td><td class="playertableData" title="Opponent Rank">OPRK</td><td class="playertableData" title="Percent Started">%ST</td><td class="playertableData" title="Percent Owned">%OWN</td><td class="playertableData" title="Change in Percent Owned">+/-</td></tr><tr id="plyr18415" class="pncPlayerRow playerTableBgRow0"><td id="slot_18415" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_18415" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="18415" teamid="-2147483648" seasonid="2018" cache="true">Cooper Kupp</a>, LAR&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70313&amp;seasonId=2018" class="flexpop" instance="_ppc">@Oak</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380910013_14" href="http://www.espn.com/nfl/game?gameId=401030751" target="_blank">Mon 10:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">26</td><td class="playertableStat appliedPoints">145.9</td><td class="playertableStat appliedPoints">9.1</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.5</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70313&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">14th</span></a></td><td class="playertableData"><nobr>20.1</nobr></td><td class="playertableData"><nobr>89.5</nobr></td><td class="playertableData"><nobr><span style="color:green">+2.9</span></nobr></td></tr><tr id="plyr18597" class="pncPlayerRow playerTableBgRow1"><td id="slot_18597" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_18597" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="18597" teamid="-2147483648" seasonid="2018" cache="true">Ronald Jones</a>, TB&nbsp;RB<a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="1" leagueid="413011" playerid="18597" teamid="-2147483648" seasonid="2018" cache="true"><img src="http://g.espncdn.com/s/ffllm/14/images/icons/sml/news_breaking.png" style="margin:0 6px 0 6px" title="Breaking News" width="15" height="12" border="0"></a></td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70218&amp;seasonId=2018" class="flexpop" instance="_ppc">@NO</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909018_27" href="http://www.espn.com/nfl/game?gameId=401030713" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">3.8</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70218&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">14th</span></a></td><td class="playertableData"><nobr>5.3</nobr></td><td class="playertableData"><nobr>86.1</nobr></td><td class="playertableData"><nobr><span style="color:red">-5.8</span></nobr></td></tr><tr id="plyr16016" class="pncPlayerRow playerTableBgRow0"><td id="slot_16016" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_16016" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="16016" teamid="-2147483648" seasonid="2018" cache="true">Kenny Stills</a>, Mia&nbsp;WR</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70310&amp;seasonId=2018" class="flexpop" instance="_ppc">Ten</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909015_15" href="http://www.espn.com/nfl/game?gameId=401030716" target="_blank">Sun 1:00</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">27</td><td class="playertableStat appliedPoints">145.7</td><td class="playertableStat appliedPoints">9.1</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">9.3</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=3&amp;playerId=70310&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:green">20th</span></a></td><td class="playertableData"><nobr>8.5</nobr></td><td class="playertableData"><nobr>76.5</nobr></td><td class="playertableData"><nobr><span style="color:green">+6.9</span></nobr></td></tr><tr id="plyr17611" class="pncPlayerRow playerTableBgRow1"><td id="slot_17611" class="slot_20 playerSlot" style="font-weight: bold;">Bench</td><td class="playertablePlayerName" id="playername_17611" style=""><a href="" class="flexpop" content="tabs#ppc" instance="_ppc" fpopheight="357px" fpopwidth="490px" tab="null" leagueid="413011" playerid="17611" teamid="-2147483648" seasonid="2018" cache="true">Ty Montgomery</a>, GB&nbsp;RB</td><td class="sectionLeadingSpacer"></td><td><div><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70203&amp;seasonId=2018" class="flexpop" instance="_ppc">Chi</a></div></td><td class="gameStatusDiv"><a class="gamestatus_380909009_9" href="http://www.espn.com/nfl/game?gameId=401030726" target="_blank">Sun 8:20</a></td><td class="sectionLeadingSpacer"></td><td class="playertableData">52</td><td class="playertableStat appliedPoints">80.1</td><td class="playertableStat appliedPoints">5.0</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">8.7</td><td class="playertableData"><a href="" content="ajax#/ffl/format/pvopop/summary?leagueId=413011&amp;positionId=2&amp;playerId=70203&amp;seasonId=2018" class="flexpop" instance="_ppc" style="text-decoration: none; cursor: pointer;"><span style="color:red">12th</span></a></td><td class="playertableData"><nobr>10.0</nobr></td><td class="playertableData"><nobr>70.5</nobr></td><td class="playertableData"><nobr><span style="color:red">-1.3</span></nobr></td></tr><tr class="pncPlayerRow irRow playerTableBgRow0"><td class="slot_21 playerSlot" style="font-weight: bold;">IR</td><td>&nbsp;</td><td class="sectionLeadingSpacer"></td><td></td><td></td><td class="sectionLeadingSpacer"></td><td class="playertableData">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="playertableStat appliedPoints">--</td><td class="sectionLeadingSpacer"></td><td class="playertableStat appliedPoints">--</td><td class="playertableData">--</td><td class="playertableData">--</td><td class="playertableData">--</td><td class="playertableData">--</td></tr></tbody></table></td></tr></tbody></table><br></div></div></div><div class="games-footercol"><script src="http://a.espncdn.com/legacy/transitionalHeader/1.1.0/js/nav-external.js"></script>
 
 	<style type="text/css">
 		.needHelpModule button {border-radius: 5px; background-color: #0066cc; padding: 10px 30px; font-size: 15px; color: #f3f3f3; margin: 15px auto; cursor: pointer; text-decoration: none; border: none; font-family: Tahoma, Geneva, sans-serif; display: block;}
@@ -7527,7 +6361,7 @@ updateScoringPeriodNav();
 		<p><a href="https://support.espn.com/"><button>Fantasy Football Help</button></a></p>
 	</div>
 
-<div id="ob_holder" style="display: none;"><iframe id="ob_iframe" style="display: none; width: 1px; height: 1px;" src="http://widgets.outbrain.com/nanoWidget/externals/obFrame/obFrame.htm#pid=6767&amp;dmpenabled=true&amp;filterDMP=&amp;csenabled=true&amp;d=4gPRcF2a57WOoKjtrH4kMO-uPe1wF8J5q9E654wLgHSm6vjjwBlro1hgS5h32p3I"></iframe><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=0&amp;tm=1228&amp;pid=6767&amp;sid=5752952&amp;wId=150&amp;wRV=01005003&amp;rId=14240c18c31baba79f53b9de8d77f22c&amp;idx=0&amp;pvId=14240c18c31baba79f53b9de8d77f22c&amp;org=0&amp;pad=4&amp;pVis=1&amp;lsd=f2c06904-9c79-4c98-bdef-91b0984a71bd&amp;eIdx=&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script></div><div class="OUTBRAIN" data-src="http://games.espn.com/ffl/clubhouse?leagueId=413011&amp;teamId=1&amp;seasonId=2018" data-widget-id="AR_9" data-ob-template="espn" style="width:956px;" data-ob-mark="true" data-browser="firefox" data-os="win64" data-dynload="" data-idx="0" id="outbrain_widget_0"><div class="ob-widget ob-strip-layout AR_9" data-dynamic-truncate="true">
+<div id="ob_holder" style="display: none;"><iframe id="ob_iframe" style="display: none; width: 1px; height: 1px;" src="http://widgets.outbrain.com/nanoWidget/externals/obFrame/obFrame.htm#pid=6767&amp;dmpenabled=true&amp;filterDMP=&amp;csenabled=true&amp;d=v6M7MKBl4f84s4xLmjAkv6piPwC8hpF-sT43wdT-cW0XuXFAW9rKTy0xV_C8CoHC"></iframe><script type="text/javascript" src="http://log.outbrain.com/loggerServices/widgetGlobalEvent?eT=0&amp;tm=1099&amp;pid=6767&amp;sid=5752952&amp;wId=150&amp;wRV=01005100&amp;rId=00bad046aebb2420c532b2e2d0424187&amp;idx=0&amp;pvId=00bad046aebb2420c532b2e2d0424187&amp;org=0&amp;pad=4&amp;pVis=1&amp;lsd=53880e97-d919-48da-86c7-5e6d0f1dcc90&amp;eIdx=&amp;ab=0&amp;wl=0" charset="UTF-8" async=""></script></div><div class="OUTBRAIN" data-src="http://games.espn.com/ffl/clubhouse?leagueId=413011&amp;teamId=1&amp;seasonId=2018" data-widget-id="AR_9" data-ob-template="espn" style="width:956px;" data-ob-mark="true" data-browser="firefox" data-os="win64" data-dynload="" data-idx="0" id="outbrain_widget_0"><div class="ob-widget ob-strip-layout AR_9" data-dynamic-truncate="true">
       <style type="text/css">
       /* dynamic basic css */
 .AR_9.ob-widget .ob-widget-items-container {margin:0;padding:0;}
@@ -7617,48 +6451,48 @@ updateScoringPeriodNav();
     <div class="ob-widget-section ob-first">
             <div class="ob-widget-header">SPONSORED HEADLINES</div>
             <ul class="ob-widget-items-container">
-        <li class="ob-dynamic-rec-container ob-recIdx-0 ob-p" data-pos="0"><a class="ob-dynamic-rec-link " onclick="" href="https://rpptrk.com/60cb018f-433d-4204-859f-f9f4d2f82052?a=&amp;n=O&amp;c=e9a657a5-8c2f-4749-b93c-222884cf6758&amp;i=e9a657a5-8c2f-4749-b93c-222884cf6758&amp;sn=$section_name$&amp;si=$section_id$&amp;title=This+is+the+%231+Stock+to+Own+Right+Now&amp;adid=007fd1b465924579b2af10022f52fe465e&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=HJXm6XN4xYrXH6AS78gEwJIfMiww5vzLJ0NgMzpa_D-uh7jcZ5vLUy41qdbrxmzhJikrhGRBmI29ZSQFhhJiL7HkaOVIP42jW9UvvqcomTmMfMXr22H_d4mClxTOmmcyJV9XWamt96DPcT6-V_14oe-sG6T5R7qjgtgFysEdcdMzhmRu3wXJcOFThrl7HihWhEZRnDhtZ3x-C6RT5P42sElfxA3hjS6jfkTk5OM0a4Bf41HhWgBQpk_b2KoISu-O-u0vNsRKter6itGZSfCBwrD4OddiI6BbakILz2xVYHNlxzNaf8jQQ1ZaUeo6rd7mU9w5trK05OfjaISGB5KhmJUrU1Ia5G7luQnOyjeMYIxWya9cVFCBLid1fHthFKOGsaTe_1rJzjEEFSflBaNFTCWOFEKlju55eC11wluVET97SJ2Atb2--dXpcB33BjslrXmkbGOHEPS71gSVFTTJC9ClxOY0W3QdqU2vEw5LCF3ljlJmh_O8WI1UwSZI6lbP0QL3FoJ73eLfuOb0zXGjU4kiPcFp54VaLSpTgucIru9bBmlSz4dxkhSJI4jd4jiZEDIZtQnEVZ-lkBzQakoxtNhvDiil4Es3b468eSKR3hn4_nuZEGxLhtalgqX6aNqPx-rsbyu_8imTDlovPL8uEhzphLGTxzkl5IFsZ_3VvrcaXuzyrJ3pHR9hX2rS0LNcoD_kqSudxcMBbWt46ycc8U-YR_PrTsC86oJMP5U6rVnGr9oUmgST7iZuKLgktZMqVZLmMdygqddafWnY0zSqAnF2M7t73diSInAtt9wkA4OqtqliBGkeKoNoCq3J7u4AbpBDSzZ22699ftT2BoNoCyKKJb7p6MOngc2-fBdt0E95SDUlts0cBqegZivCpyIlxhuzwOvFxvSFvj9eXNqjw1lb6ztzZA-q0zXKzOtyic8&amp;c=b46e0d59&amp;v=3';" target="_blank" rel="nofollow">
+        <li class="ob-dynamic-rec-container ob-recIdx-0 ob-p" data-pos="0"><a class="ob-dynamic-rec-link " onclick="" href="https://www.incontinenceresearch.org/5-best-underwear-ob/?utm_source=Outbrain&amp;utm_medium=Discovery&amp;utm_campaign=5-Best-Incontinence-Underwear-Reviews-Desktop&amp;utm_content=5+Best+Incontinence+Underwear+for+Adults&amp;utm_term=$publisher_name$_$section_name$&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=gY_oTEwYguKRi4LUbXbAatGsfg0c5SlpaAcw-r7fFub_Wx2MW_ys5TCPxpMTpPO_P7FsvLxuz3AzYepWVjA0vgx7VD6YpEWZCJg5mOwIRCFEweyGOPOX12aPmX4VE_9e-7-af4vlcyPB8xv8_6_8CR9pGbQxwFVtxUVKFdig5mFpxSlTvXR3xXBZzEi4V125TBhxhtGcW8Chij-xxM7uZaKKcgrWKb6vIHnacM2NIGRBgLEbQ-FF6brF46rxDvCZewko9uAg3o5DRVBjq6OiHG2_AiN4a12HXIfsocS1bH3UScEyRGJN6TDE0YR4oZWtwJ46oQZ4Z9EN1JRQCgKtyroV83chB6IoZgyxbE6rFubFu1DBC3HcJrpLMJ3Qq4Ci5AKTxEMr1Ozzx7BxBID2FGYwvdHtftkuG-u0ny2tNU8RyISzUbxSzCyfpD1DqkICKQb0uPXBsluiHuR181n0GmIVKNdwbPZ41nlIGBCh9yUcCkH7EC81igiqm7qFp-Fgvz1aPD5MpIAKigtk23D3cYbT4fSZEh5rO-bJYOiqCbegfWFj46dX9YtUHDr1A43QpBSmy-t1CqswB6ZqEKUXsjkwKi_lT86r1TBQHE_RN2WQwHSvH78QI7UeUwqZ5_WRqowb3qrQXDKxUbC1qybJ6AT2bH9KVixbyjO-usqqNqFPjWH0lm1Qbb04iMl5OEOg_pbsqEeJ-R3OfWBP5F82_LAv_H7-IyZoexemb9HnxHWI6EiPLHmLJ61ubS-iQHSgYS8pUNA3s1ArOkm5fEF58ZFiQW8Noi4MYOKXbdyFON-rielZSZ50FeizKL5s7P248aYlUZsHZsKa5CxPXqD3Fu8jGR7Giz2pPrxHXrHj5f4PXk-IF88pe8KeZE3IHG0_Ul25yBj3KKAo2P9SimBKsMqqdGYZX8Lzxc0YyNfEesk&amp;c=fe266483&amp;v=3';" target="_blank" rel="nofollow">
 
       <span class="ob-unit ob-rec-image-container" data-type="Image">
   <div class="ob-image-ratio"></div>
-    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjYxYzAwZDg4NWMwMDczZjJlODEyZDhkMThjMDMwZGVjOWJkMTRmYTA4ODI0N2Y3ZTAyYjBmOWM5MzA5NjBhNmEiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="This is the #1 Stock to Own Right Now" title="This is the #1 Stock to Own Right Now" onerror="OBR.extern.imageError(this)">
+    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6Ijg1ZDhhYWU1MTAxZTgzMGM4OWMwZDMzZGE0MWY4YmQxZjYxODdjMDM2ZDZmM2Q1Mjg4OWNmOTBhYWM4OTY3MDYiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="5 Best Incontinence Underwear for Adults" title="5 Best Incontinence Underwear for Adults" onerror="OBR.extern.imageError(this)">
           </span>
 
-      <span class="ob-unit ob-rec-text" data-type="Title" title="This is the #1 Stock to Own Right Now">This is the #1 Stock to Own Right Now</span>
-      <span class="ob-unit ob-rec-source" data-type="Source">The Crux</span>
+      <span class="ob-unit ob-rec-text" data-type="Title" title="5 Best Incontinence Underwear for Adults">5 Best Incontinence Underwear for Adults</span>
+      <span class="ob-unit ob-rec-source" data-type="Source">www.incontinenceresearch.org</span>
 
           </a>
-</li><li class="ob-dynamic-rec-container ob-recIdx-1 ob-p" data-pos="1"><a class="ob-dynamic-rec-link " onclick="" href="https://rpptrk.com/213ac4f7-37ed-4506-8aa4-785fe07d0e33?a=&amp;n=O&amp;c=3e8f6394-2af3-46a1-8ea5-cb1d07de9f2a&amp;i=3e8f6394-2af3-46a1-8ea5-cb1d07de9f2a&amp;sn=$section_name$&amp;si=$section_id$&amp;title=Top+Chef%3A+%22My+Secret+To+The+Juiciest+Hamburgers+Ever%21%22&amp;adid=007160d038fef495b90abc36560e77c4b5&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=jZ3c7zVmva2Fth0hSxAcV9ikEfo3IA8A4e0fUIfMhN_tmRq2VDXv_N_MejXxqDP6Vv-kVfPnqOFUyflK3UHBEiLyubFGzXLW2z6iOOttIqvbzEDrLgDUBueJj7pxzKtIAthSEEgyhZt1f1h8VOr_5HVfmmWTmHrWIBGi7RalCtaLNHO9RfQFg4Ub1fsKzmHzt6PgdGaLIYJP-N36zSoj8Byh7Az5XvcEPR59N8ycWV5EzVXZvA6hqekWaqYPXRBlhwz5bomc563L2KTTlfROr6XajEZqFvX0eI6sTbqksvqVShM9Rew6ytr0RlcC9AsxIbSES7CoOSKE3wUXsKOU89X92kkgMo2gbAxV8YmUXZx8B6SpTr4kVcBl3K64FpjzNtbvJimVZZjPas2RWh9pEcYADeTMuULF0QKHiBQ-kEFqYnqUdZxSq6Rvmj_L3k-PRz5P3pyGPuYWB7rN_K9TMmyuM7ONoO5iVyRL031YSn9CDR6Ljk8aZBaqEv4Fn5BVARkyoA5Ueea_Vnfz2uVP1QHadFQU4MgpVTyswFvrtw-l2JxTQFn4lafUvtvsZx1vA6eRqVeCygmQn-lMXQLysKMjfgZ8PhMVHbDFbkxrcreuRfO173yshWWlt2sI4LwAO_EU_eThj9PkCpPHRr4Vm9Bd2ZrlMuQc9WMCII6uevMm0YEHY5Jb-IBY75Rf3Q4zl1tt0B96G_7zxigfbwBjSJ9O_tKtEvl8rqeoR-dJPbZR_CuyNeZkmKi-oAI85hkwaqzef3jH91zRKqqhXDASxXxw3WWcmjWpFsG7f9FSgOe7ibpT9pUAEL2H81vLqHSMGkbzxxMAxV5R0no5oWpPnFI-evYE-XF3hkSs9A-4mHGKRBfM9oooa_vbKJffhxPEyao2NUL-4z3Vr5tZI5LJycgnxnCVP8wi_UG8rwbGftk&amp;c=15737955&amp;v=3';" target="_blank" rel="nofollow">
+</li><li class="ob-dynamic-rec-container ob-recIdx-1 ob-p" data-pos="1"><a class="ob-dynamic-rec-link " onclick="" href="https://ad.doubleclick.net/ddm/trackclk/N4492.1984505OUTBRAIN/B20533661.210574710;dc_trk_aid=410263655;dc_trk_cid=91488020;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=snAbKG7vA8MoNIbyNBgl8n0Ny4IwUpE4cLf8mWhDXr1kjg5zNKbo_4syo_9edwpE4gJXjw0ihw9DCGtPtzjeWMrQ56UT9lg_S8EgDb_5GTaJryv-CCJmMwrwyA4GMBrzT-PTtv76-CcffnHajQdgtdIN0nICQ2i5GzAIjpqtYgqg7pCQQpC9kbYFLhILVfENyr25QE-o8gpdpeqVVSVebLi77OA4kKUSwQG4HCgtsZaUEBgZkcflqDmXhh5OqbbHHyxTAVmeZgimrO9xdvKOfzbrzBdaw7Rq696DoCh6g62XiFSwyWkUkU10_OESszSiDPyVT-l0J4QFAkDDbKi6msV2YqMslS2dXvtWtNpAmU9w9jzuC0Qdkwrl23NBh6nulVlLfmP9jMImi8FZx1yA0F7r_tQowBMCl98CFpTuW3Yswabu0tIQMlVTvdiBG78Y98qPP39NbCpf5QSziBUW9Mw4ooSZj4M3TU3c03d7n-EBS1pG535LqfJH4sOU5ug-RPk8AhmYBGtALtqOZ4wVQN2iRGmFrgrotpITKBDfw2d58eBqs15Foxku6fyeUX0JsSyk2PP3VCnpOCmnkOkeJ6NdHoW2bHYUMvbWU64y2lUOEl6ptfy0Y1u1jEjULL7gPuLmGMEDnicDeLnYC00ivCLrL2tDkfEfuCWDMH7kvXjWc8DHxHIIet0RKLtSQKMOUNG5LfgXV-3RgOsgqXHTjFdqhhzGzhTq1YKS16Je02zT5U8E-hyvK1UU5fiDmssqk5DzI5eYR77wR3c9kY5xwbzo7Rai1bRKqE1d7S2hzrYSSHXomqF8wA0lDXmLanjtaQxuGmIUxkNW838BUmXLh-YvmoEDJ69vdfwnOYFR3mQq8kPA2LRTC0iaD7jUYOgGtVUhUISItITFv__3N5MJXHdETG-UDLxEa29JqPndYKQ&amp;c=93ce7681&amp;v=3';" target="_blank" rel="nofollow">
 
       <span class="ob-unit ob-rec-image-container" data-type="Image">
   <div class="ob-image-ratio"></div>
-    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjYyY2YxZDFkNTRjMTBlMmY5ZjNjOWZiOTdhZjRiMjdiODBhMWQ0MGUyNWE0NGVjYWM1MDEzYzliODcyYmRhMjQiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="Top Chef: &quot;My Secret To The Juiciest Hamburgers Ever!&quot;" title="Top Chef: &quot;My Secret To The Juiciest Hamburgers Ever!&quot;" onerror="OBR.extern.imageError(this)">
+    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6ImUzNjk2MzE2NmVkNDkyZmIxYmQ0NmIzNWQ0YjUxOGE1Zjk2NjA1ZGIwNmE0YmI3OGEzYjQ5MGRmZmE5MWZjNWIiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="You could save $668 when you switch to Progressive" title="You could save $668 when you switch to Progressive" onerror="OBR.extern.imageError(this)">
           </span>
 
-      <span class="ob-unit ob-rec-text" data-type="Title" title="Top Chef: &quot;My Secret To The Juiciest Hamburgers Ever!&quot;">Top Chef: "My Secret To The Juiciest Hamburgers Ever!"</span>
-      <span class="ob-unit ob-rec-source" data-type="Source">senior-savings.com</span>
+      <span class="ob-unit ob-rec-text" data-type="Title" title="You could save $668 when you switch to Progressive">You could save $668 when you switch to Progressive</span>
+      <span class="ob-unit ob-rec-source" data-type="Source">Progressive</span>
 
           </a>
-</li><li class="ob-dynamic-rec-container ob-recIdx-2 ob-p" data-pos="2"><a class="ob-dynamic-rec-link " onclick="" href="http://www.tiebreaker.com/nfl-fan-signs/?utm_source=ouins&amp;utm_campaign=00d474371ce2b57914f403b0582706822b&amp;utm_term=$publisher_name$_$section_name$_$section_id$&amp;utm_request=$req_id$&amp;utm_content=newnext&amp;utm_medium=R_OS_TB_US_D_NFLSigns_v10_2008&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=PhrxPZjqakjaAMXOOx0AFTxUnx6ByJeCZsSoET1y0gTUaCNl4JrvZKxTXC0o1BrZ2grKLOdtKoQ70jRSd1C_rt7QMbWrTRyLE4buD3iRIk5az9W9Bi4eIHWXmGpD-FsopJ15TwBvl0M-Nb6nM2nLO-fZsotCp3Q8k4QVcLv4cxs5B__7DfO39R_3i2SJCx7iuuwVGJkUIqwG-ti1OIu3lu_Gxf8ICRp5t6gHl8iAPYtLa1oGSpn9lBVruqdTKfTD5sMVKGkNsNpKKmjJacV7L3SAJyhifopi6AgHJkAtMsHPwmDbJ3q9vWd3IlVrPRCzkB5DR4YKqOiuaik8K6vpSYAoSFBmlxLJZ5nUFSHphxMm6VS0KdZm9W2yE8DwCTNIM8i_BZFSTkRa1H-ANKFPQjdFveUYgQqwJ_8WfLrPnjKtxV5YmuTUl0mxH0NxVm81wymb6_0whYObVq7kdMpYPXc9LlMIC5AuFr6oY5fK-1kzMa2F44n7QlRYMnHLHHJaQ-Uw_QrAjsMZYQLnngCr4fLZfvB85FOvnVg0-AB9wJFPL_dkxYmrpqLdjus-84X12uPO9xvpaRkVd9TtYq7w7qGb_O92e7JvmXEVsEv6PzLedPwB6HDrK8rMDSlhxK2z2vHk9lsXk7pKSNkjdb5nS_0G_phJBoSeXPBa74op_aFPPkad0Q2RABr5bppsE_vNA2pwkf3PelnK4yWKSB9Jegx8hwbcicYFem09pjwlX7HNaBgBZRx7vgYJ-uh8l2O9o4u6cZMsgDZbd6SiYm5yRUu8y13ZzYJCrVMuqlNJivs-fgk1wXzqblLuiymbc_mOULMT5FWVsI5GiZpLElPT2hvH8ZLKFFSV1j9mOA-F1YEtmuJGDhcEl_jEIKm5lstMSFpttp1IDSG_Nj7YwDR06vw92BjCvH1pZheshWiG9157KogGcGb4XjEFYgqnL1YX&amp;c=73a703e7&amp;v=3';" target="_blank" rel="nofollow">
+</li><li class="ob-dynamic-rec-container ob-recIdx-2 ob-p" data-pos="2"><a class="ob-dynamic-rec-link " onclick="" href="http://www.heraldweekly.com/the-unfiltered-life-of-howard-stern/?utm_medium=outbrain&amp;utm_source=187&amp;utm_campaign=2603383x1_00734967aef6f428dd48a796842204118d&amp;utm_term=$origpubname$_$origsrcname$_$section_id$&amp;utm_content=%5BGallery+Story%5D+Howard+Stern%27s+Wife+Finally+Broke+Her+Silence&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=ctfqyMqILpcAbBnZfXxvBP5OCdX4EZPdGeRXGZvPlupQolY4zfSjGh2KnamqwUzPN5tjaM-P_698eJ7SAJ5AzR_0GsAHIEgr6D2_QmDl3qAvTJwHOpy0Hk9S0d6JyCbLHeIAP_JgYUpJTy2cit5BRdZu7qvgJI4BbBMoNGkNtlnhg-kzJ2-PWxoXkxb68G8KiDvQrBMMQignaDG0su2jgzegJiogkf73U9YWTlsKNiENATAz9P8mY20YYV41wPzZGGapqYd_HD6GX5L5R-8NZW49Y-nS-VbclMeabVL79W5EhXuxwqcjb4wxzHx9bGRBjCcYUzi6xdBedguIb2Tg8MUmeC7LQncrsjIKACHuIZryKkYlTOCjsZbwuDVhfsSTYrBqFd1JsLXnKmRDXj3P6xj9ioUOVtFPVWnk23Qa72ge7KQAIloqZaoQd3DXWdmIEUaJVWfjQxJ2QJoHF_CY6mA00beigoTfAkAgnrEcuR757RlKY2jb1F4z-08gMzyt0OmfRwqejLe-tqXZapuh7f5qidAThi_YDwrW2SlLFdxOrkXjyaFiYHdshJfxPKh5-0vmP9HgycspVY4Vm_At6o7AUyNKRmB1EDG8vwH9XBEmi1WV2WYor3UJ9EBJe9z82DPrv78QGjL6XVwy9OgJCtwz0gvZTiUvW21mILDl37AxoCJmBXUZAppuVQBskxcYqrrT1fgKZ8h1BSXx1fyHYdqQBnkehrljsNV5msOOW4RmNnp-Z4eN_7ksNTExT0hm2HPpz9mHAO56THbd7BE5g1OKOtHvBJuBa2qUdi_nefQoQy6y_ESvotyEsxrrq4lbiUM12YWY7mMSQr_8VHHFRV9uHS9LmWM4G-p2FzikHUPTvQU-KRmioPqwRdG83FYE_zywlP9tWhc6SHfWgXtBt22o3D1d7hh75H6eO3WsDJisA3nSlJtaxQNcTe9GC-3F&amp;c=6f36753e&amp;v=3';" target="_blank" rel="nofollow">
 
       <span class="ob-unit ob-rec-image-container" data-type="Image">
   <div class="ob-image-ratio"></div>
-    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6ImRlMDE3OTRlZTQ3Zjg5NjYwYjIyOThjNzFiZjYzNTJlMzlmZTVjOGMxOWZlMDc3ZjIwNmY5ZTc0ZTIwYmQyOWEiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="Her Husband Didn't Know She Brought The Sign, Until She Revealed It At Halftime" title="Her Husband Didn't Know She Brought The Sign, Until She Revealed It At Halftime" onerror="OBR.extern.imageError(this)">
+    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6ImQ5YWQxMGM1ZThjYTU5ZTJmODE3MzEyYWVhOTVkZTFkOGM4Y2VmZTdkNmExY2NmMjEyYWUxMTZhNWYxMTI0MGIiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="[Gallery Story] Howard Stern's Wife Finally Broke Her Silence" title="[Gallery Story] Howard Stern's Wife Finally Broke Her Silence" onerror="OBR.extern.imageError(this)">
           </span>
 
-      <span class="ob-unit ob-rec-text" data-type="Title" title="Her Husband Didn't Know She Brought The Sign, Until She Revealed It At Halftime">Her Husband Didn't Know She Brought The Sign, Until She Revealed It At Halftime</span>
-      <span class="ob-unit ob-rec-source" data-type="Source">Tie Breaker</span>
+      <span class="ob-unit ob-rec-text" data-type="Title" title="[Gallery Story] Howard Stern's Wife Finally Broke Her Silence">[Gallery Story] Howard Stern's Wife Finally Broke Her Silence</span>
+      <span class="ob-unit ob-rec-source" data-type="Source">Herald Weekly</span>
 
           </a>
-</li><li class="ob-dynamic-rec-container ob-recIdx-3 ob-p" data-pos="3"><a class="ob-dynamic-rec-link " onclick="" href="https://www.energybillcruncher.com/pa/?tg_ref=pwlmt2&amp;camp_id=0081da15449bea024e0e15f1a904843d41&amp;keyword=%24%7Bregion%7D%24+Launches+No+Cost+Solar+Program&amp;sub2=$origpubname$_$origsrcname$&amp;csg_ref=pagen&amp;pag_ref=gen_na&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=HFS4s10ZnB3WI4RZvcLQFchlf7qQwFYysV8OFVPJOkdS-dUoPxKTpINX7dtWePn5rkSU7dVL8ga0vOPT9WLOase5V07Odx3OfcIUOEeV-ou_lY0arJDSkhX04EalXjLKxF5SBAgfwuuQPFht-gN4EqMY7wszl0cgRztRjbvHb1KZEJRu8AmXv0BoCwTAEu_kuC0oB2tyUq_OfS4QhJaZ_KDWnlD0YfGyizEsixaiCkYyBbKGzTbiWSC7NfC1DXu-8i1iSplvVxtBFRo0RYmUPWr9_gY4xLdatoL-ox_McaIaSkTfd5s1gQyWwQWNVUS0IR6ZUrULN7znJ5bfmtQK5meTZT5-a3VZibHD3VRVXCeMsiR4jaR69qf1BmE2wie7rrgQ5PocjozkvElfUKgSHjSu9yLTFxHXez6AtOX1OZ72pI5f8bEybIoz5XkZBy8LIhPxN0ch2l7v4IKfpyiXFFELc8ghwjVLudycpJOY14HmMMa17V0OBe_F_4MQctRiGZIv7rDn5BkZ6SoMDG106oiczy1Ddy-wQ9g3lIyh0fGtYssQf5k7F6l5d7G073mboLz4VOLJoF-7rbmpACvJImbnI7gb-xLVu9gyYNrW9_TLWnR8gKETFablk588KF3G_BTZ8ngYwPhJr-HT9l_rrRveI3K8eyA5OCmMOpfDlvz3fCTXbbq46fX7vefrEXbS4XCOXzXkNdbqGfAl5BasdcY4Maw8MYVGZhGwm_hSoyLfqWoOQajbTpmBepi-80amhCcuzKDznw4akGFmbIzPBZlTn54lXCNulQSXgdFSdXEs_UQ3lwscszy78-BSnuwRRYv7yKsVeIGiRfpfE_kBCaj5XXAYKyS0KEasQRLR7XaTuHBCKZYl0ElHz7Tm91_XYWiGybLJYRZl-l-7au6MVj6MER9qFI8_VgnmdpBSWFfXQbqNbOlhEBZlAE1F5iK_&amp;c=19c03637&amp;v=3';" target="_blank" rel="nofollow">
+</li><li class="ob-dynamic-rec-container ob-recIdx-3 ob-p" data-pos="3"><a class="ob-dynamic-rec-link " onclick="" href="https://www.mattressfirm.com/blog/culture/meaningful-way-support-foster-kids-school-supply-drive/?utm_campaign=aug18-always-on&amp;utm_source=outbrain&amp;utm_medium=display&amp;utm_content=aware&amp;obOrigUrl=true" onmousedown="this.href='http://paid.outbrain.com/network/redir?p=AwOpEd8ft3PnXcJguSUw7dTKAmQXumB-T0MP4Ib2XRkv9LXX2UjMgc_puKypgFULBs0S8gd8dlcn6WW6r-DHKeoSuL7EX4g26y3zJH1TGkJC7dMf7xadhIL2AasCI3ipvrqzr_Ljwy7Lscgr7huEwax9AnjSzM4YoG5RXIDjPODewchrAV5Xto3MdIoTaYRTMV_UxXcCI79aCnLeQmxrjOajYxYe2h3Be4y6N-NXjv4gkbnmWhM41iUArPaZrgQ0xIFw_Tggj0Hb3Amjh_PSOD7W4ZQybgwZPTWd-3toZL4s7f8n5cahmgZImCYSBTe5xe14ob_Vxcr7cyQOzdxw-6-uyUZt7hvBwwILbp3h1Vlw9_honUeeFZgSgunZec_uqzoZPChlYP-xWI2YRTgErW-ZUn4sH8v4ldOnFGgGOIm5wHxAcOn3IKGyXMaPLTii4xosvsZfsHu6Q6ZG_2lHGndKHFKZhWo6da_4_YVep5VPdEWI9jrIIfFw_7xcawmLtbPcG_2kht5Cy3fwZv9jMUPBaFrqp0GSUi_KCdTRgW6UJoFmCd6DbO8yOuYUym4_l1Ak7OiFyqTzbZbCDODc_sycXLgBHpnNHeZdx0E3wStPtoIguPTfoGyUYdS0SgExH-lWwWw-LBuK3CIoooA16aHTgT1cK_nVK2AVoP6mdx1J0lrIXvytnlic5akfL5M7hbZwNWgz7nw4UasIN4RXz2zOv0Ay0ERQ1sq7jdHDSQze6sOiNpfDEJLdzUucyriVmBvXUv_Bgu9JadWWeYNbqppIpirvHmQHDDzVJhn0RSVjrBmx0ZLkdru6j3gy6W2OXnYRdrqThVe2lACSCDSIZsQM8ms0JLuNoSgXPsxzxWcg99MSK7ZUIJdzJelUZOLP1llt5z_h2rPSq7Trpy9LMaPn03yvNFvEQOpLrvvhSc0&amp;c=3ca49f64&amp;v=3';" target="_blank" rel="nofollow">
 
       <span class="ob-unit ob-rec-image-container" data-type="Image">
   <div class="ob-image-ratio"></div>
-    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6ImJiNzYzN2YxMjNlNzEyZWM3ZGIyNzBlMGE0NzVjZGJjMTEzOTZhOTgxNjFiYTU0NzA3NjE3ZjJhZDA4MGMzZGUiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="Texas Launches No Cost Solar Program" title="Texas Launches No Cost Solar Program" onerror="OBR.extern.imageError(this)">
+    <img class="ob-rec-image ob-show" aria-hidden="true" src="http://images.outbrainimg.com/transform/v3/eyJpdSI6IjdlNzZkNThhNmVmZmY4ZGFmZmU4M2YyY2NlNDFiYjEyMTFiYzEwNWI5MTcxNzc0MjkwOTk0YTFjZWRiNTk2NWMiLCJ3IjozMDAsImgiOjI1MCwiZCI6MS41LCJjcyI6MCwiZiI6MH0.jpg" onload="this.className+=' ob-show'" alt="Donate School Supplies to Local Foster Kids for Back-to-School" title="Donate School Supplies to Local Foster Kids for Back-to-School" onerror="OBR.extern.imageError(this)">
           </span>
 
-      <span class="ob-unit ob-rec-text" data-type="Title" title="Texas Launches No Cost Solar Program">Texas Launches No Cost Solar Program</span>
-      <span class="ob-unit ob-rec-source" data-type="Source">Energy Bill Cruncher</span>
+      <span class="ob-unit ob-rec-text" data-type="Title" title="Donate School Supplies to Local Foster Kids for Back-to-School">Donate School Supplies to Local Foster Kids for Back-to-School</span>
+      <span class="ob-unit ob-rec-source" data-type="Source">The Daily Doze</span>
 
           </a>
 </li>      </ul>
@@ -7667,6 +6501,7 @@ updateScoringPeriodNav();
 			<a href="http://www.outbrain.com/what-is/default/en" rel="nofollow" onclick="OBR.extern.callWhatIs('http://www.outbrain.com/what-is/default/en','',-1,-1,true ,null);return false">Recommended by<span class="ob_logo" title="Outbrain - content marketing"></span></a>
 	</div>
     <div class="ob-pixels">
+            <iframe class="ob-pifr" src="http://widgets.outbrain.com/nanoWidget/externals/obPixelFrame/obPixelFrame.htm#p=https%3A%2F%2Fad.doubleclick.net%2Fddm%2Ftrackimpj%2FN4492.1984505OUTBRAIN%2FB20533661.210574710%3Bdc_trk_aid%3D410263655%3Bdc_trk_cid%3D91488020%3Bord%3D%255Btimestamp%255D%3Bdc_lat%3D%3Bdc_rdid%3D%3Btag_for_child_directed_treatment%3D%3F%26obRequestId%3DCT_IgS6K20AFAxsl1BI9YV3yJO5FXGmkGGoriiz-8dD8GMoTCFaaiM69QtZ6AUU-%26obTimestamp%3D1535750319084" style="display:none;width:1px;height:1px;" sandbox="allow-scripts allow-same-origin"></iframe>
         </div>  </div></div><script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script></div></div>
 <br><br>
 </div>
@@ -7798,6 +6633,6 @@ updateScoringPeriodNav();
 		}
 	});
 </script>
-<!-- End comScore Tag --><span aria-hidden="true" style="display: block; position: absolute; top: -999px; left: -999px; font-size: 300px; width: auto; height: auto; line-height: normal; margin: 0px; padding: 0px; font-variant: normal; white-space: nowrap; font-family: BentonSansBold, serif; font-style: normal; font-weight: 400;">BESbswy</span><span aria-hidden="true" style="display: block; position: absolute; top: -999px; left: -999px; font-size: 300px; width: auto; height: auto; line-height: normal; margin: 0px; padding: 0px; font-variant: normal; white-space: nowrap; font-family: BentonSansBold, sans-serif; font-style: normal; font-weight: 400;">BESbswy</span><span aria-hidden="true" style="display: block; position: absolute; top: -999px; left: -999px; font-size: 300px; width: auto; height: auto; line-height: normal; margin: 0px; padding: 0px; font-variant: normal; white-space: nowrap; font-family: BentonSansMedium, serif; font-style: normal; font-weight: 400;">BESbswy</span><span aria-hidden="true" style="display: block; position: absolute; top: -999px; left: -999px; font-size: 300px; width: auto; height: auto; line-height: normal; margin: 0px; padding: 0px; font-variant: normal; white-space: nowrap; font-family: BentonSansMedium, sans-serif; font-style: normal; font-weight: 400;">BESbswy</span>
+<!-- End comScore Tag -->
 
-<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="disneyid-wrapper"><iframe id="disneyid-iframe" name="disneyid-iframe" title="Account Dialog" src="https://cdn.registerdisney.go.com/v2/ESPN-ONESITE.WEB-PROD/en-US?include=config,l10n,js,html&amp;scheme=http&amp;postMessageOrigin=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;cookieDomain=espn.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=games.espn.com&amp;cssOverride=https%3A%2F%2Fsecure.espncdn.com%2Fcombiner%2Fc%3Fcss%3Ddisneyid%2Fcore.css%2Cdisneyid%2Ffantasy.css&amp;responderPage=https%3A%2F%2Fwww.espn.com%2Flogin%2Fresponder%2F&amp;buildId=1656394eae2" style="z-index: 9999999; position: absolute;" frameborder="0"></iframe></div><iframe id="disneyid-secure-responder" name="disneyid-secure-responder" src="https://www.espn.com/login/responder/?clientId=ESPN-ONESITE.WEB-PROD&amp;scheme=http&amp;postMessageOrigin=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;cookieDomain=espn.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=games.espn.com&amp;langPref=en-US&amp;cssOverride=https%3A%2F%2Fsecure.espncdn.com%2Fcombiner%2Fc%3Fcss%3Ddisneyid%2Fcore.css%2Cdisneyid%2Ffantasy.css&amp;responderPage=https%3A%2F%2Fwww.espn.com%2Flogin%2Fresponder%2F&amp;buildId=1656394eae2" style="display: none;"></iframe><script type="text/javascript" id="unid" data-client="ESPN-ONESITE.WEB-PROD" src="//cdn.unid.go.com/js/unid.min.js"></script><iframe id="disneyid-secure-migration-responder" name="disneyid-secure-migration-responder" src="https://gone.espn.go.com/login/responder/?clientId=ESPN-ONESITE.WEB-PROD&amp;scheme=http&amp;postMessageOrigin=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;cookieDomain=espn.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=games.espn.com&amp;langPref=en-US&amp;cssOverride=https%3A%2F%2Fsecure.espncdn.com%2Fcombiner%2Fc%3Fcss%3Ddisneyid%2Fcore.css%2Cdisneyid%2Ffantasy.css&amp;responderPage=https%3A%2F%2Fwww.espn.com%2Flogin%2Fresponder%2F&amp;buildId=1656394eae2&amp;espn-migration=true" style="display: none;"></iframe><iframe id="unidFrame" style="display: none;" src="http://cdn.unid.go.com/inner/?v=4.0.88" class="unid_change_anon unid_change_ts unid_send unid_sent unid_inprogress unid_success unid_new unid_allowed unid_done" data-unid="f545e316-442d-431c-8f68-e9a2dbf5f0cb"></iframe></body></html>
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="disneyid-wrapper" class="state-active" style="display: block;"><iframe id="disneyid-iframe" name="disneyid-iframe" title="Account Dialog" src="https://cdn.registerdisney.go.com/v2/ESPN-ONESITE.WEB-PROD/en-US?include=config,l10n,js,html&amp;scheme=http&amp;postMessageOrigin=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;cookieDomain=espn.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=games.espn.com&amp;cssOverride=https%3A%2F%2Fsecure.espncdn.com%2Fcombiner%2Fc%3Fcss%3Ddisneyid%2Fcore.css%2Cdisneyid%2Ffantasy.css&amp;responderPage=https%3A%2F%2Fwww.espn.com%2Flogin%2Fresponder%2F&amp;buildId=1656394eae2" style="z-index: 9999999; position: absolute;" frameborder="0"></iframe></div><iframe id="disneyid-secure-responder" name="disneyid-secure-responder" src="https://www.espn.com/login/responder/?clientId=ESPN-ONESITE.WEB-PROD&amp;scheme=http&amp;postMessageOrigin=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;cookieDomain=espn.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=games.espn.com&amp;langPref=en-US&amp;cssOverride=https%3A%2F%2Fsecure.espncdn.com%2Fcombiner%2Fc%3Fcss%3Ddisneyid%2Fcore.css%2Cdisneyid%2Ffantasy.css&amp;responderPage=https%3A%2F%2Fwww.espn.com%2Flogin%2Fresponder%2F&amp;buildId=1656394eae2" style="display: none;"></iframe><script type="text/javascript" id="unid" data-client="ESPN-ONESITE.WEB-PROD" src="//cdn.unid.go.com/js/unid.min.js"></script><iframe id="disneyid-secure-migration-responder" name="disneyid-secure-migration-responder" src="https://gone.espn.go.com/login/responder/?clientId=ESPN-ONESITE.WEB-PROD&amp;scheme=http&amp;postMessageOrigin=http%3A%2F%2Fgames.espn.com%2Fffl%2Fclubhouse%3FleagueId%3D413011%26teamId%3D1%26seasonId%3D2018&amp;cookieDomain=espn.com&amp;config=PROD&amp;logLevel=INFO&amp;topHost=games.espn.com&amp;langPref=en-US&amp;cssOverride=https%3A%2F%2Fsecure.espncdn.com%2Fcombiner%2Fc%3Fcss%3Ddisneyid%2Fcore.css%2Cdisneyid%2Ffantasy.css&amp;responderPage=https%3A%2F%2Fwww.espn.com%2Flogin%2Fresponder%2F&amp;buildId=1656394eae2&amp;espn-migration=true" style="display: none;"></iframe><iframe id="unidFrame" style="display: none;" src="http://cdn.unid.go.com/inner/?v=4.0.88" class="unid_change_anon unid_change_ts unid_send unid_sent unid_inprogress unid_success unid_new unid_allowed unid_done" data-unid="d596519b-7ed7-447b-b873-fe93d40995f4"></iframe></body></html>

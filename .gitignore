@@ -4,3 +4,4 @@ geckodriver.log
 espn_creds.yaml
 test_scripts.py
 /.cache/
+/__pycache__/
