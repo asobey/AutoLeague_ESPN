@@ -34,12 +34,12 @@ routerPassword: xxxxxxxxxxxx
 
 ###TeamManagement.py
 
-def __main__():
+def main():
     loops manage team at specific times (daily)
-    manage_team()
+    autoleague_main():
     taunt_bot()
 
-def manage_team():
+def autoleague_main():
     get_team()
     get_free_agents()
         optimize_free_agents()

@@ -23,6 +23,12 @@ def create_team_table(_file_location, _file_name):
     _team_table.columns = _team_table.iloc[0] # make 1st row the column headers
     _team_table = _team_table.drop([1]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
 
+    for column in _team_table:
+        print(column)
+        _team_table[column] = pd.to_numeric(_team_table[column], errors='ignore')
+
+
+    print(type(_team_table['PROJ'][7]))
     team_table = add_position_row(_team_table)
 
     return team_table

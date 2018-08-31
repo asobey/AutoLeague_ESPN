@@ -9,15 +9,19 @@ def optimize(file_location, file_name):
     table = pandas_bs4_table_parse.create_team_table(file_location + file_name)
 
 def rank_by_pos(table, pos_indexes):
-    for i in pos_true:
-        print(team_table['PLAYER'][i] + ': ' + player_value(team_table, i))
-    rank_db = team_table['PLAYER', 'PROJ'][pos_true]
+    print()
+    #for i in pos_indexes:
+    #   print(table['PLAYER'][i] + ': \t\t\t' + player_value(team_table, i))
+    rank_db = table[['PLAYER', 'PROJ']].iloc[pos_indexes]
     print(rank_db)
-    rank_db.sort_values(by=['PROJ'])
+    print('sorting by PROJ.....')
+    print(type(table['PROJ'][2]))
+    rank_db = rank_db.sort_values(['PROJ'], ascending=False)
     print(rank_db)
 
-def player_value(table, pos_index):
-    return table[pos_index]
+
+def player_value(_table, pos_index):
+    return _table['PROJ'][pos_index]
 
 
 if __name__ == '__main__':
@@ -39,6 +43,6 @@ if __name__ == '__main__':
             print('Only 1 ' + pos + ' on roster. No Changes made')
         else:
             if pos == 'RB':
-                for i in pos_true:
-                    print(team_table['PLAYER'][i] + ': ' + player_value(team_table, i))
+                #for i in pos_true:
+                #    print(team_table['PLAYER'][i] + ': ' + player_value(team_table, i))
                 rank_by_pos(team_table, pos_true)
