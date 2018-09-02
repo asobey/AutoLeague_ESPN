@@ -28,6 +28,7 @@ def open_browser(privateData):
         return browser
     except:
         print('Error Opening Homepage')
+    return browser
 
 def navigate_and_login(_browser, _privateData):
     # select corner profile
