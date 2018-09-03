@@ -54,7 +54,7 @@ if __name__ == '__main__':
     to_HERE = team_table[team_table['PLAYER']=='Ronald Jones, TB RB']['HERE'].item()
 
     print('Switch ', team_table[team_table['ID']==from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE']==to_HERE]['PLAYER'].item())
-    browser = (browser, from_ID, to_HERE)
+    browser = id_to_here(browser, from_ID, to_HERE)
 
     time.sleep(5)
     source_file_name = 'temp1'
