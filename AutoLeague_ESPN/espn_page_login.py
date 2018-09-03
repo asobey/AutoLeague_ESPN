@@ -4,11 +4,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 import yaml
 
+
 def login_and_return_browser():
     privateData = import_yaml()
     browser = open_browser(privateData)
     browser = navigate_and_login(browser, privateData)
     return browser
+
 
 def import_yaml():
     with open('espn_creds.yaml', 'r') as _private:
@@ -18,8 +20,9 @@ def import_yaml():
         except yaml.YAMLError as exc:
             print(exc)
 
+
 def open_browser(privateData):
-    browser = webdriver.Firefox() #For some reason if I use webdriver.Chrome() the window does not come up big enough to
+    browser = webdriver.Firefox() # For some reason the webdriver.Chrome() window does not come up big enough to
     # find the proper login button. Firefox opens a large enough window. It is failing to login possible resizing or
     # other method may be required.
     try:
@@ -29,6 +32,7 @@ def open_browser(privateData):
     except:
         print('Error Opening Homepage')
     return browser
+
 
 def navigate_and_login(_browser, _privateData):
     # select corner profile
@@ -45,6 +49,7 @@ def navigate_and_login(_browser, _privateData):
     actions.send_keys(_privateData['user'], Keys.TAB, _privateData['pass'], Keys.ENTER)
     actions.perform()
     return _browser
+
 
 if __name__ == '__main__':
     login_and_return_browser()
