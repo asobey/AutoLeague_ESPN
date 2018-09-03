@@ -38,6 +38,7 @@ def create_team_table(file_location, file_name):
 
     _team_table = add_player_id(_team_table, table_soup)
 
+
     team_table_out = add_here_col(_team_table)
 
     return team_table_out
@@ -61,9 +62,16 @@ def add_position_col(table):
         table['POS'][pos_true] = pos
     return table
 
+
 def add_here_col(table):
-    table['HERE'] = ([0,1,2,3,4,5,6,14,7,8,'HERE',9,10,11,12])
+    if len(table.index)==16:
+        table['HERE'] = ([0,1,2,3,4,5,6,14,7,8,'HERE',9,10,11,12,13]) #not sure which "here" number for IR. maybe not 13
+    elif len(table.index)==15:
+        table['HERE'] = ([0,1,2,3,4,5,6,14,7,8,'HERE',9,10,11,12])
+    else:
+        print('table row out of range')
     return table
+
 
 def update_team_table(table):
     """currently takes save_source and create table to update table. This should simplify that"""
