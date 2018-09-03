@@ -33,10 +33,8 @@ if __name__ == '__main__':
     import AutoLeague_ESPN.team_table_parse as team_table_parse
 
     print('CWD: ', os.getcwd()) #  can get rid of later. Should not hurt
-    os.chdir('C:\\Users\\alexs\\PycharmProjects\\AutoLeague_ESPN\\AutoLeague_ESPN')
+    #os.chdir('C:\\Users\\alexs\\PycharmProjects\\AutoLeague_ESPN\\AutoLeague_ESPN')
 
-    print('CWD: ', os.getcwd()) #  can get rid of later. Should not hurt
-    os.chdir('C:\\Users\\alexs\\PycharmProjects\\AutoLeague_ESPN\\AutoLeague_ESPN')
 
     source_file_location = '..\\offline_webpages\\'
     source_file_name = 'front_page_source'
@@ -49,12 +47,15 @@ if __name__ == '__main__':
     team_table_parse.print_table(team_table)
 
     time.sleep(5)
-    #Options to query on column to another: df[df['B']==3]['A'].item() ; df.query('B==3')['A'].item()
-    from_ID = team_table[team_table['PLAYER']=='Joe Mixon, Cin RB']['ID'].item()
-    to_HERE = team_table[team_table['PLAYER']=='Ronald Jones, TB RB']['HERE'].item()
+    # Options to query on column to another: df[df['B']==3]['A'].item() ; df.query('B==3')['A'].item()
+    from_ID = team_table[team_table['PLAYER']=='A.J. Green, Cin WR']['ID'].item()
+    #    from_ID = team_table[team_table['PLAYER']=='Joe Mixon, Cin RB']['ID'].item()
+    # add a check that you are moving to a valid spot
+    to_HERE = team_table[team_table['PLAYER']=='Demaryius Thomas, Den WR']['HERE'].item()
+    # to_HERE = team_table[team_table['PLAYER']=='Ronald Jones, TB RB']['HERE'].item()
 
     print('Switch ', team_table[team_table['ID']==from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE']==to_HERE]['PLAYER'].item())
-    browser = (browser, from_ID, to_HERE)
+    browser = id_to_here(browser, from_ID, to_HERE)
 
     time.sleep(5)
     source_file_name = 'temp1'

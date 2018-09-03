@@ -40,7 +40,7 @@ def navigate_and_login(_browser, _privateData):
     LoginElem.click()
     time.sleep(.5)
     # fill username and password with keystokes
-    time.sleep(1)
+    time.sleep(2)
     actions = ActionChains(_browser)
     actions.send_keys(_privateData['user'], Keys.TAB, _privateData['pass'], Keys.ENTER)
     actions.perform()
