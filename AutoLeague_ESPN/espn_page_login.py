@@ -41,7 +41,7 @@ def navigate_and_login(browser, _privateData):
     browser.set_window_size(1100, 1080)
 
 
-def navigate_and_login(_browser, _privateData):
+def navigate_and_login(browser, _privateData):
     # select corner profile
     ProfileElem = browser.find_element_by_link_text('Log In')
     ProfileElem.click()
