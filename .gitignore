@@ -1,7 +1,8 @@
-/.idea/
-.idea/workspace.xml
+**/.idea/
+**/.cache/
+**/__pycache__/
+**/offline_webpages
+**/.idea/
 geckodriver.log
-espn_creds.yaml
+espn_cred.yaml
 test_scripts.py
-/.cache/
-/__pycache__/
