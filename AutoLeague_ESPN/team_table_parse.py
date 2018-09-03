@@ -10,7 +10,45 @@ def print_table(table):
     print(table_str)
 
 
-def create_team_table(file_location, file_name):
+def update_team_table(_PS):
+    _soup = BeautifulSoup(_PS, 'lxml')
+    _table_soup = _soup.find_all('table')[0]
+
+    _df = pd.read_html(str(_table_soup))
+
+    _team_table = _df[3] # from troubleshooting the third table is the team table
+
+    print_table(_team_table)  # DEBUG
+    if len(_team_table.keys.values) == 16:
+        _team_table = _team_table.drop([3], axis=1)
+        print_table(_team_table)  # DEBUG
+
+    _team_table = _team_table.drop([5, 10], axis=1).drop([0, 12], axis=0) # remove useless rows and columns
+    _team_table = _team_table.dropna(subset=[1]) # drop the IR column if PLAYER value is nan
+
+    # fix a couple column header labels
+    _team_table[2][1] = 'POS'
+    _team_table[1][1] = 'PLAYER'
+    print('_team_table[2][13]: ' + str(_team_table[2][13]))  # DEBUG
+    _team_table[2][13] = 'POS'
+    print('_team_table[2][13] fix: ' + str(_team_table[2][13]))  # DEBUG
+
+    _team_table.columns = _team_table.iloc[0] # make 1st row the column headers
+    _team_table = _team_table.drop([1]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
+
+    for col in _team_table:
+        _team_table[col][:9] = pd.to_numeric(_team_table[col][:9], errors='ignore')
+        _team_table[col][11:] = pd.to_numeric(_team_table[col][11:], errors='ignore')
+
+    _team_table = add_position_col(_team_table)
+
+    _team_table = add_player_id(_team_table, _table_soup)
+
+    team_table_out = add_here_col(_team_table)
+
+    return team_table_out
+
+def create_team_table_old(file_location, file_name):  # made new create_team_table but don't want to get rid of this just yet
     _PS = open(file_location + file_name, 'r')
     _soup = BeautifulSoup(_PS, 'lxml')
     _PS.close()
@@ -43,6 +81,12 @@ def create_team_table(file_location, file_name):
 
     return team_table_out
 
+
+def create_team_table(file_location, file_name):
+    _PS = open(file_location + file_name, 'r')
+
+    return update_team_table(_PS)
+
 def add_player_id(team_table, table_soup):
 
     table_line = str(table_soup.find_all("td", {"class": "playertablePlayerName"}))
@@ -72,10 +116,6 @@ def add_here_col(table):
         print('table row out of range')
     return table
 
-
-def update_team_table(table):
-    """currently takes save_source and create table to update table. This should simplify that"""
-    pass
 
 if __name__ == '__main__':
     file_location = '..\\offline_webpages\\'
