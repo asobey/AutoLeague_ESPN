@@ -68,7 +68,16 @@ soup = BeautifulSoup(r.content, 'html.parser')
 table = soup.find('table', class_='playerTableTable')
 tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
 
-print(tdf)
+
+tdf = tdf.drop([1,3,4,9,13,18,22], axis=1) # remove useless rows and columns
+
+tdf = tdf.drop([0]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
+tdf.columns = tdf.iloc[0] # make 1st row the column headers
+tdf = tdf.drop([0]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
+
+
+table_str = tabulate(tdf, headers='keys', tablefmt='psql')
+print(table_str)
 
 # df = pd.DataFrame(df, columns=['one', 'two', 'three', 'four'])
 
