@@ -60,7 +60,20 @@ def navigate_and_login(_browser, _privateData):
 
 
 if __name__ == '__main__':
-    login_and_return_browser()
+    privateData = import_yaml()
+    browser = open_browser(privateData)
+
+    # select corner profile
+    ProfileElem = browser.find_element_by_link_text('Log In')
+    ProfileElem.click()
+    time.sleep(.5)
+    # select login
+    LoginElem = browser.find_element_by_xpath(
+        '/html/body/div[2]/table/tbody/tr/td/div[2]/div[2]/header/div[2]/ul/li[2]/div/div/ul[1]/li[4]/a')
+    LoginElem.click()
+    time.sleep(.5)
+    # fill username and password with keystokes
+    time.sleep(2)
 
 #UserElem = browser.find_elements_by_xpath('/html/body/div[2]/div/div/section/section/form/section/div[1]/div/label/span[2]/input')
 #UserElem = browser.find_elements_by_id('input.ng-pristine.ng-invalid.ng-invalid-required.ng-valid-pattern.ng-touched')

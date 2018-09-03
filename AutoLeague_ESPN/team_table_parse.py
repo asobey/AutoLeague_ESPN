@@ -50,6 +50,7 @@ def update_team_table(_PS):
 
 def create_team_table_old(file_location, file_name):  # made new create_team_table but don't want to get rid of this just yet
     _PS = open(file_location + file_name, 'r')
+    print(_PS)
     _soup = BeautifulSoup(_PS, 'lxml')
     _PS.close()
     table_soup = _soup.find_all('table')[0]
@@ -75,7 +76,6 @@ def create_team_table_old(file_location, file_name):  # made new create_team_tab
     _team_table = add_position_col(_team_table)
 
     _team_table = add_player_id(_team_table, table_soup)
-
 
     team_table_out = add_here_col(_team_table)
 
@@ -121,6 +121,6 @@ if __name__ == '__main__':
     file_location = '..\\offline_webpages\\'
     file_name = 'front_page_source'
 
-    team_table = create_team_table(file_location, file_name)
+    team_table = create_team_table2(file_location, file_name)
 
     print_table(team_table)

@@ -3,7 +3,7 @@
 # Fill in your username and password.
 # Rename file to: 'espn_creds.yaml'
 
-homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=1&seasonId=XXXX #Your ESPN FF Homepage URL
+homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XX&seasonId=XXXX #Your ESPN FF Homepage URL
 user: xxxxxxxxxx@xxxxxxxxx.com #email or username
 pass: xxxxxxxxxxxx
 
