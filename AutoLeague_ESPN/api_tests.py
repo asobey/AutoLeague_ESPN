@@ -1,21 +1,21 @@
 # endpoints for the api:
-    # leagueSettings
-    # playerInfo
-    # scoreboard
-    # player/news
-    # recentActivity
-    # leagueSchedules
-    # teams
-    # rosterInfo
-    # schedule
-    # polls
-    # messageboard
-    # status
-    # teams/pendingMoveBatches
-    # tweets
-    # stories
-    # livescoring (doesn’t seem to be working right)
-    # boxscore
+#   leagueSettings
+#   playerInfo
+#   scoreboard --json
+#   player/news
+#   recentActivity
+#   leagueSchedules
+#   teams
+#   rosterInfo --json
+#   schedule
+#   polls
+#   messageboard
+#   status
+#   teams/pendingMoveBatches
+#   tweets
+#   stories
+#   livescoring (doesn’t seem to be working right)
+#   boxscore
 
 import requests
 from bs4 import BeautifulSoup
@@ -27,13 +27,31 @@ import re
 
 with open('espn_creds.yaml', 'r') as _private:
     privateData = yaml.load(_private)
-    print(privateData)
 
-scores = {}
-for week in range(1, 17):
-    r = requests.get('http://games.espn.com/ffl/api/v2/scoreboard',
-                     params={'leagueId': 413011, 'seasonId': 2018, 'matchupPeriodId': week})
-    scores[week] = r.json()
+# scores = {}
+# for week in range(1, 17):
+#     r = requests.get('http://games.espn.com/ffl/api/v2/scoreboard',
+#                      params={'leagueId': 413011, 'seasonId': 2018, 'matchupPeriodId': week})
+#     scores[week] = r.json()
+#
+# df = []
+# for key in scores:
+#     temp = scores[key]['scoreboard']['matchups']
+#     for match in temp:
+#         df.append([key,
+#                    match['teams'][0]['team']['teamAbbrev'],
+#                    match['teams'][1]['team']['teamAbbrev'],
+#                    match['teams'][0]['score'],
+#                    match['teams'][1]['score']])
+#
+# df = pd.DataFrame(df, columns=['Week', 'HomeAbbrev', 'AwayAbbrev', 'HomeScore', 'AwayScore'])
+# df.head()
+#
+#
+# table_str = tabulate(df, headers='keys', tablefmt='psql')
+# print(table_str)
+
+print('----- Moving to Roster Data ------')
 
 cookies = {
     'espn_s2': privateData['espn_s2'],
@@ -48,14 +66,19 @@ r = requests.get("http://games.espn.com/ffl/api/v2/rosterInfo",
                  params=parameters,
                  cookies=cookies)
 roster = r.json()
-print(roster)
+rdf = []
+temp2 = roster['leagueRosters']['teams'][0]['slots']
+i = 1
+for match in temp2:
+    rdf.append([i,
+                match['player']['firstName'],
+                match['player']['lastName']])
+    i = i+1
 
-# figure out how to build the dataframe
-# df = pd.read_json(str(roster))
-# # print(df)
+table_str = tabulate(rdf, headers='keys', tablefmt='psql')
+print(table_str)
 
-
-
+print('---------- Moving on to the Leader Board ------------')
 
 leaders = {}
 r = requests.get('http://games.espn.com/ffl/leaders',
