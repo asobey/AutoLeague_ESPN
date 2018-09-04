@@ -7,9 +7,11 @@ This module controls in browser movement. Several function accomplish movement i
 """
 
 def save_source(browser, source_file_location, source_file_name):
-    _PS = open((source_file_location + source_file_name), 'w')
+    print('Saving source_page to: ' + os.path.join(source_file_location, source_file_name), end='')
+    _PS = open(os.path.join(source_file_location, source_file_name), 'w', encoding="utf-8")
     _PS.write(browser.page_source)
     _PS.close()
+    print('.......DONE')
 
 
 def id_to_here(browser, from_id, here_slot):
@@ -38,14 +40,16 @@ if __name__ == '__main__':
     source_file_location = '..\\offline_webpages\\'
     source_file_name = 'front_page_source'
 
-    browser = espn_page_login.login_and_return_browser() # open browser and login
+    browser = espn_page_login.login_and_return_browser()  # open browser and login
+
+    time.sleep(2)
 
     save_source(browser, source_file_location, source_file_name) # save source
     team_table = team_table_parse.create_team_table(source_file_location, source_file_name) # read table from source
 
     team_table_parse.print_table(team_table)
 
-    time.sleep(3)
+    time.sleep(1)
     # Options to query on column to another: df[df['B']==3]['A'].item() ; df.query('B==3')['A'].item()
     #J's
     #from_ID = team_table[team_table['PLAYER']=='A.J. Green, Cin WR']['ID'].item()
@@ -56,13 +60,27 @@ if __name__ == '__main__':
     to_HERE = team_table[team_table['PLAYER'] == 'Marshawn Lynch, Oak RB']['HERE'].item()
     # add a check that you are moving to a valid spot
 
-    print('Switch ', team_table[team_table['ID']==from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE']==to_HERE]['PLAYER'].item())
+    print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==
+                                                                                              to_HERE]['PLAYER'].item())
     browser = id_to_here(browser, from_ID, to_HERE)
 
-    time.sleep(5)
-    source_file_name = 'temp1'
-    # It takes these two steps to update table...possible improvement
-    # save_source(browser, source_file_location, source_file_name)  # save source
-    team_table = team_table_parse.update_team_table(browser.page_source)  # read table from source
+    time.sleep(2)
 
+    save_source(browser, source_file_location, source_file_name)  # save source
+    team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
+    team_table_parse.print_table(team_table)
+
+    # S's
+    from_ID = team_table[team_table['PLAYER'] == 'Sammy Watkins, KC WR']['ID'].item()
+    to_HERE = team_table[team_table['PLAYER'] == 'Chris Hogan, NE WR']['HERE'].item()
+    # add a check that you are moving to a valid spot
+
+    print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==
+                                                                                              to_HERE]['PLAYER'].item())
+    browser = id_to_here(browser, from_ID, to_HERE)
+
+    time.sleep(2)
+
+    save_source(browser, source_file_location, source_file_name)  # save source
+    team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
     team_table_parse.print_table(team_table)

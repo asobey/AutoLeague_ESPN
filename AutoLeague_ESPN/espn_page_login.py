@@ -9,6 +9,8 @@ import os
 def login_and_return_browser():
     privateData = import_yaml()
     browser = open_browser(privateData)
+    # RESIZE WINDOW
+    browser.set_window_size(1100, 1080)
     browser = navigate_and_login(browser, privateData)
     return browser
 
@@ -23,7 +25,7 @@ def import_yaml():
 
 
 def open_browser(privateData):
-    browser = webdriver.Firefox() # For some reason the webdriver.Chrome() window does not come up big enough to
+    browser = webdriver.Chrome() # For some reason the webdriver.Chrome() window does not come up big enough to
     # find the proper login button. Firefox opens a large enough window. It is failing to login possible resizing or
     # other method may be required.
     try:
@@ -60,23 +62,17 @@ def navigate_and_login(browser, _privateData):
 
 
 if __name__ == '__main__':
-    privateData = import_yaml()
-    browser = open_browser(privateData)
 
-    # select corner profile
-    ProfileElem = browser.find_element_by_link_text('Log In')
-    ProfileElem.click()
-    time.sleep(.5)
-    # select login
-    LoginElem = browser.find_element_by_xpath(
-        '/html/body/div[2]/table/tbody/tr/td/div[2]/div[2]/header/div[2]/ul/li[2]/div/div/ul[1]/li[4]/a')
-    LoginElem.click()
-    time.sleep(.5)
-    # fill username and password with keystokes
-    time.sleep(2)
+    import AutoLeague_ESPN.browser_functions as browser_functions
+    import AutoLeague_ESPN.team_table_parse as team_table_parse
 
-#UserElem = browser.find_elements_by_xpath('/html/body/div[2]/div/div/section/section/form/section/div[1]/div/label/span[2]/input')
-#UserElem = browser.find_elements_by_id('input.ng-pristine.ng-invalid.ng-invalid-required.ng-valid-pattern.ng-touched')
-#input.ng-pristine.ng-invalid.ng-invalid-required.ng-valid-pattern.ng-touched
-#UserElem.send_keys(privateData.user)
-# fill password
+    source_file_location = '..\\offline_webpages\\'
+    source_file_name = 'front_page_source'
+
+    browser = login_and_return_browser()
+
+    browser_functions.save_source(browser, source_file_location, source_file_name)  # Save Source
+
+    time.sleep(3)
+    team_table = team_table_parse.update_team_table(browser.page_source)  # read table from source
+    team_table_parse.print_table(team_table)

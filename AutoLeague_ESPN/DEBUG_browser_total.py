@@ -40,7 +40,7 @@ actions.send_keys(privateData['user'], Keys.TAB, privateData['pass'], Keys.ENTER
 actions.perform()
 
 # WAIT FOR BROWSER TO LOAD
-time.sleep(1)
+time.sleep(2)
 
 # # SAVING PAGE_SOURCE
 # source_file_location = '..\\offline_webpages\\'
@@ -63,22 +63,21 @@ _table_soup = _soup.find_all('table')[0]  # Finding the table element in the sou
 _df = pd.read_html(str(_table_soup))  # Making the soup table element into a pandas df
 _team_table = _df[3]  # From troubleshooting the third table is the team table
 
-print(tabulate(_team_table, headers='keys', tablefmt='psql'))  # DEBUG
-if len(_team_table.columns) == 16:
-    _team_table = _team_table.drop([3], axis=1)
-    print(tabulate(_team_table, headers='keys', tablefmt='psql'))
+#print(tabulate(_team_table, headers='keys', tablefmt='psql'))  # DEBUG
 
+_team_table = _team_table.fillna('--')  # Fill nan values will -- makes them able to index of of later
 
-_team_table = _team_table.drop([5, 10], axis=1).drop([0, 12], axis=0)  # remove useless rows and columns
-_team_table = _team_table.dropna(subset=[1])  # drop the IR column if PLAYER value is nan
+if len(_team_table.columns) == 16:  # If not a large enough pause is given before table the browser.source the table
+    # will not full load. If this occurs the ACTION column is missing. Check table[2][1] == 'ACTION' as well
+    raise Exception('full table not loaded')
+
+_team_table[3][1, 13] = 'POS'  # need to set this early so nan value does not become index
+_team_table = _team_table.drop([2, 6, 11], axis=1).drop([0, 12], axis=0)
 
 # fix a couple column header labels
-_team_table[2][1] = 'POS'
 _team_table[1][1] = 'PLAYER'
-print('_team_table[2][13]: ' + str(_team_table[2][13]))  # DEBUG
-_team_table[2][13] = 'POS'
-print('_team_table[2][13] fix: ' + str(_team_table[2][13]))  # DEBUG
 
+# MAKE 1ST ROW COLUMN HEADERS AND DROP 1ST ROW
 _team_table.columns = _team_table.iloc[0]  # make 1st row the column headers
 _team_table = _team_table.drop([1]).reset_index(drop=True)  # drop 1st row (now column headers) and reindex
 
@@ -86,11 +85,33 @@ for col in _team_table:
     _team_table[col][:9] = pd.to_numeric(_team_table[col][:9], errors='ignore')
     _team_table[col][11:] = pd.to_numeric(_team_table[col][11:], errors='ignore')
 
-#_team_table = add_position_col(_team_table)
+#print(tabulate(_team_table, headers='keys', tablefmt='psql'))
+
+#_ADDING POSITIONS COL
+POSITIONS = ['QB', 'TE', 'K', 'D/ST', 'RB', 'WR']
+for pos in POSITIONS:
+    pos_true = _team_table.index[_team_table['PLAYER'].str.contains('\xa0' + pos)].values
+    _team_table['POS'][pos_true] = pos
+
 
 #_team_table = add_player_id(_team_table, _table_soup)
+table_line = str(_table_soup.find_all("td", {"class": "playertablePlayerName"}))
+player_ids = list(map(int, re.findall('playername_(\d+)', table_line)))
+
+# The extra '--' at the end and the [:17] are to resolve having or not having an IR spot
+player_ids_insert = (player_ids[:10] + ['ID'] + player_ids[10:] + ['--'] + ['--'] + ['--'])[:17]
+_team_table['ID'] = player_ids_insert
+
 
 #team_table_out = add_here_col(_team_table)
+if len(_team_table.index) == 17:
+    _team_table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12, 13, 14])
+elif len(_team_table.index) == 16:
+    _team_table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12, 13])  # not sure which "here" number for IR. maybe not 13
+elif len(_team_table.index) == 15:
+    _team_table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12])
+else:
+    print('table row out of range')
 
-print(tabulate(team_table_out, headers='keys', tablefmt='psql'))
+print(tabulate(_team_table, headers='keys', tablefmt='psql'))
 
