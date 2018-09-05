@@ -3,9 +3,9 @@ from tabulate import tabulate
 import AutoLeague_ESPN.team_table_parse as team_table_parse
 import AutoLeague_ESPN.browser_functions as browser_functions
 
-positions = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
-single_spot_positions = ['QB', 'K', 'D/ST']
-multi_spot_positions = ['TE', 'RB', 'WR']
+POSITIONS = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
+SINGLE_SPOT_POSITIONS = ['QB', 'K', 'D/ST']
+MULTI_SPOT_POSITIONS = ['TE', 'RB', 'WR']
 
 def optimize(file_location, file_name):
 
@@ -43,6 +43,7 @@ def rank_single_spot_pos(table):
     for pos in top_singles.keys():  # loop thru each position
         print('Optimizing single spot positions: ' + pos + '\'s .........', end=' ')
         pos_true = table.index[table['POS'].str.contains(pos)].values  # list of true values by row number
+
         print(table['PLAYER'][pos_true])
         if pos in single_spot_positions:
             if len(pos_true) == 0:
@@ -58,8 +59,25 @@ def rank_single_spot_pos(table):
     for x in top_singles.values(): #make sure the single_pos_dictionary is complete before returning
         if x == '':
             raise ValueError('top_singles not complete!')
-
     return top_singles
+
+def make_team_dic(table, positions):
+    team_dic = {}
+    for pos in positions:
+        pos_true = table.index[table['POS'].str.contains(pos)].values  # list of true values by row number
+        print(pos + ' : ' + str(pos_true))
+        team_dic[pos] = table.loc[pos_true]
+        print(tabulate(team_dic[pos], headers='keys', tablefmt='psql'))
+    return team_dic
+
+def rank_team_dic(t_dic, rank_by):
+    if rank_by == 'ESPN':
+        return rank_team_dic_by_ESPN(t_dic)
+
+def rank_team_dic_by_ESPN(t_dic):
+    ranked_dic = {}
+
+    return ranked_dic
 
 if __name__ == '__main__':
     source_file_locations = '..\\offline_webpages\\'
@@ -68,20 +86,27 @@ if __name__ == '__main__':
     team_table = team_table_parse.create_team_table(source_file_locations, source_file_name)
     team_table_parse.print_table(team_table)
 
-    table = team_table # Used temporarily
+    make_team_dic(team_table, POSITIONS)
 
-    top_singles = rank_single_spot_pos(team_table)
 
-    for pos in multi_spot_positions:
-        pos_true = table.index[table['POS'].str.contains(pos)].values  # list of true values
-        if len(pos_true) == 0:
-            raise ValueError('Position not filled!')
-        elif len(pos_true) == 1:
-            raise ValueError('Only 1 in position. Not fully filled!')
-        else:
-            if pos == 'RB' or pos == 'WR':
-                ranking = rank_by_pos(team_table, pos_true)
-                arrange_top_two(pos, ranking)
+
+
+
+
+
+
+    # top_singles = rank_single_spot_pos(team_table)
+    #
+    # for pos in multi_spot_positions:
+    #     pos_true = table.index[table['POS'].str.contains(pos)].values  # list of true values
+    #     if len(pos_true) == 0:
+    #         raise ValueError('Position not filled!')
+    #     elif len(pos_true) == 1:
+    #         raise ValueError('Only 1 in position. Not fully filled!')
+    #     else:
+    #         if pos == 'RB' or pos == 'WR':
+    #             ranking = rank_by_pos(team_table, pos_true)
+    #             arrange_top_two(pos, ranking)
 
 """
 Logic:
