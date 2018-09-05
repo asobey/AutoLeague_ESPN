@@ -70,9 +70,12 @@ if __name__ == '__main__':
     team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
     team_table_parse.print_table(team_table)
 
+    print('Move using IDs')
     # S's
-    from_ID = team_table[team_table['PLAYER'] == 'Sammy Watkins, KC WR']['ID'].item()
-    to_HERE = team_table[team_table['PLAYER'] == 'Chris Hogan, NE WR']['HERE'].item()
+    from_ID = '16725'
+    print(team_table[team_table['ID'] == from_ID])
+    print(team_table[team_table['ID'] == '14402'])
+    to_HERE = team_table[team_table['ID'] == '14402']['HERE'].item()
     # add a check that you are moving to a valid spot
 
     print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==

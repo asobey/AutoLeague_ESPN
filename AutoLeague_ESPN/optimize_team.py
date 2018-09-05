@@ -65,9 +65,9 @@ def make_team_dic(table, positions):
     team_dic = {}
     for pos in positions:
         pos_true = table.index[table['POS'].str.contains(pos)].values  # list of true values by row number
-        print(pos + ' : ' + str(pos_true))
+        #print(pos + ' : ' + str(pos_true))
         team_dic[pos] = table.loc[pos_true]
-        print(tabulate(team_dic[pos], headers='keys', tablefmt='psql'))
+        #print(tabulate(team_dic[pos], headers='keys', tablefmt='psql'))
     return team_dic
 
 def rank_team_dic(t_dic, rank_by):
@@ -75,9 +75,10 @@ def rank_team_dic(t_dic, rank_by):
         return rank_team_dic_by_ESPN(t_dic)
 
 def rank_team_dic_by_ESPN(t_dic):
-    ranked_dic = {}
-
-    return ranked_dic
+    rank_dic = team_dic
+    for df in rank_dic:
+        rank_dic[df] = rank_dic[df].sort_values('PROJ', ascending=False)
+    return rank_dic
 
 if __name__ == '__main__':
     source_file_locations = '..\\offline_webpages\\'
@@ -86,11 +87,15 @@ if __name__ == '__main__':
     team_table = team_table_parse.create_team_table(source_file_locations, source_file_name)
     team_table_parse.print_table(team_table)
 
-    make_team_dic(team_table, POSITIONS)
+    team_dic = make_team_dic(team_table, POSITIONS)
 
+    ranked_dic = rank_team_dic(team_dic, 'ESPN')
 
-
-
+    for pos in POSITIONS:
+        print(pos + ': UNRANKED TABLE')
+        print(tabulate(team_dic[pos], headers='keys', tablefmt='psql'))
+        print(pos + ': RANKED TABLE')
+        print(tabulate(ranked_dic[pos], headers='keys', tablefmt='psql'))
 
 
 
