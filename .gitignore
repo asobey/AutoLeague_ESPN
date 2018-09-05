@@ -6,3 +6,4 @@
 geckodriver.log
 espn_creds.yaml
 test_scripts.py
+.vscode
