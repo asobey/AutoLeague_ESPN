@@ -76,14 +76,7 @@ def add_position_col(table):
 
 
 def add_here_col(table):
-    #if len(table.index) == 17:
-    table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12, 13, 14, 15, 16, 17])[:len(table)]
-    # elif len(table.index) == 16:
-    #     table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12, 13])  # not sure which "here" number for IR. maybe not 13
-    # elif len(table.index) == 15:
-    #     table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12])
-    # else:
-    #     print('table row out of range')
+    table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 'HERE', 9, 10, 11, 12, 13, 15, 16, 17, 18])[:len(table)]
     return table
 
 
