@@ -39,9 +39,12 @@ def update_team_table(PS):
     _team_table.columns = _team_table.iloc[0]  # make 1st row the column headers
     _team_table = _team_table.drop([1]).reset_index(drop=True)  # drop 1st row (now column headers) and reindex
 
-    for col in _team_table:
-        _team_table[col][:9] = pd.to_numeric(_team_table[col][:9], errors='ignore')
-        _team_table[col][11:] = pd.to_numeric(_team_table[col][11:], errors='ignore')
+    #for col in _team_table:
+        # _team_table[col][:9] = pd.to_numeric(_team_table[col][:9], errors='ignore')
+        # _team_table[col][11:] = pd.to_numeric(_team_table[col][11:], errors='ignore')
+
+    _team_table['PROJ'] = pd.to_numeric(_team_table['PROJ'], errors='coerce')
+    _team_table['PROJ'][10] = 'PROJ'
 
     # REMOVE TABS Â
     _team_table = _team_table.replace('Â', '', regex=True)
