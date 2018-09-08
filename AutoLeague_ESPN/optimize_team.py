@@ -87,6 +87,7 @@ def optimize_position_chart(ranked_dic):
 
     return opt_pos_chart
 
+
 def optimize_position_table(team_table, opt_pos_chart):
     #opt_pos_table = pd.dataframe()
     first = True
@@ -97,6 +98,23 @@ def optimize_position_table(team_table, opt_pos_chart):
         else:
             opt_pos_table = opt_pos_table.append(team_table.loc[team_table['ID'] == value])
     return opt_pos_table
+
+def handle_multi_spot_anomoly(team_table, opt_pos_chart):
+    '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
+    and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
+    with throw an exception at the end.'''
+
+    # Only need to check for RB1(1) and WR1(3). Error cannot occur with RB2(2) or WR2(4) positions
+    for key, value in opt_pos_chart.items():
+        if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
+            temp_id = opt_pos_chart[1]
+            opt_pos_chart[1] = opt_pos_chart[2]
+            opt_pos_chart[2] = temp_id
+        if key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
+            temp_id = opt_pos_chart[3]
+            opt_pos_chart[3] = opt_pos_chart[4]
+            opt_pos_chart[4] = temp_id
+    return opt_pos_chart
 
 if __name__ == '__main__':
     source_file_locations = '..\\offline_webpages\\'
@@ -126,6 +144,7 @@ if __name__ == '__main__':
 
 
     optimal_position_chart = optimize_position_chart(new_ranked_dic)
+    optimal_position_chart = handle_multi_spot_anomoly(team_table, optimal_position_chart)
 
     print('OPTIMAL POSITION CHART:')
     print(optimize_position_chart)

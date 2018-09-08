@@ -19,12 +19,34 @@ def id_to_here(webdriver, from_id, here_slot):
     print(f'moving..... ID: {from_id} to HERE slot: {here_slot}')
     move1 = webdriver.find_element_by_css_selector('#pncButtonMove_' + str(from_id))
     move1.click()
-    here2 = webdriver.find_element_by_css_selector('#pncButtonHere_' + str(here_slot))
-    submit = webdriver.find_element_by_css_selector('#pncSaveRoster1')
-    time.sleep(.2)
-    here2.click()
-    time.sleep(.2)
-    submit.click()
+    try:
+        here2 = webdriver.find_element_by_css_selector('#pncButtonHere_' + str(here_slot))
+        submit = webdriver.find_element_by_css_selector('#pncSaveRoster1')
+        time.sleep(.2)
+        here2.click()
+        time.sleep(.2)
+        submit.click()
+    except:
+        print('Multi spot anomaly detected!')
+
+
+def handle_multi_spot_move(webdriver, from_id, here_slot):
+    '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
+    and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
+    with throw an exception at the end.'''
+    if here_slot == 1 or here_slot == 2 or here_slot == 3 or here_slot == 4:
+        if here_slot == 1: here_slot = 2
+        elif here_slot == 2: here_slot = 1
+        elif here_slot == 3: here_slot = 4
+        elif here_slot == 4: here_slot = 3
+        here2 = webdriver.find_element_by_css_selector('#pncButtonHere_' + str(here_slot))
+        submit = webdriver.find_element_by_css_selector('#pncSaveRoster1')
+        time.sleep(.2)
+        here2.click()
+        time.sleep(.2)
+        submit.click()
+    else:
+        print('The handle_multi_spot_move() function cannot handle this move anomaly ')
 
 
 def sort_team(webdriver, team_table, opt_team_chart):
