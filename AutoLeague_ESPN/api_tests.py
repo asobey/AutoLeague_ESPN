@@ -71,18 +71,19 @@ def add_player_id(team_table, table_soup):
     return team_table
 
 
-def top_waiver(position):
+def top_waiver(position='none'):
     """this "top" ranking is personal preference. initial setup is based on espn's projection"""
 
     df = create_waiver(position)
     player = df.nlargest(3, 'Projected')
+    # maybe do a reindex or something?
     print(tabulate(player, headers='keys', tablefmt='psg1'))
 
     return player
 
 
 def create_waiver(position='none'):
-    """Listing of "position" players on the waiver wire."""
+    """Listing of "position" players on the waiver wire. Excludes players not playing this week (BYE or real life FA)"""
 
     cookies = {
         'espn_s2': privateData['espn_s2'],
@@ -91,12 +92,12 @@ def create_waiver(position='none'):
 
     # slot codes used to get the right page
     slots = {'QB': 0, 'RB': 2, 'RB/WR': 3, 'WR': 4, 'TE': 6, 'D/ST': 16, 'K': 17, 'FLEX': 23}
-    slot = slots[position]
 
     if position == 'none':
         parameters = {'leagueId': privateData['leagueid'], 'teamID': privateData['teamid'],
                       'avail': 1, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
     else:
+        slot = slots[position]
         parameters = {'leagueId': privateData['leagueid'], 'teamID': privateData['teamid'],
                       'slotCategoryId': slot, 'avail': 1, 'injury': 2, 'context': 'freeagency',
                       'view': 'overview'}
@@ -119,9 +120,8 @@ def create_waiver(position='none'):
         df = df.append(tdf, ignore_index=True, sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
 
     df = df.query('Projected != "--"')
-
-    df['Projected'] = df['Projected'].fillna(0).astype('float')
-    df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
+    df['Projected'] = df['Projected'].fillna(0).astype('float')  # !!!! troubleshoot this warning
+    # df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
     # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
 
 
