@@ -61,17 +61,15 @@ def create_roster():
     return table_str
 
 
-def top_waiver(position):
+def top_waiver(position):  # this "top" ranking is personal preference. initial setup is based on espn's projection
 
-    player = create_projected(position)
+    player = create_waiver(position)
     print(player)
 
     return player
 
 
-def create_projected(position):
-
-    print('Listing of top', position, 'players:')
+def create_waiver(position):  # 'Listing of', position, 'players on the waiver wire:'
 
     cookies = {
         'espn_s2': privateData['espn_s2'],
@@ -79,31 +77,32 @@ def create_projected(position):
     }
 
     # slot codes used to get the right page
-    slots = {'QB': 0, 'RB': 2, 'WR': 4, 'TE': 6,
-             'D/ST': 16, 'K': 17, 'BE': 20, 'FLEX': 23}
+    slots = {'QB': 0, 'RB': 2, 'RB/WR': 3, 'WR': 4, 'TE': 6, 'D/ST': 16, 'K': 17, 'FLEX': 23}
     slot = slots[position]
 
-    r = requests.get('http://games.espn.com/ffl/tools/projections',
-                     params={'leagueId': 413011, 'slotCategoryId': slot},
-                     cookies=cookies)
+    df = pd.DataFrame(columns=['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-'])
 
-    soup = BeautifulSoup(r.content, 'html.parser')
-    table = soup.find('table', class_='playerTableTable')
-    tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+    for si in [0, 50, 100]:
+        r = requests.get('http://games.espn.com/ffl/freeagency',
+                         params={'leagueId': privateData['leagueid'], 'teamID': privateData['teamid'],
+                                 'slotCategoryId': slot, 'avail': 1, 'injury': 2, 'context': 'freeagency',
+                                 'view': 'overview', 'startIndex': si},
+                         cookies=cookies)
 
-    tdf = tdf.iloc[2:, [1, 2, 14]].reset_index(drop=True)  # delete the useless columns
+        soup = BeautifulSoup(r.content, 'html.parser')
+        table = soup.find('table', class_='playerTableTable')
+        tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
 
-    tdf.columns = ['Player', 'Owner', 'Pts']
-    tdf['Pts'] = tdf['Pts'].fillna(0).astype('float')
-    tdf['Player'] = tdf['Player'].str.split(',').str[0]  # keep just player name
+        tdf = tdf.iloc[2:, [0, 5, 13, 14, 15, 16, 17]].reset_index(drop=True)  # delete the useless columns
 
-    var_list = {'WA', 'WA (Wed)'}  # eventually find some way to have it find WA and 'WA ('*
-
-    tdf = tdf.query('Owner == "WA (Wed)"')  # just keep the available players
+        tdf.columns = ['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-']
+        # tdf['Pts'] = tdf['Projected'].fillna(0).astype('float')
+        tdf['Player'] = tdf['Player'].str.split(',').str[0]  # keep just player name
+        df = df.append(tdf, ignore_index=True)
 
     # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
 
-    return tdf
+    return df
 
 
 def create_leaders():
