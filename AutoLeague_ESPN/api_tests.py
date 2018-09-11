@@ -1,32 +1,210 @@
 # endpoints for the api:
 #   leagueSettings
-#   playerInfo
-#   scoreboard --json
-#   player/news
-#   recentActivity
+#   playerInfo --only has 49 players in the list for some reason??
+#   scoreboard --json, no value to roster sorting
+#   player/news --full text of the news
+#   recentActivity --league trading activities
 #   leagueSchedules
-#   teams
-#   rosterInfo --json
+#   teams --league standing
+#   rosterInfo --json, contains position IDs, percent owned, percent started, health status, and some way to tell if you can still move them
 #   schedule
 #   polls
 #   messageboard
-#   status
+#   status --just the current date
 #   teams/pendingMoveBatches
 #   tweets
 #   stories
 #   livescoring (doesn’t seem to be working right)
-#   boxscore
+#   boxscore -- looks like this will have all the stats, but will be kinda hard to parse
 
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import yaml
-import numpy as np
+# import numpy as np
+# import re
 from tabulate import tabulate
-import re
+
 
 with open('espn_creds.yaml', 'r') as _private:
-    privateData = yaml.load(_private)
+    privateData = yaml.load(_private)    # pulls in the person specific data (teamId, cookies, etc)
+
+
+def create_roster():
+
+    print('----- Moving to Roster Data ------')
+
+    cookies = {
+        'espn_s2': privateData['espn_s2'],
+        'SWID': privateData['SWID']
+    }
+
+    parameters = {
+        'leagueId': privateData['leagueid'], 'teamId': privateData['teamid'], 'seasonId': privateData['seasonid']
+    }
+
+    r = requests.get("http://games.espn.com/ffl/api/v2/rosterInfo",
+                     params=parameters,
+                     cookies=cookies)
+    roster = r.json()
+    rdf = []  # pd.DataFrame(columns=['PlayerID', 'First', 'Last', 'Pos', 'Slot', 'possible slot'])
+    temp2 = roster['leagueRosters']['teams'][0]['slots']
+    for match in temp2:
+        rdf.append([match['player']['playerId'],
+                    match['player']['firstName'],
+                    match['player']['lastName'],
+                    match['player']['defaultPositionId'],  # Player IDs are: 1=QB; 2=RB; 3=WR; 4=TE; 5=K; 16=D/ST
+                    match['slotCategoryId'],  # Position IDs are: 0=QB; 2=RB; 3=RB/WR; 4=WR; 6=TE; 23=FLEX; 17=K; 16=D/ST; 20=Bench; 21=IR
+                    match['player']['eligibleSlotCategoryIds']])
+
+    table_str = tabulate(rdf, headers='keys', tablefmt='psql')
+    return table_str
+
+
+def top_waiver(position):
+
+    player = create_projected(position)
+    print(player)
+
+    return player
+
+
+def create_projected(position):
+
+    print('Listing of top', position, 'players:')
+
+    cookies = {
+        'espn_s2': privateData['espn_s2'],
+        'SWID': privateData['SWID']
+    }
+
+    # slot codes used to get the right page
+    slots = {'QB': 0, 'RB': 2, 'WR': 4, 'TE': 6,
+             'D/ST': 16, 'K': 17, 'BE': 20, 'FLEX': 23}
+    slot = slots[position]
+
+    r = requests.get('http://games.espn.com/ffl/tools/projections',
+                     params={'leagueId': 413011, 'slotCategoryId': slot},
+                     cookies=cookies)
+
+    soup = BeautifulSoup(r.content, 'html.parser')
+    table = soup.find('table', class_='playerTableTable')
+    tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+
+    tdf = tdf.iloc[2:, [1, 2, 14]].reset_index(drop=True)  # delete the useless columns
+
+    tdf.columns = ['Player', 'Owner', 'Pts']
+    tdf['Pts'] = tdf['Pts'].fillna(0).astype('float')
+    tdf['Player'] = tdf['Player'].str.split(',').str[0]  # keep just player name
+
+    var_list = {'WA', 'WA (Wed)'}  # eventually find some way to have it find WA and 'WA ('*
+
+    tdf = tdf.query('Owner == "WA (Wed)"')  # just keep the available players
+
+    # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
+
+    return tdf
+
+
+def create_leaders():
+
+    cookies = {
+        'espn_s2': privateData['espn_s2'],
+        'SWID': privateData['SWID']
+    }
+
+    r = requests.get('http://games.espn.com/ffl/leaders',
+                     params={'leagueId': 413011, 'seasonId': 2018,
+                             'scoringPeriodId': 1,
+                             'slotCategoryId': 0},
+                     cookies=cookies)
+
+    soup = BeautifulSoup(r.content, 'html.parser')
+    table = soup.find('table', class_='playerTableTable')
+    tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+
+    print(tabulate(tdf, headers='keys', tablefmt='psg1'))
+
+    tdf = tdf.drop([1, 3, 4, 7, 12, 16, 21, 25], axis=1)  # remove useless rows and columns
+
+    print(tabulate(tdf, headers='keys', tablefmt='psg1'))
+
+    tdf = tdf.drop([0]).reset_index(drop=True)  # drop 1st row (now column headers) and reindex
+    tdf.columns = tdf.iloc[0]  # make 1st row the column headers
+    tdf = tdf.drop([0]).reset_index(drop=True)  # drop 1st row (now column headers) and reindex
+    # fix column header labels with something like tdf[2][1] = 'POS'
+    # consider tdf.dropna(subset=[1]) to drop nan columns?
+
+    table_str = tabulate(tdf, headers='keys', tablefmt='psql')
+    # print(table_str)
+
+    return 0
+
+
+def boxscores():
+    parameters = {
+        'leagueId': privateData['leagueid'], 'teamId': privateData['teamid'], 'seasonId': privateData['seasonid']
+    }
+
+    r = requests.get("http://games.espn.com/ffl/api/v2/rosterInfo",
+                     params=parameters)
+
+    # slot codes
+    slots = {0: 'QB', 2: 'RB', 4: 'WR', 6: 'TE',
+             16: 'D/ST', 17: 'K', 20: 'BE', 23: 'FLEX'}
+
+    # rows will be by player by week
+    df = pd.DataFrame(columns=['playerName', 'matchupPeriodId',
+                               'slotId', 'position', 'bye', 'appliedStatTotal',
+                               'teamAbbrev', 'wonMatchup'])
+
+    for week in range(1, 17):
+        for match in range(len(sbs[week]['scoreboard']['matchups'])):
+            homeId = sbs[week]['scoreboard']['matchups'][match]['teams'][0]['team']['teamId']
+            winner = sbs[week]['scoreboard']['matchups'][match]['winner']
+
+            # loop through home (0) and away (1)
+            for team in range(2):
+                # boolean for who won this matchup
+                winb = False
+                if (winner == 'away' and team == 1) or (winner == 'home' and team == 0):
+                    winb = True
+
+                # fantasy team info (dict)
+                tinfo = bss[week][match]['boxscore']['teams'][team]['team']
+
+                # all players on that team info (array of dicts)
+                ps = bss[week][match]['boxscore']['teams'][team]['slots']
+
+                # loop through players
+                for k, p in enumerate(ps):
+                    # players on bye/injured won't have this entry
+                    try:
+                        pts = p['currentPeriodRealStats']['appliedStatTotal']
+                    except KeyError:
+                        pts = 0
+
+                    # there is some messiness in the json so just skip
+                    try:
+                        # get player's position. this is a bit hacky...
+                        pos = p['player']['eligibleSlotCategoryIds']
+                        for s in [20, 23]:
+                            if pos.count(s) > 0:
+                                pos.remove(s)
+                        pos = slots[pos[0]]
+
+                        # add it all to the DataFrame
+                        df = df.append({'playerName': p['player']['firstName'] + ' ' + p['player']['lastName'],
+                                        'matchupPeriodId': week,
+                                        'slotId': p['slotCategoryId'],
+                                        'position': pos,
+                                        'bye': True if p['opponentProTeamId'] == -1 else False,
+                                        'appliedStatTotal': pts,
+                                        'teamAbbrev': tinfo['teamAbbrev'],
+                                        'wonMatchup': winb},
+                                       ignore_index=True)
+                    except KeyError:
+                        continue
 
 # scores = {}
 # for week in range(1, 17):
@@ -51,83 +229,9 @@ with open('espn_creds.yaml', 'r') as _private:
 # table_str = tabulate(df, headers='keys', tablefmt='psql')
 # print(table_str)
 
-print('----- Moving to Roster Data ------')
-
-cookies = {
-    'espn_s2': privateData['espn_s2'],
-    'SWID': privateData['SWID']
-}
-
-parameters = {
-    'leagueId': 413011, 'teamId': 10, 'seasonId': 2018
-}
-
-r = requests.get("http://games.espn.com/ffl/api/v2/rosterInfo",
-                 params=parameters,
-                 cookies=cookies)
-roster = r.json()
-rdf = []
-temp2 = roster['leagueRosters']['teams'][0]['slots']
-i = 1
-for match in temp2:
-    rdf.append([i,
-                match['player']['firstName'],
-                match['player']['lastName']])
-    i = i+1
-
-table_str = tabulate(rdf, headers='keys', tablefmt='psql')
-print(table_str)
-
-print('---------- Moving on to the Leader Board ------------')
-
-leaders = {}
-r = requests.get('http://games.espn.com/ffl/leaders',
-                 params={'leagueId': 413011, 'seasonId': 2018,
-                         'scoringPeriodId': 1,
-                         'slotCategoryId': 0},
-                 cookies=cookies)
-
-soup = BeautifulSoup(r.content, 'html.parser')
-table = soup.find('table', class_='playerTableTable')
-tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+# temp...copies from sobey's code
 
 
-tdf = tdf.drop([1,3,4,9,13,18,22], axis=1) # remove useless rows and columns
-
-tdf = tdf.drop([0]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
-tdf.columns = tdf.iloc[0] # make 1st row the column headers
-tdf = tdf.drop([0]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
-
-
-table_str = tabulate(tdf, headers='keys', tablefmt='psql')
-print(table_str)
-
-# df = pd.DataFrame(df, columns=['one', 'two', 'three', 'four'])
-
-# positions = ['QB', 'TE', 'K', 'D/ST', 'RB', 'WR']
-
-
-
-# def create_team_table(file_location, file_name):
-#     _PS = open(file_location + file_name, 'r')
-#     _soup = BeautifulSoup(_PS, 'lxml')
-#     _PS.close()
-#     table_soup = _soup.find_all('table')[0]
-#
-#     df = pd.read_html(str(table_soup))
-#
-#     _team_table = df[3] # from troubleshooting the third table is the team table
-#     _team_table = _team_table.drop([5, 10], axis=1).drop([0, 12], axis=0) # remove useless rows and columns
-#     _team_table = _team_table.dropna(subset=[1]) # drop the IR column if PLAYER value is nan
-#
-#     # fix a couple column header labels
-#     _team_table[2][1] = 'POS'
-#     _team_table[1][1] = 'PLAYER'
-#     _team_table[2][13] = 'POS'
-#
-#     _team_table.columns = _team_table.iloc[0] # make 1st row the column headers
-#     _team_table = _team_table.drop([1]).reset_index(drop=True) # drop 1st row (now column headers) and reindex
-#
 #     for col in _team_table:
 #         _team_table[col][:9] = pd.to_numeric(_team_table[col][:9], errors='ignore')
 #         _team_table[col][11:] = pd.to_numeric(_team_table[col][11:], errors='ignore')
@@ -186,3 +290,10 @@ print(table_str)
 #     team_table = create_team_table(file_location, file_name)
 #
 #     print_table(team_table)
+
+if __name__ == '__main__':
+    # table1 = create_roster()
+    # table1 = boxscores()
+    # table1 = create_leaders()
+    # print(table1)
+    top_waiver('QB')
