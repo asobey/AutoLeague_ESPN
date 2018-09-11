@@ -3,9 +3,17 @@
 # Fill in your username and password.
 # Rename file to: 'espn_creds.yaml'
 
-homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XX&seasonId=XXXX #Your ESPN FF Homepage URL
-user: xxxxxxxxxx@xxxxxxxxx.com #email or username
-pass: xxxxxxxxxxxx
+user: xxxxx@xxxxx
+pass: xxxx
+
+leagueid: xxxxxx
+seasonid: xxxx
+teamid: xx
+
+homepage: xxxxxxxxxxxxxxxxxxxxxxxxx #Your ESPN FF Homepage URL
+
+espn_s2: xxxxxxxxxxxxx
+SWID: xxxxxxxxxxxxx
 
 # If you login to your ESPN FF homepage, just copy and paste the URL into the homepage definition.
 # It should look very similar to the above link. The first set of XXXXXX is the league ID. The second XXXX is season ID

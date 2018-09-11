@@ -63,7 +63,8 @@ def create_roster():
 
 def top_waiver(position):  # this "top" ranking is personal preference. initial setup is based on espn's projection
 
-    player = create_waiver(position)
+    df = create_waiver(position)
+    player = df.nlargest(3, 'Projected')
     print(player)
 
     return player
@@ -96,10 +97,12 @@ def create_waiver(position):  # 'Listing of', position, 'players on the waiver w
         tdf = tdf.iloc[2:, [0, 5, 13, 14, 15, 16, 17]].reset_index(drop=True)  # delete the useless columns
 
         tdf.columns = ['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-']
-        # tdf['Pts'] = tdf['Projected'].fillna(0).astype('float')
-        tdf['Player'] = tdf['Player'].str.split(',').str[0]  # keep just player name
         df = df.append(tdf, ignore_index=True)
 
+    df = df.query('Projected != "--"')
+
+    df['Projected'] = df['Projected'].fillna(0).astype('float')
+    df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
     # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
 
     return df
