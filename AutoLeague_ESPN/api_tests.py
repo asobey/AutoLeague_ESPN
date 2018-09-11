@@ -22,7 +22,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import yaml
 # import numpy as np
-# import re
+import re
 from tabulate import tabulate
 
 
@@ -61,16 +61,28 @@ def create_roster():
     return table_str
 
 
-def top_waiver(position):  # this "top" ranking is personal preference. initial setup is based on espn's projection
+def add_player_id(team_table, table_soup):
+    table_line = str(table_soup.find_all("td", {"class": "playertablePlayerName"}))
+    player_ids = list(map(int, re.findall('playername_(\d+)', table_line)))
+
+    # The extra '--' at the end and the [:17] are to resolve having or not having an IR spot
+    player_ids_insert = (player_ids[:10] + ['ID'] + player_ids[10:] + ['--'] + ['--'] + ['--'] + ['--'] + ['--'])[:len(team_table)]
+    team_table['ID'] = player_ids_insert
+    return team_table
+
+
+def top_waiver(position):
+    """this "top" ranking is personal preference. initial setup is based on espn's projection"""
 
     df = create_waiver(position)
     player = df.nlargest(3, 'Projected')
-    print(player)
+    print(tabulate(player, headers='keys', tablefmt='psg1'))
 
     return player
 
 
-def create_waiver(position):  # 'Listing of', position, 'players on the waiver wire:'
+def create_waiver(position='none'):
+    """Listing of "position" players on the waiver wire."""
 
     cookies = {
         'espn_s2': privateData['espn_s2'],
@@ -81,13 +93,20 @@ def create_waiver(position):  # 'Listing of', position, 'players on the waiver w
     slots = {'QB': 0, 'RB': 2, 'RB/WR': 3, 'WR': 4, 'TE': 6, 'D/ST': 16, 'K': 17, 'FLEX': 23}
     slot = slots[position]
 
+    if position == 'none':
+        parameters = {'leagueId': privateData['leagueid'], 'teamID': privateData['teamid'],
+                      'avail': 1, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
+    else:
+        parameters = {'leagueId': privateData['leagueid'], 'teamID': privateData['teamid'],
+                      'slotCategoryId': slot, 'avail': 1, 'injury': 2, 'context': 'freeagency',
+                      'view': 'overview'}
+
     df = pd.DataFrame(columns=['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-'])
 
     for si in [0, 50, 100]:
+        parameters['startIndex'] = si
         r = requests.get('http://games.espn.com/ffl/freeagency',
-                         params={'leagueId': privateData['leagueid'], 'teamID': privateData['teamid'],
-                                 'slotCategoryId': slot, 'avail': 1, 'injury': 2, 'context': 'freeagency',
-                                 'view': 'overview', 'startIndex': si},
+                         params=parameters,
                          cookies=cookies)
 
         soup = BeautifulSoup(r.content, 'html.parser')
@@ -95,15 +114,16 @@ def create_waiver(position):  # 'Listing of', position, 'players on the waiver w
         tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
 
         tdf = tdf.iloc[2:, [0, 5, 13, 14, 15, 16, 17]].reset_index(drop=True)  # delete the useless columns
-
-        tdf.columns = ['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-']
-        df = df.append(tdf, ignore_index=True)
+        tdf = add_player_id(tdf, soup)
+        tdf.columns = ['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-', 'PlayerID']
+        df = df.append(tdf, ignore_index=True, sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
 
     df = df.query('Projected != "--"')
 
     df['Projected'] = df['Projected'].fillna(0).astype('float')
     df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
     # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
+
 
     return df
 
@@ -299,3 +319,5 @@ if __name__ == '__main__':
     # table1 = create_leaders()
     # print(table1)
     top_waiver('QB')
+
+
