@@ -8,29 +8,31 @@ import os
 
 
 def login_and_return_browser():
-    privateData = import_yaml()
-    browser = open_browser(privateData)
+    """This function calls the import_yaml function to open espn_cred.yaml file then calls the navigate_and_login
+    function. It does not return anything but starts the webdriver/broswer object'"""
+    private_data = import_yaml()
+    webdriver = open_browser(private_data)
     # RESIZE WINDOW
-    browser.set_window_size(1100, 1080)
-    browser = navigate_and_login(browser, privateData)
-    return browser
+    webdriver.set_window_size(1100, 1080)  # width, length. This is needed to be able to select profile menu
+    webdriver = navigate_and_login(webdriver, private_data)
+    return webdriver
 
 
 def import_yaml():
+    """This function opens the espn_creds.yaml file and returns its contents as privateData"""
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
         try:
-            privateData = yaml.load(_private)
-            return privateData
+            private_data = yaml.load(_private)
+            return private_data
         except yaml.YAMLError as exc:
             print(exc)
 
 
-def open_browser(privateData):
-    browser = webdriver.Chrome() # For some reason the webdriver.Chrome() window does not come up big enough to
-    # find the proper login button. Firefox opens a large enough window. It is failing to login possible resizing or
-    # other method may be required.
+def open_browser(private_data):
+    """This function simply opens and returns the webdriver/browser"""
+    browser = webdriver.Chrome()
     try:
-        browser.get(privateData['homepage'])
+        browser.get(private_data['homepage'])
         print('Fantasy Football Page Opened.')
         return browser
     except:
@@ -38,27 +40,38 @@ def open_browser(privateData):
     return browser
 
 
-def navigate_and_login(browser, _privateData):
-    time.sleep(.1)
-    # set window size
-    browser.set_window_size(1100, 1080)
+def navigate_and_login(browser, private_data):
+    """This function navigates and logs into the homepage after the browser is open and loaded to the homepage."""
+    corner_elem_text = 'Log In'
+    login_button_xpath = '/html/body/div[2]/table/tbody/tr/td/div[2]/div[2]/header/div[2]/ul/li[2]/div/div/ul[1]/' \
+                         'li[4]/a'
+    # username_field = "//input[@placeholder='Username or Email Address']"
+    username_field = '#did-ui-view > div > section > section > form > section > div:nth-child(1) > div > label > span.input-wrapper > input'
+    action_xpath = '//*[@id="playertable_0"]/tbody/tr[2]/td[3]'
 
-
-def navigate_and_login(browser, _privateData):
-    # select corner profile
-    ProfileElem = browser.find_element_by_link_text('Log In')
-    ProfileElem.click()
-    time.sleep(.5)
-    # select login
-    LoginElem = browser.find_element_by_xpath('/html/body/div[2]/table/tbody/tr/td/div[2]/div[2]/header/div[2]/ul/li[2]/div/div/ul[1]/li[4]/a')
-    LoginElem.click()
-    time.sleep(.5)
-    # fill username and password with keystokes
+    # Click corner profile menu
+    profile_elem = WebDriverWait(browser, 10).until(lambda browser: browser.find_element_by_link_text(corner_elem_text))
+    profile_elem.click()
+    # Select 'Login' from profile menu
+    login_elem = WebDriverWait(browser,10).until(lambda browser: browser.find_element_by_xpath(login_button_xpath))
+    login_elem.click()
+    # <<<<<================ISSUE TO FIX======================================
+    # ****FIX DESIRED***: Wait for login popup. Currently cannot identify element to wait on.
     time.sleep(2)
+    pop_up = '// *[ @ id = "did-ui-view"]'
+    #username_elem = WebDriverWait(browser, 5).until(lambda browser: browser.find_elements_by_id("did-ui-view"))
+    #username_elem = WebDriverWait(browser, 5).until(lambda browser: browser.find_elements_by_css_selector(username_field))
+    # Fill username and password with key-stokes
     actions = ActionChains(browser)
-    # For some reason extra Key.TAB is required at beginning on 2nd computer. Code not robust.
-    actions.send_keys(_privateData['user'], Keys.TAB, _privateData['pass'], Keys.ENTER)
+    # For some reason extra Key.TAB is required at beginning on 2nd computer (old laptop). Code not robust.
+    actions.send_keys(private_data['user'], Keys.TAB, private_data['pass'], Keys.ENTER)
     actions.perform()
+
+    # =====================ISSUE TO FIX=================================>>>>>
+    # This WebDriverWait statement is to ensure broswer is not retuned until table is fully loaded. 'eplus' is a new
+    # table tab that appears after login. Without this wait statement a smaller table is saved and parsing breaks.
+    action_column = WebDriverWait(browser, 8).until(lambda browser: browser.find_element_by_class_name("eplus"))
+
     return browser
 
 
@@ -73,7 +86,6 @@ if __name__ == '__main__':
     browser = login_and_return_browser()
 
     browser_functions.save_source(browser, source_file_location, source_file_name)  # Save Source
-
-    time.sleep(3)
-    team_table = team_table_parse.update_team_table(browser.page_source)  # read table from source
+    team_table = team_table_parse.create_team_table(source_file_location, source_file_name)
+    #team_table = team_table_parse.update_team_table(browser.page_source)  # read table from source
     team_table_parse.print_table(team_table)
