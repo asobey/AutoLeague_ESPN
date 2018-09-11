@@ -39,7 +39,7 @@ def handle_multi_spot_move(webdriver, team_table, opt_team_chart):
     with throw an exception at the end.'''
     for key, value in opt_team_chart.items():
         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-                
+
         if team_table['ID'].loc[team_table['HERE'] == key].item() == value:
 
     if here_slot == 1 or here_slot == 2 or here_slot == 3 or here_slot == 4:
