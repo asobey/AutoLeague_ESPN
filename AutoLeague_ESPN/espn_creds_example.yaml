@@ -10,8 +10,13 @@ leagueid: xxxxxx
 seasonid: xxxx
 teamid: xx
 
-homepage: xxxxxxxxxxxxxxxxxxxxxxxxx #Your ESPN FF Homepage URL
+homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX #Your ESPN FF Homepage URL
 
+# Program Options
+windowSize: 1100, 1080  # default <1100, 1080>. If size is too small (specifically width) errors may occur
+projectionType: ESPN  # default <ESPN>. Future choices <ESPN>, <YAHOO>, <ESPNwPPR>, <YAHOOwPPR>, <INTERNAL>
+
+# COOKIES
 espn_s2: xxxxxxxxxxxxx
 SWID: xxxxxxxxxxxxx
 
