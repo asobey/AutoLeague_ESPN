@@ -38,17 +38,15 @@ def handle_multi_spot_move(team_table, opt_team_chart):
     and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
     with throw an exception at the end.'''
     for key, value in opt_team_chart.items():
-        print(opt_team_chart)  # DEBUG
         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
             _temp1 = opt_team_chart[1]
             opt_team_chart[1] = opt_team_chart[2]
             opt_team_chart[2] = _temp1
-        elif key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-            _temp1 = opt_team_chart[1]
-            opt_team_chart[1] = opt_team_chart[2]
-            opt_team_chart[2] = _temp1
-        print(opt_team_chart)  # DEBUG
-        return opt_team_chart
+        elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
+            _temp1 = opt_team_chart[3]
+            opt_team_chart[3] = opt_team_chart[4]
+            opt_team_chart[4] = _temp1
+    return opt_team_chart
 
 def sort_team(team_table, opt_team_chart):
     """This funtion goes through the optimal team chart and calls the move function for each player change"""
