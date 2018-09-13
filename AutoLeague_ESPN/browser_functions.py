@@ -33,29 +33,26 @@ def id_to_here(webdriver, from_id, here_slot):
         print('Multi spot anomaly detected!')
 
 
-def handle_multi_spot_move(webdriver, team_table, opt_team_chart):
+def handle_multi_spot_move(team_table, opt_team_chart):
     '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
     and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
     with throw an exception at the end.'''
     for key, value in opt_team_chart.items():
+        print(opt_team_chart)  # DEBUG
         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-
-        if team_table['ID'].loc[team_table['HERE'] == key].item() == value:
-
-    if here_slot == 1 or here_slot == 2 or here_slot == 3 or here_slot == 4:
-        try:
-            if here_slot == 1: here_slot = 2
-            elif here_slot == 2: here_slot = 1
-            elif here_slot == 3: here_slot = 4
-            elif here_slot == 4: here_slot = 3
-
-        except:
-            print('The handle_multi_spot_move() function cannot handle this move anomaly ')
+            _temp1 = opt_team_chart[1]
+            opt_team_chart[1] = opt_team_chart[2]
+            opt_team_chart[2] = _temp1
+        elif key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
+            _temp1 = opt_team_chart[1]
+            opt_team_chart[1] = opt_team_chart[2]
+            opt_team_chart[2] = _temp1
+        print(opt_team_chart)  # DEBUG
         return opt_team_chart
 
-def sort_team(webdriver, team_table, opt_team_chart):
+def sort_team(team_table, opt_team_chart):
     """This funtion goes through the optimal team chart and calls the move function for each player change"""
-    opt_team_chart = handle_multi_spot_move(webdriver, team_table, opt_team_chart)
+    opt_team_chart = handle_multi_spot_move(team_table, opt_team_chart)
 
     for key, value in opt_team_chart.items():
         time.sleep(.5)  # UNNEEDED BUT LOOKS COOL
@@ -64,7 +61,7 @@ def sort_team(webdriver, team_table, opt_team_chart):
         else:
             print(f'+++++++++++++++++++++++++++++++++++++++++++++++Player: {value} needs to be moved to: {key}++++++++')
             try:
-                id_to_here(webdriver, value, key)
+                id_to_here(browser, value, key)
             except:
                 print(f'Unable to move {value}')
 
@@ -103,7 +100,7 @@ if __name__ == '__main__':
     print('++++++++++++++++++OPTIMAL TEAM TABLE+++++++++++++++++++++')
     team_table_parse.print_table(optimal_team_table)
 
-    sort_team(browser, team_table, optimal_team_chart)
+    sort_team(team_table, optimal_team_chart)
 
 
     #
