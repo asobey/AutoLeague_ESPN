@@ -15,22 +15,11 @@ GOALS:
 4) Auto Shittalk - Pregame
 4) Auto Brag - Postgame
 
-=======
-After the draft, let the AutoLeague take care of your team for you. You have too much on your plate. Sit back and relax while
-AutoLeague takes care of the thinking. Starting with ESPN.
+One required file that I do not have on GitHub is the username/password keeper. Please create this file and place it in the same directory to use this program. Follow the format in espn_creds_example.yaml to create the new file with filename: espn_creds.yaml.
 
-Atomate_Team_Management is the main file used to handle ESPN Fantasy Football (FF) Team Management.
+Currently only runs by using browser_functions.py
 
-One required file that I do not have on GitHub is the username/password keeper. Please create this file and place it in the same directory to use this program. It consists of only two lines (below) and requires your ESPN username and password.
-Filename: espn_creds.yaml
-File Contents: "
-ESPNUserName: xxxxxxxxxx@xxxxxxxxx.com
-routerPassword: xxxxxxxxxxxx
-"
-
-*This file is currently not required. If you have the ESPN login info saved in your Firefox browser (though cookies maybe?) everything should work (no need to login).
-
-#Desired Methods organized within Files
+#Desired Methods organized within Files (this is all still hypothetical)
 
 ###TeamManagement.py
 
@@ -90,5 +79,3 @@ def msg_bot(team, msg):
     send msg to team
     
 ####LeagueTrade.py
-
-#josh was here
