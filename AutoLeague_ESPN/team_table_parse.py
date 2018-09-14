@@ -79,7 +79,7 @@ def add_player_id(team_table, table_soup):
     for i in team_table.index:
         if team_table['POS'][i] != '--':
             if len(player_ids) > 0:
-                team_table['ID'][i] = player_ids[0]
+                team_table.loc[i, 'ID'] = player_ids[0]
                 player_ids.pop(0)
     return team_table
 

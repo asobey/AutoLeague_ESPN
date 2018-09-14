@@ -84,13 +84,6 @@ if __name__ == '__main__':
 
     save_source(browser, source_file_location, source_file_name) # save source
     team_table = team_table_parse.create_team_table(source_file_location, source_file_name) # read table from source
-
-    team_table_parse.print_table(team_table)
-
-    time.sleep(2)
-
-    save_source(browser, source_file_location, source_file_name)  # save source
-    team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
     team_table_parse.print_table(team_table)
 
     optimal_team_chart = optimize_team.optimize(team_table)

@@ -4,8 +4,8 @@ import AutoLeague_ESPN.team_table_parse as team_table_parse
 import time
 
 POSITIONS = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
-SINGLE_SPOT_POSITIONS = ['QB', 'K', 'D/ST']
-MULTI_SPOT_POSITIONS = ['TE', 'RB', 'WR']
+SINGLE_SPOT_POSITIONS = ['QB', 'K', 'D/ST']  # Delete later
+MULTI_SPOT_POSITIONS = ['TE', 'RB', 'WR']  # Delete later
 
 def optimize(team_table):
     team_dic = make_team_dic(team_table, POSITIONS)
@@ -19,12 +19,8 @@ def optimize(team_table):
     return optimal_position_chart
 
 
-def player_value(_table, pos_index):
-    return _table['PROJ'][pos_index]
-
-
 def make_team_dic(table, positions):
-    team_dic = {}
+    team_dic = {}  # Making a dictionary of the team
     for pos in positions:
         pos_true = table.index[table['POS'].str.contains(pos)].values  # list of true values by row number
         #print(pos + ' : ' + str(pos_true))
@@ -52,12 +48,11 @@ def rank_team_dic_by_ESPN(t_dic):
 def add_multi_pos_chart(r_dic):
     '''This function combined the remaining (not top 2 in positions) WR/RB/TE into two groups: best WR/RB and best remainder'''
     r_dic['REMAINDER'] = r_dic['RB'].iloc[2:].append(r_dic['WR'].iloc[2:]).append(r_dic['TE'].iloc[1:])
-    #print(r_dic['REMAINDER'])
+
     r_dic['REMAINDER'] = r_dic['REMAINDER'].sort_values('PROJ', ascending=False)
     print('REMAINDER:')
     print(tabulate(r_dic['REMAINDER'], headers='keys', tablefmt='psql'))
 
-    #print(r_dic['REMAINDER']['POS'].iloc[0])
     if r_dic['REMAINDER']['POS'].iloc[0] == 'TE':
         r_dic['RB/WR'] = r_dic['REMAINDER'].drop(r_dic['REMAINDER'].index[2:]).drop(r_dic['REMAINDER'].index[0])
         r_dic['FLEX'] = r_dic['REMAINDER'].drop(r_dic['REMAINDER'].index[1:])
