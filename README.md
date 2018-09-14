@@ -23,59 +23,72 @@ Currently only runs by using browser_functions.py
 
 ###TeamManagement.py
 
-def main():
-    loops manage team at specific times (daily)
-    autoleague_main():
-    taunt_bot()
+--------4 MODULES---------
+*future
 
-def autoleague_main():
-    get_team()
-    get_free_agents()
-        optimize_free_agents()
-            pickup_free_agents()
+Manage
+    main
+        team
+Browse
+    frontpage
+        import_yaml_file (could also exist in Manage)
+        open_browser
+        login (frontpage)
+    waiver
+        open_waiver(position)
+    external_ranking
+    save_source
+    pickup_waiver
+    sort_team
+        multispot
+        move
+    trade*
+Parse
+    print
+    create
+        open_source
+        update_table
+            add_position
+            add_id
+            add_here        
+Logic
+    team_sort (put best player in)
+    waiver_sort (choose waiver player to trade)
+Communication*
+    Taunt*
     
-    get_team()
-        optimize_team()
-        switch_players_in_roster()
-    
-def get_team():
-    return position_chart
 
-def optimize_team(get_team()):
-    switches = []
-    for player in roaster[playing positions]:
-        for possible_replacement in replacement_hierarchy:
-            if player_side_by_side(player, possible_replacement):
-                switch_players_in_roster()
-    return list of switch x for y
+------ACTION OUTLINE--------
 
-def player_side_by_side(current, possible_replacement):
-    if evaluate_player(current) < evaluate_player(possible_replacement):
-        return True
-    else:
-        return False
-
-def evaluate_player():
-    return player_score
-
-def switch_players_in_roster():
-
-def get_free_agents():
-    return free_agent_chart
-
-def optimize_free_agents(get_team(), get_free_agents()):
-    return list of switch x for y
-    
-def pickup_free_agent(optimize_free_agents())
+def Manage.main():  # run Manage.team at specific times
+    def Manage.team():  # all team management occur here
+        Browse.frontpage(): # get browser object and frontpage source
+            Browse.import_yaml_file
+            Browse.open_browser
+            Browse.login (frontpage)
+            Browse.save_source (get rid of this eventually)
+        Parse.create  # Create team table
+            Parse.open_source (get rid of this eventually)
+            Parse.update_table
+                Parse.add_position
+                Parse.add_id
+                Parse.add_here
+        Browse.waiver
+            Browse.open_waiver
+            Browse.get_waivers
+        Browse.eternal_ranking  # return ranking from 3rd party (yahoo, http://www.borischen.co/)
+        Logic.waiver_sort(team_table, waivers, external_rankings(optional))
+            Browser.pickup_waiver
+        Logic.team_sort(team_table, external_rankings(optional))
+            Browser.sort_team
+                Browser.multispot
+                Browser.move
 
 
-###LeagueComm.py
-
-def taunt_bot():
-find losses or low projections
-return team, msg
-
-def msg_bot(team, msg):
+Communication
+    Communication.taunt_bot(): #find losses or low projections
+        return team, msg
+    Communication.msg_bot(team, msg):
     send msg to team
     
-####LeagueTrade.py
+Broswer.trade

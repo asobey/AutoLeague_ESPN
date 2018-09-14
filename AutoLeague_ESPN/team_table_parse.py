@@ -74,10 +74,13 @@ def add_player_id(team_table, table_soup):
     """This function searches the BS4 soup for each players ID then adds it"""
     table_line = str(table_soup.find_all("td", {"class": "playertablePlayerName"}))
     player_ids = list(map(int, re.findall('playername_(\d+)', table_line)))
-
-    # The extra '--' at the end and the [:len(team_table)] are to resolve having or not having an IR or empty slot
-    player_ids_insert = (player_ids + ['--'] + ['--'] + ['--'] + ['--'] + ['--'])[:len(team_table)]
+    player_ids_insert = ['--'] * len(team_table)  # Start by filling all rows will '--'
     team_table['ID'] = player_ids_insert
+    for i in team_table.index:
+        if team_table['POS'][i] != '--':
+            if len(player_ids) > 0:
+                team_table['ID'][i] = player_ids[0]
+                player_ids.pop(0)
     return team_table
 
 
