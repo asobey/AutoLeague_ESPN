@@ -46,17 +46,22 @@ def create_roster():
                      cookies=cookies)
     roster = r.json()
     rdf = []  # initialize the list
-    temp2 = roster['leagueRosters']['teams'][0]['slots']  # create a nested dict of all the "slots". Includes empties.
-    for match in temp2:
+    temp2 = roster['leagueRosters']['teams'][0]['slots']  # create a nested lists? of all the "slots". Includes empties.
+    slots = ['QB', 'RB1', 'RB2', 'RB/WR', 'WR1', 'WR2', 'TE', 'FLEX',  # Individual row titles in the standard table
+             'D/ST', 'K', 'Bench1', 'Bench2', 'Bench3', 'Bench4', 'Bench5', 'IR']
+    pos_ids = {0: 'QB', 2: 'RB', 3: 'RB/WR', 4: 'WR', 6: 'TE', 23: 'FLEX', 17: 'K', 16: 'D/ST', 20: 'Bench', 21: 'IR'}
+    i = 0
+    for match in temp2:  # runs though the entries, and appennds the following items:  = ['SLOT', 'POS', 'ID', 'PLAYER', 'PTS', 'AVG', 'LAST', 'PROJ', '%ST', '%OWN', '+/-', 'OPRK', 'OPP', 'PRK', 'STATUS ET']
         if len(match) > 3:  # Check for blank slot
-            rdf.append([match['player']['playerId'],
+            rdf.append([pos_ids[match['slotCategoryId']],
+                        match['player']['playerId'],
                         match['player']['firstName'],
                         match['player']['lastName'],
-                        match['player']['defaultPositionId'],  # Slot IDs are: 1=QB; 2=RB; 3=WR; 4=TE; 5=K; 16=D/ST
-                        match['slotCategoryId'],  # Position IDs are: 0=QB; 2=RB; 3=RB/WR; 4=WR; 6=TE; 23=FLEX; 17=K; 16=D/ST; 20=Bench; 21=IR
-                        match['player']['eligibleSlotCategoryIds']])
+                        match['lockStatus'],  # 0 == normal; 4 == locked
+                        match['playerPotentialTransactions']])
         else:
-            print('empty player slot')
+            rdf.append([slots[i], '--', '--', '--', '--', '--'])
+        i = i+1
 
     table_str = tabulate(rdf, headers='keys', tablefmt='psql')
     return table_str
@@ -119,7 +124,7 @@ def create_waiver(position='none'):
         df = df.append(tdf, ignore_index=True, sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
 
     df = df.query('Projected != "--"')
-    df['Projected'] = df['Projected'].fillna(0).astype('float')  # !!!! troubleshoot this warning
+    df['Projected'] = df['Projected'].fillna(0).astype('float')  # !!!! troubleshoot. try  df.loc['Projected'] = df[...
     # df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
     # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
 
