@@ -32,8 +32,6 @@ with open('espn_creds.yaml', 'r') as _private:
 
 def create_roster():
 
-    print('----- Moving to Roster Data ------')
-
     cookies = {
         'espn_s2': privateData['espn_s2'],
         'SWID': privateData['SWID']
@@ -47,27 +45,28 @@ def create_roster():
                      params=parameters,
                      cookies=cookies)
     roster = r.json()
-    rdf = []  # pd.DataFrame(columns=['PlayerID', 'First', 'Last', 'Pos', 'Slot', 'possible slot'])
-    temp2 = roster['leagueRosters']['teams'][0]['slots']
+    rdf = []  # initialize the list
+    temp2 = roster['leagueRosters']['teams'][0]['slots']  # create a nested dict of all the "slots". Includes empties.
     for match in temp2:
-        rdf.append([match['player']['playerId'],
-                    match['player']['firstName'],
-                    match['player']['lastName'],
-                    match['player']['defaultPositionId'],  # Player IDs are: 1=QB; 2=RB; 3=WR; 4=TE; 5=K; 16=D/ST
-                    match['slotCategoryId'],  # Position IDs are: 0=QB; 2=RB; 3=RB/WR; 4=WR; 6=TE; 23=FLEX; 17=K; 16=D/ST; 20=Bench; 21=IR
-                    match['player']['eligibleSlotCategoryIds']])
+        if len(match) > 3:  # Check for blank slot
+            rdf.append([match['player']['playerId'],
+                        match['player']['firstName'],
+                        match['player']['lastName'],
+                        match['player']['defaultPositionId'],  # Slot IDs are: 1=QB; 2=RB; 3=WR; 4=TE; 5=K; 16=D/ST
+                        match['slotCategoryId'],  # Position IDs are: 0=QB; 2=RB; 3=RB/WR; 4=WR; 6=TE; 23=FLEX; 17=K; 16=D/ST; 20=Bench; 21=IR
+                        match['player']['eligibleSlotCategoryIds']])
+        else:
+            print('empty player slot')
 
     table_str = tabulate(rdf, headers='keys', tablefmt='psql')
     return table_str
 
 
-def add_player_id(team_table, table_soup):
-    table_line = str(table_soup.find_all("td", {"class": "playertablePlayerName"}))
-    player_ids = list(map(int, re.findall('playername_(\d+)', table_line)))
+def add_player_id(team_table, table_soup):  # Only works on table_soups that are fully populated with ONLY players
+    """ Adds the player ID from the soup when it isn't readily available. """
 
-    # The extra '--' at the end and the [:17] are to resolve having or not having an IR spot
-    player_ids_insert = (player_ids[:10] + ['ID'] + player_ids[10:] + ['--'] + ['--'] + ['--'] + ['--'] + ['--'])[:len(team_table)]
-    team_table['ID'] = player_ids_insert
+    table_line = str(table_soup.find_all("td", {"class": "playertablePlayerName"}))
+    team_table['ID'] = list(map(int, re.findall('playername_(\d+)', table_line)))
     return team_table
 
 
@@ -314,10 +313,10 @@ def boxscores():
 #     print_table(team_table)
 
 if __name__ == '__main__':
-    # table1 = create_roster()
+    table1 = create_roster()
     # table1 = boxscores()
     # table1 = create_leaders()
-    # print(table1)
-    top_waiver('QB')
+    print(table1)
+    # top_waiver('QB')
 
 
