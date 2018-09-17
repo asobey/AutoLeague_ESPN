@@ -1,7 +1,5 @@
-import pandas as pd
 from tabulate import tabulate
-import AutoLeague_ESPN.team_table_parse as team_table_parse
-import time
+import AutoLeague_ESPN as team_table_parse
 
 POSITIONS = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
 SINGLE_SPOT_POSITIONS = ['QB', 'K', 'D/ST']  # Delete later

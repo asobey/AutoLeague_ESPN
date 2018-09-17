@@ -78,7 +78,7 @@ def navigate_and_login(browser, private_data):
 if __name__ == '__main__':
 
     import AutoLeague_ESPN.browser_functions as browser_functions
-    import AutoLeague_ESPN.team_table_parse as team_table_parse
+    import AutoLeague_ESPN .team_table_parse as team_table_parse
 
     source_file_location = '..\\offline_webpages\\'
     source_file_name = 'front_page_source'
@@ -87,5 +87,4 @@ if __name__ == '__main__':
 
     browser_functions.save_source(browser, source_file_location, source_file_name)  # Save Source
     team_table = team_table_parse.create_team_table(source_file_location, source_file_name)
-    #team_table = team_table_parse.update_team_table(browser.page_source)  # read table from source
-    team_table_parse.print_table(team_table)
+    #team_table_parse.print_table(team_table)

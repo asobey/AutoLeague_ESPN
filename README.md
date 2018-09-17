@@ -30,10 +30,12 @@ Manage
     main
         team
 Browse
-    frontpage
+    __init__
         import_yaml_file (could also exist in Manage)
         open_browser
         login (frontpage)
+            from_cookies
+            from_creds
     waiver
         open_waiver(position)
     external_ranking

@@ -1,0 +1,6 @@
+
+
+
+
+class Logic(object):
+    pass

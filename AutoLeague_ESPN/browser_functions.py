@@ -72,7 +72,6 @@ if __name__ == '__main__':
     import AutoLeague_ESPN.optimize_team as optimize_team
 
     print('CWD: ', os.getcwd()) #  can get rid of later. Should not hurt
-    #os.chdir('C:\\Users\\alexs\\PycharmProjects\\AutoLeague_ESPN\\AutoLeague_ESPN')
 
     source_file_location = '..\\offline_webpages\\'
     source_file_name = 'front_page_source'
@@ -92,38 +91,3 @@ if __name__ == '__main__':
     team_table_parse.print_table(optimal_team_table)
 
     sort_team(team_table, optimal_team_chart)
-
-
-    #
-    # time.sleep(1)
-    # # Options to query on column to another: df[df['B']==3]['A'].item() ; df.query('B==3')['A'].item()
-    # #J's
-    # #from_ID = team_table[team_table['PLAYER']=='A.J. Green, Cin WR']['ID'].item()
-    # #to_HERE = team_table[team_table['PLAYER']=='Demaryius Thomas, Den WR']['HERE'].item()
-    #
-    # # S's
-    # from_ID = team_table[team_table['PLAYER'] == 'Joe Mixon, Cin RB']['ID'].item()
-    # to_HERE = team_table[team_table['PLAYER'] == 'Marshawn Lynch, Oak RB']['HERE'].item()
-    # # add a check that you are moving to a valid spot
-    #
-    # print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==
-    #                                                                                           to_HERE]['PLAYER'].item())
-    # browser = id_to_here(browser, from_ID, to_HERE)
-    #
-    # time.sleep(2)
-    #
-    # save_source(browser, source_file_location, source_file_name)  # save source
-    # team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
-    # team_table_parse.print_table(team_table)
-    #
-    # print('Move using IDs')
-    # # S's
-    # from_ID = '16725'
-    # print(team_table[team_table['ID'] == from_ID])
-    # print(team_table[team_table['ID'] == '14402'])
-    # to_HERE = team_table[team_table['ID'] == '14402']['HERE'].item()
-    # # add a check that you are moving to a valid spot
-    #
-    # print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==
-    #                                                                                           to_HERE]['PLAYER'].item())
-    # browser = id_to_here(browser, from_ID, to_HERE)
