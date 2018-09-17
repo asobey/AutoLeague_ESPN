@@ -18,8 +18,8 @@ def import_yaml():
 
 if __name__ == '__main__':
     priv_data = import_yaml()
-    webdriver = Browse(priv_data)
-    parser = Parse()
-    webdriver.save_source()
-    parser.table_from_file(priv_data)
-    Parse.print_table()
+    b = Browse(priv_data)
+    p = Parse()
+    b.save_source()
+    p.table_from_file(priv_data)
+    p.print_table()

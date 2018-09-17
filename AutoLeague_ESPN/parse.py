@@ -12,16 +12,17 @@ class Parse(object):
 
     def team_table(self, page_source=None):
         if page_source != None:
-            self.team = self.table(page_source)
+            print('Using table from file.')
+            self.table_from_file(page_source)
         else:
             try:
-                self.team = self.table_from_file()
+                self.table_from_file()
             except NotImplementedError:
                 print('Neither file nor page_source available to make table')
 
     def print_table(self):
         """Simply prints table in nice format"""
-        print(tabulate(self.team_table, headers='keys', tablefmt='psql'))
+        print(tabulate(self.team, headers='keys', tablefmt='psql'))
 
     def table_from_file(self, private_data):
         """Create table from a offline source file."""
@@ -29,12 +30,12 @@ class Parse(object):
         print(f'CWD: {os.getcwd()}')
         print(f'Opening page source from Source Path: {source_path}')
         _PS = open(source_path, 'r')
-        return self.table_from_source(_PS)
+        self.table_from_source(_PS)
 
     def table_from_source(self, page_source):
         """Create team table."""
-        sourse_soup = BeautifulSoup(page_source, 'lxml')  # Using BS4 to parse
-        _table_soup = sourse_soup.find_all('table')[0]  # Finding the table element in the soup
+        source_soup = BeautifulSoup(page_source, 'lxml')  # Using BS4 to parse
+        _table_soup = source_soup.find_all('table')[0]  # Finding the table element in the soup
         _df = pd.read_html(str(_table_soup))  # Making the soup table element into a pandas df
         team_table = _df[3]  # From troubleshooting the third table is the team table
         # Check if table loaded after login
@@ -66,10 +67,10 @@ class Parse(object):
         team_table = team_table.fillna('--')  # Again, fill nan values with -- makes them able to index of of later
         col_order = ['HERE','SLOT', 'POS', 'ID', 'PLAYER', 'PTS', 'AVG', 'LAST', 'PROJ', '%ST', '%OWN',
                      '+/-', 'OPRK', 'OPP', 'PRK', 'STATUS ET']  # Changing col order for user
-        return team_table[col_order]
+        self.team = team_table[col_order]
 
     @staticmethod
-    def add_player_id(self, team_table, table_soup):
+    def add_player_id(team_table, table_soup):
         """This function searches the BS4 soup for each players ID then adds it"""
         table_line = str(table_soup.find_all("td", {"class": "playertablePlayerName"}))
         player_ids = list(map(int, re.findall('playername_(\d+)', table_line)))
@@ -82,7 +83,6 @@ class Parse(object):
                     player_ids.pop(0)
         return team_table
 
-    @staticmethod
     def add_position_col(self, table):
         """This function finds the position of each player by parsing the 'PLAYER' column, then adds a 'POS' column with
         that value."""
@@ -102,7 +102,8 @@ if __name__ == '__main__':
     import yaml
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
         pd = yaml.load(_private)
+        print(pd)
 
-    Parse.table_from_file(pd)  # read table from source
-
-    Parse.print_table()
+    p = Parse()
+    p.table_from_file(pd)  # read table from source
+    p.print_table()
