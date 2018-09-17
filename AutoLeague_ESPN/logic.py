@@ -1,6 +1,5 @@
 
 
 
-
 class Logic(object):
     pass

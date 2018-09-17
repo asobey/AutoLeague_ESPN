@@ -17,7 +17,9 @@ def import_yaml():
 
 
 if __name__ == '__main__':
-    webdriver = Browse()
+    priv_data = import_yaml()
+    webdriver = Browse(priv_data)
     parser = Parse()
-    Parse.team_table(webdriver.driver.page_source)
+    webdriver.save_source()
+    parser.table_from_file(priv_data)
     Parse.print_table()

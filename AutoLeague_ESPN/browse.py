@@ -5,14 +5,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 import os
 # program imports
-from AutoLeague_ESPN.manage import import_yaml
+#from AutoLeague_ESPN.manage import import_yaml
 
 
 class Browse(object):
     """Creates a Selenium webdriver object"""
 
-    def __init__(self):
-        self.private_data = import_yaml()
+    def __init__(self, private_data):
+        self.private_data = private_data
         self.homepage = self.private_data['homepage']
         self.driver = webdriver.Chrome()
         self.driver.set_window_size(1100, 1080)  # width, length.
@@ -109,7 +109,8 @@ class Browse(object):
                     f'+++++++++++++++++++++++++++++++++++++++++++++Player: {value} needs to be moved to: {key}++++++++')
                 try:
                     self.id_to_here(value, key)
-                except NotImplementedError:(f'Unable to move {value}')
+                except NotImplementedError:
+                    print(f'Unable to move {value}')
 
 if __name__ == '__main__':
 

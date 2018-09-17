@@ -4,8 +4,6 @@ from tabulate import tabulate
 import re
 import os
 
-# program imports
-from AutoLeague_ESPN.manage import import_yaml
 
 class Parse(object):
 
@@ -25,9 +23,8 @@ class Parse(object):
         """Simply prints table in nice format"""
         print(tabulate(self.team_table, headers='keys', tablefmt='psql'))
 
-    def table_from_file(self):
+    def table_from_file(self, private_data):
         """Create table from a offline source file."""
-        private_data = import_yaml()
         source_path = os.path.join(private_data['source_file_location'], private_data['source_file_name'])
         print(f'CWD: {os.getcwd()}')
         print(f'Opening page source from Source Path: {source_path}')
@@ -94,7 +91,6 @@ class Parse(object):
             table.loc[pos_true, 'POS'] = pos  # This is how to correctly set value in df
         return table
 
-    @staticmethod
     def add_here_col(self, table):
         """This function simply adds a 'HERE' column. HERE is the slot position recognized by the weddriver when moving
         players around."""
@@ -103,9 +99,10 @@ class Parse(object):
 
 
 if __name__ == '__main__':
-    file_location = '..\\offline_webpages\\'
-    file_name = 'front_page_source'
+    import yaml
+    with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
+        pd = yaml.load(_private)
 
-    team_table = team_table(file_location, file_name) # read table from source
+    Parse.table_from_file(pd)  # read table from source
 
-    print_table(team_table)
+    Parse.print_table()
