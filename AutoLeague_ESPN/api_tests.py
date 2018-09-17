@@ -108,7 +108,7 @@ def create_waiver(position='none'):
 
     df = pd.DataFrame(columns=['Player', 'Opponent', 'Projected', 'OppRank', '%Start', '%Own', '+/-'])
 
-    for si in [0, 50, 100]:
+    for si in [0, 50]:
         parameters['startIndex'] = si
         r = requests.get('http://games.espn.com/ffl/freeagency',
                          params=parameters,
@@ -318,10 +318,10 @@ def boxscores():
 #     print_table(team_table)
 
 if __name__ == '__main__':
-    table1 = create_roster()
+    # table1 = create_roster()
     # table1 = boxscores()
     # table1 = create_leaders()
-    print(table1)
-    # top_waiver('QB')
+    # print(table1)
+    top_waiver('QB')
 
 
