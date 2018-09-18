@@ -32,25 +32,25 @@ def id_to_here(webdriver, from_id, here_slot):
     except:
         print('Multi spot anomaly detected!')
 
-
-def handle_multi_spot_move(team_table, opt_team_chart):
-    '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
-    and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
-    with throw an exception at the end.'''
-    for key, value in opt_team_chart.items():
-        if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-            _temp1 = opt_team_chart[1]
-            opt_team_chart[1] = opt_team_chart[2]
-            opt_team_chart[2] = _temp1
-        elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
-            _temp1 = opt_team_chart[3]
-            opt_team_chart[3] = opt_team_chart[4]
-            opt_team_chart[4] = _temp1
-    return opt_team_chart
+#THIS SHOULD AND IS HANDLED IN OPTIMIZE_TEAM
+# def handle_multi_spot_move(team_table, opt_team_chart):
+#     '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
+#     and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
+#     with throw an exception at the end.'''
+#     for key, value in opt_team_chart.items():
+#         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
+#             _temp1 = opt_team_chart[1]
+#             opt_team_chart[1] = opt_team_chart[2]
+#             opt_team_chart[2] = _temp1
+#         elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
+#             _temp1 = opt_team_chart[3]
+#             opt_team_chart[3] = opt_team_chart[4]
+#             opt_team_chart[4] = _temp1
+#     return opt_team_chart
 
 def sort_team(team_table, opt_team_chart):
     """This funtion goes through the optimal team chart and calls the move function for each player change"""
-    opt_team_chart = handle_multi_spot_move(team_table, opt_team_chart)
+    #opt_team_chart = handle_multi_spot_move(team_table, opt_team_chart)
 
     for key, value in opt_team_chart.items():
         time.sleep(.5)  # UNNEEDED BUT LOOKS COOL
@@ -72,7 +72,6 @@ if __name__ == '__main__':
     import AutoLeague_ESPN.optimize_team as optimize_team
 
     print('CWD: ', os.getcwd()) #  can get rid of later. Should not hurt
-    #os.chdir('C:\\Users\\alexs\\PycharmProjects\\AutoLeague_ESPN\\AutoLeague_ESPN')
 
     source_file_location = '..\\offline_webpages\\'
     source_file_name = 'front_page_source'
@@ -84,13 +83,6 @@ if __name__ == '__main__':
 
     save_source(browser, source_file_location, source_file_name) # save source
     team_table = team_table_parse.create_team_table(source_file_location, source_file_name) # read table from source
-
-    team_table_parse.print_table(team_table)
-
-    time.sleep(2)
-
-    save_source(browser, source_file_location, source_file_name)  # save source
-    team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
     team_table_parse.print_table(team_table)
 
     optimal_team_chart = optimize_team.optimize(team_table)
@@ -99,38 +91,3 @@ if __name__ == '__main__':
     team_table_parse.print_table(optimal_team_table)
 
     sort_team(team_table, optimal_team_chart)
-
-
-    #
-    # time.sleep(1)
-    # # Options to query on column to another: df[df['B']==3]['A'].item() ; df.query('B==3')['A'].item()
-    # #J's
-    # #from_ID = team_table[team_table['PLAYER']=='A.J. Green, Cin WR']['ID'].item()
-    # #to_HERE = team_table[team_table['PLAYER']=='Demaryius Thomas, Den WR']['HERE'].item()
-    #
-    # # S's
-    # from_ID = team_table[team_table['PLAYER'] == 'Joe Mixon, Cin RB']['ID'].item()
-    # to_HERE = team_table[team_table['PLAYER'] == 'Marshawn Lynch, Oak RB']['HERE'].item()
-    # # add a check that you are moving to a valid spot
-    #
-    # print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==
-    #                                                                                           to_HERE]['PLAYER'].item())
-    # browser = id_to_here(browser, from_ID, to_HERE)
-    #
-    # time.sleep(2)
-    #
-    # save_source(browser, source_file_location, source_file_name)  # save source
-    # team_table = team_table_parse.create_team_table(source_file_location, source_file_name)  # read table from source
-    # team_table_parse.print_table(team_table)
-    #
-    # print('Move using IDs')
-    # # S's
-    # from_ID = '16725'
-    # print(team_table[team_table['ID'] == from_ID])
-    # print(team_table[team_table['ID'] == '14402'])
-    # to_HERE = team_table[team_table['ID'] == '14402']['HERE'].item()
-    # # add a check that you are moving to a valid spot
-    #
-    # print('Switch ', team_table[team_table['ID'] == from_ID]['PLAYER'].item(), ' and ', team_table[team_table['HERE'] ==
-    #                                                                                           to_HERE]['PLAYER'].item())
-    # browser = id_to_here(browser, from_ID, to_HERE)

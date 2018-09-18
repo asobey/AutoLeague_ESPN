@@ -1,6 +1,6 @@
-import AutoLeague_ESPN.espn_page_login as espn_page_login
-import AutoLeague_ESPN.team_table_parse as team_table_parse
-import AutoLeague_ESPN.browser_functions as browser_functions
+import AutoLeague_ESPN as espn_page_login
+import AutoLeague_ESPN as team_table_parse
+import AutoLeague_ESPN as browser_functions
 
 import os.path
 
