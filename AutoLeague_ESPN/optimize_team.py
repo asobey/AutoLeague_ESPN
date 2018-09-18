@@ -1,9 +1,8 @@
 from tabulate import tabulate
-import AutoLeague_ESPN as team_table_parse
+import AutoLeague_ESPN.team_table_parse as team_table_parse
 
 POSITIONS = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
-SINGLE_SPOT_POSITIONS = ['QB', 'K', 'D/ST']  # Delete later
-MULTI_SPOT_POSITIONS = ['TE', 'RB', 'WR']  # Delete later
+
 
 def optimize(team_table):
     team_dic = make_team_dic(team_table, POSITIONS)
@@ -30,6 +29,7 @@ def make_team_dic(table, positions):
 def rank_team_dic(t_dic, rank_by):
     if rank_by == 'ESPN':
         return rank_team_dic_by_ESPN(t_dic)
+
 
 def rank_team_dic_by_ESPN(t_dic):
     rank_dic = {}
@@ -65,8 +65,8 @@ def add_multi_pos_chart(r_dic):
 
 
 def optimize_position_chart(ranked_dic):
-    opt_pos_chart = {0:'',1:'',2:'',3:'',4:'',5:'',6:'',7:'',8:'',14:''}
-    #                QB   RB1  RB2 RB/WR WR1  WR2  TE   D/ST K    FLEX
+    """Create dictionary of optimized position chart"""
+    opt_pos_chart = {}
     opt_pos_chart[0] = ranked_dic['QB']['ID'].iloc[0]
     opt_pos_chart[1] = ranked_dic['RB']['ID'].iloc[0]
     opt_pos_chart[2] = ranked_dic['RB']['ID'].iloc[1]
@@ -77,7 +77,6 @@ def optimize_position_chart(ranked_dic):
     opt_pos_chart[14] = ranked_dic['FLEX']['ID'].iloc[0]
     opt_pos_chart[7] = ranked_dic['D/ST']['ID'].iloc[0]
     opt_pos_chart[8] = ranked_dic['K']['ID'].iloc[0]
-
     return opt_pos_chart
 
 

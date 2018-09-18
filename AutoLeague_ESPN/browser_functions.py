@@ -32,25 +32,25 @@ def id_to_here(webdriver, from_id, here_slot):
     except:
         print('Multi spot anomaly detected!')
 
-
-def handle_multi_spot_move(team_table, opt_team_chart):
-    '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
-    and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
-    with throw an exception at the end.'''
-    for key, value in opt_team_chart.items():
-        if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-            _temp1 = opt_team_chart[1]
-            opt_team_chart[1] = opt_team_chart[2]
-            opt_team_chart[2] = _temp1
-        elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
-            _temp1 = opt_team_chart[3]
-            opt_team_chart[3] = opt_team_chart[4]
-            opt_team_chart[4] = _temp1
-    return opt_team_chart
+#THIS SHOULD AND IS HANDLED IN OPTIMIZE_TEAM
+# def handle_multi_spot_move(team_table, opt_team_chart):
+#     '''The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
+#     and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
+#     with throw an exception at the end.'''
+#     for key, value in opt_team_chart.items():
+#         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
+#             _temp1 = opt_team_chart[1]
+#             opt_team_chart[1] = opt_team_chart[2]
+#             opt_team_chart[2] = _temp1
+#         elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
+#             _temp1 = opt_team_chart[3]
+#             opt_team_chart[3] = opt_team_chart[4]
+#             opt_team_chart[4] = _temp1
+#     return opt_team_chart
 
 def sort_team(team_table, opt_team_chart):
     """This funtion goes through the optimal team chart and calls the move function for each player change"""
-    opt_team_chart = handle_multi_spot_move(team_table, opt_team_chart)
+    #opt_team_chart = handle_multi_spot_move(team_table, opt_team_chart)
 
     for key, value in opt_team_chart.items():
         time.sleep(.5)  # UNNEEDED BUT LOOKS COOL

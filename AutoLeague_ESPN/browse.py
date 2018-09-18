@@ -4,8 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 import os
-# program imports
-#from AutoLeague_ESPN.manage import import_yaml
+import yaml
 
 
 class Browse(object):
@@ -79,26 +78,28 @@ class Browse(object):
         except NotImplementedError:
             print('Multi spot anomaly detected!')
 
-    #This probably needs to move to the logic module
-    @staticmethod
-    def handle_multi_spot_move(self, team_table, opt_team_chart):
-        """The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
-        and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
-        with throw an exception at the end."""
-        for key, value in opt_team_chart.items():
-            if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-                _temp1 = opt_team_chart[1]
-                opt_team_chart[1] = opt_team_chart[2]
-                opt_team_chart[2] = _temp1
-            elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
-                _temp1 = opt_team_chart[3]
-                opt_team_chart[3] = opt_team_chart[4]
-                opt_team_chart[4] = _temp1
-        return opt_team_chart
+    # #This probably needs to move to the logic module
+    # @staticmethod
+    # def handle_multi_spot_move(self, team_table, opt_team_chart):
+    #      """The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true
+    # for WR1
+    #      and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot
+    # positions
+    #      with throw an exception at the end."""
+    #     for key, value in opt_team_chart.items():
+    #         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
+    #             _temp1 = opt_team_chart[1]
+    #             opt_team_chart[1] = opt_team_chart[2]
+    #             opt_team_chart[2] = _temp1
+    #         elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
+    #             _temp1 = opt_team_chart[3]
+    #             opt_team_chart[3] = opt_team_chart[4]
+    #             opt_team_chart[4] = _temp1
+    #     return opt_team_chart
 
     def sort_team(self, team_table, opt_team_chart):
         """This funtion goes through the optimal team chart and calls the move function for each player change"""
-        opt_team_chart = self.handle_multi_spot_move(team_table, opt_team_chart)
+        # opt_team_chart = self.handle_multi_spot_move(team_table, opt_team_chart)
 
         for key, value in opt_team_chart.items():
             time.sleep(.5)  # UNNEEDED BUT LOOKS COOL
@@ -112,11 +113,9 @@ class Browse(object):
                 except NotImplementedError:
                     print(f'Unable to move {value}')
 
+
 if __name__ == '__main__':
-
     print('CWD: ', os.getcwd())  # can get rid of later. Should not hurt
-    d = Browse()
-
-    #browser_functions.save_source(browser, source_file_location, source_file_name)  # Save Source
-    #team_table = team_table_parse.create_team_table(source_file_location, source_file_name)
-    #team_table_parse.print_table(team_table)
+    with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
+        priv_data = yaml.load(_private)
+    b = Browse(priv_data)

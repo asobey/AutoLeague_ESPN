@@ -3,23 +3,31 @@
 # Fill in your username and password.
 # Rename file to: 'espn_creds.yaml'
 
+# Source File Locations
+save_offline : False  # If False, source_file_location and source_file_name is unnecessary.
+source_file_location: '..\\offline_webpages\\'
+source_file_name: 'front_page_source'
+
+homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX # Your ESPN FF Homepage URL
+# If you login to your ESPN FF homepage, just copy and paste the URL into the homepage definition.
+# It should look very similar to the above link. The first set of XXXXXX is the league ID. The second XXXX is season ID
+# which will be '2018' (or whatever this year is).
+
+# Either use cookies or credentials to login to ESPN homepage. Cookies is faster.
+login_by: cookies  # 'cookies' or 'creds'
+
+# COOKIES
+espn_s2: 'xxxxxxxxxxxxx'  # use quotes as showm
+SWID: '{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXXX}'  # use quotes and brackets as shown
+
+# CREDS
 user: xxxxx@xxxxx
 pass: xxxx
-
-leagueid: xxxxxx
-seasonid: xxxx
-teamid: xx
-
-homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX #Your ESPN FF Homepage URL
 
 # Program Options
 windowSize: 1100, 1080  # default <1100, 1080>. If size is too small (specifically width) errors may occur
 projectionType: ESPN  # default <ESPN>. Future choices <ESPN>, <YAHOO>, <ESPNwPPR>, <YAHOOwPPR>, <INTERNAL>
 
-# COOKIES
-espn_s2: xxxxxxxxxxxxx
-SWID: xxxxxxxxxxxxx
-
-# If you login to your ESPN FF homepage, just copy and paste the URL into the homepage definition.
-# It should look very similar to the above link. The first set of XXXXXX is the league ID. The second XXXX is season ID
-# which will be '2018' (or whatever this year is).
+leagueid: xxxxxx
+seasonid: xxxx
+teamid: xx

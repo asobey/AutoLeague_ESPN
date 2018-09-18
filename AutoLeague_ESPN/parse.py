@@ -9,14 +9,15 @@ class Parse(object):
 
     def __init__(self):
         self.POSITIONS = ['QB', 'TE', 'K', 'D/ST', 'RB', 'WR']
+        self.team = pd.DataFrame
 
     def team_table(self, page_source=None):
-        if page_source != None:
+        if page_source is not None:
             print('Using table from file.')
-            self.table_from_file(page_source)
+            self.table_from_source(page_source)
         else:
             try:
-                self.table_from_file()
+                self.table_from_source(page_source)
             except NotImplementedError:
                 print('Neither file nor page_source available to make table')
 
@@ -65,7 +66,7 @@ class Parse(object):
         team_table = self.add_here_col(team_table)
 
         team_table = team_table.fillna('--')  # Again, fill nan values with -- makes them able to index of of later
-        col_order = ['HERE','SLOT', 'POS', 'ID', 'PLAYER', 'PTS', 'AVG', 'LAST', 'PROJ', '%ST', '%OWN',
+        col_order = ['HERE', 'SLOT', 'POS', 'ID', 'PLAYER', 'PTS', 'AVG', 'LAST', 'PROJ', '%ST', '%OWN',
                      '+/-', 'OPRK', 'OPP', 'PRK', 'STATUS ET']  # Changing col order for user
         self.team = team_table[col_order]
 
@@ -91,7 +92,8 @@ class Parse(object):
             table.loc[pos_true, 'POS'] = pos  # This is how to correctly set value in df
         return table
 
-    def add_here_col(self, table):
+    @staticmethod
+    def add_here_col(table):
         """This function simply adds a 'HERE' column. HERE is the slot position recognized by the weddriver when moving
         players around."""
         table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18])[:len(table)]
@@ -101,9 +103,9 @@ class Parse(object):
 if __name__ == '__main__':
     import yaml
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
-        pd = yaml.load(_private)
-        print(pd)
+        priv_d = yaml.load(_private)
+        print(priv_d)
 
     p = Parse()
-    p.table_from_file(pd)  # read table from source
+    p.table_from_file(priv_d)  # read table from source
     p.print_table()
