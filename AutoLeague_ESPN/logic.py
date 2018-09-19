@@ -49,6 +49,26 @@ class Logic(object):
                 print('FAILED!!!!!!!!!!!!!!!!!!!!!!...at: ' + str(position))
                 print(tabulate(self.ranked_dic[position], headers='keys', tablefmt='psql'))
 
+    def rank_dic(self, dict, rank_by):
+        """Takes team_dic and ranks players by position depending on method (i.e. ESPN, Yahoo, ect."""
+        if rank_by == 'ESPN':
+            self.rank_dic_by_espn(dict)
+        elif rank_by == 'Yahoo':
+            raise ValueError('This ranking method does not exist yet!')
+        else:
+            raise ValueError('No ranking method selected for players')
+
+    def rank_dic_by_espn(self, dict):
+        """Takes team_dic and ranks players by position according to ESPN projections"""
+        for position in self.team_dic:
+            try:
+                dict[position] = dict[position].sort_values('PROJ', ascending=False)
+                print(position + ': RANKED TABLE')
+                print(tabulate(self.ranked_dic[position], headers='keys', tablefmt='psql'))
+            except ValueError:
+                print('FAILED!!!!!!!!!!!!!!!!!!!!!!...at: ' + str(position))
+                print(tabulate(self.ranked_dic[position], headers='keys', tablefmt='psql'))
+
     def add_multi_pos_chart(self):
         """This function combined the remaining (not top 2 in positions) WR/RB/TE into two groups: best WR/RB and best
         remainder"""
@@ -144,4 +164,6 @@ Logic:
     -K
     -Remaining WR/RB
     -Remaining WR/RB/TE
+    
+*Change order based on day played to add flexibility
 """
