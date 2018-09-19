@@ -83,20 +83,22 @@ def create_waiver(position='none'):
 
     df = pd.DataFrame(columns=['Projected', 'PlayerId'])
 
-    for si in [0]:  # just use the first pages for now. not sure why the third isn't working with si 50 and 100
-        parameters['startIndex'] = si
-        r = requests.get('http://games.espn.com/ffl/freeagency',
-                         params=parameters,
-                         cookies=cookies)
+    for si in [0, 50, 100]:  # just use the first pages for now. not sure why the third isn't working with si 50 and 100
+        try:
+            parameters['startIndex'] = si
+            r = requests.get('http://games.espn.com/ffl/freeagency',
+                             params=parameters,
+                             cookies=cookies)
 
-        soup = BeautifulSoup(r.content, 'html.parser')
-        table = soup.find('table', class_='playerTableTable')
-        tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
-        tdf = tdf.iloc[2:, [13]]  # delete the useless columns
-        tdf = add_player_id(tdf, soup)
-        tdf.columns = ['Projected', 'PlayerId']
-        df = df.append(tdf, ignore_index=True, sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
-
+            soup = BeautifulSoup(r.content, 'html.parser')
+            table = soup.find('table', class_='playerTableTable')
+            tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+            tdf = tdf.iloc[2:, [13]]  # delete the useless columns
+            tdf = add_player_id(tdf, soup)
+            tdf.columns = ['Projected', 'PlayerId']
+            df = df.append(tdf, ignore_index=True, sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
+        except:
+            pass
     df.query('Projected != "--"', inplace=True)  # Delete the players with "--"
     df['Projected'] = df['Projected'].fillna(0).astype('float')  #
 
