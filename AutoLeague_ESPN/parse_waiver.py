@@ -9,9 +9,7 @@ import requests
 class Parse(object):
 
     def __init__(self):
-        self.POSITIONS = ['QB', 'TE', 'K', 'D/ST', 'RB', 'WR']
         self.WAIVER_POS = ['QB', 'RB', 'RB/WR', 'WR', 'TE', 'FLEX', 'K', 'D/ST', 'ALL']
-        self.team = pd.DataFrame
         self.waiver = {}
 
     def top_waiver(self, source_dict, position=None):
@@ -57,10 +55,6 @@ class Parse(object):
 
         return dfaa
 
-    def print_waiver(self):
-        """Simply prints table in nice format"""
-        print(tabulate(self.waiver, headers='keys', tablefmt='psql'))
-
 
 if __name__ == '__main__':
     import yaml
@@ -70,4 +64,4 @@ if __name__ == '__main__':
 
     p = Parse()
     p.top_waiver(priv_d)  # read waiver from web
-    # p.print_waiver()
+
