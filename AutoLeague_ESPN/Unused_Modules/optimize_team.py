@@ -1,5 +1,5 @@
 from tabulate import tabulate
-import AutoLeague_ESPN.team_table_parse as team_table_parse
+import AutoLeague_ESPN.Unused_Modules.team_table_parse as team_table_parse
 
 POSITIONS = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
 

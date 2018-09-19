@@ -77,8 +77,8 @@ def navigate_and_login(browser, private_data):
 
 if __name__ == '__main__':
 
-    import AutoLeague_ESPN.browser_functions as browser_functions
-    import AutoLeague_ESPN .team_table_parse as team_table_parse
+    import AutoLeague_ESPN.Unused_Modules.browser_functions as browser_functions
+    import AutoLeague_ESPN.Unused_Modules.team_table_parse as team_table_parse
 
     source_file_location = '..\\offline_webpages\\'
     source_file_name = 'front_page_source'

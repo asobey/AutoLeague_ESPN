@@ -67,9 +67,9 @@ def sort_team(team_table, opt_team_chart):
 if __name__ == '__main__':
     import time
 
-    import AutoLeague_ESPN.espn_page_login as espn_page_login
-    import AutoLeague_ESPN.team_table_parse as team_table_parse
-    import AutoLeague_ESPN.optimize_team as optimize_team
+    import AutoLeague_ESPN.Unused_Modules.espn_page_login as espn_page_login
+    import AutoLeague_ESPN.Unused_Modules.team_table_parse as team_table_parse
+    import AutoLeague_ESPN.Unused_Modules.optimize_team as optimize_team
 
     print('CWD: ', os.getcwd()) #  can get rid of later. Should not hurt
 
