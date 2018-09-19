@@ -41,17 +41,17 @@ def create_roster():
                      cookies=cookies)
     roster = r.json()
     rdf = []  # initialize the list so we can use append right away
-    temp2 = roster['leagueRosters']['teams'][0]['slots']  # create a nested lists? of all the "slots". Includes empties.
+    json_slots = roster['leagueRosters']['teams'][0]['slots']  # create a nested lists? of all the "slots". Includes empties.
     slots = ['QB', 'RB1', 'RB2', 'RB/WR', 'WR1', 'WR2', 'TE', 'FLEX',  # Individual row titles in the standard table
              'D/ST', 'K', 'Bench1', 'Bench2', 'Bench3', 'Bench4', 'Bench5', 'IR']
     pos_ids = {0: 'QB', 2: 'RB', 3: 'RB/WR', 4: 'WR', 6: 'TE', 23: 'FLEX', 17: 'K', 16: 'D/ST', 20: 'Bench', 21: 'IR'}
     i = 0
-    for match in temp2:  # runs though the entries and appends
-        if len(match) > 3:  # Check for blank slot
-            rdf.append([match['slotCategoryId'],
-                        match['player']['playerId']])
+    for slot_number in json_slots:  # runs though the entries and appends
+        if len(slot_number) > 3:  # Check for blank slot
+            rdf.append([slot_number['slotCategoryId'],
+                        slot_number['player']['playerId']])
         else:
-            rdf.append([slots[i], '--', '--', '--', '--', '--'])
+            rdf.append([slots[i], '--'])  # troubleshoot for blank slots if I change the number of columns
         i = i+1
 
     # table_str = tabulate(rdf, headers='keys', tablefmt='psql')
@@ -105,7 +105,8 @@ def create_waiver(position='none'):
 
 def top_waiver(position='none'):
     """this "top" ranking is personal preference. initial setup is based on espn's projection"""
-
+    # return dict looks like (
+    # for
     df = create_waiver(position)
     player = df.nlargest(3, 'Projected')
     # maybe do a reindex or something?
@@ -116,6 +117,8 @@ def top_waiver(position='none'):
 
 def sort_on_projected(roster):
     print('Still need to sort on projected')
+    #
+    #  browser.sort_team  # moves the players in the web
     return roster
 
 
