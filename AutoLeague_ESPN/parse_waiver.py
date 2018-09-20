@@ -36,19 +36,21 @@ class Parse(object):
                 table = soup.find('table', class_='playerTableTable')
                 tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
                 tdf = tdf.iloc[2:, [0, 2, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16, 17]]  # Identify the columns you want to keep by deleting the useless columns
-                # tdf = tdf.iloc[2:, [13]]  # delete the useless columns
                 table_line = str(soup.find_all("td", {"class": "playertablePlayerName"}))
                 tdf['ID'] = list(map(int, re.findall('playername_(\d+)', table_line)))
-                # tdf.columns = ['Projected', 'PlayerId']  # fill these in fully
                 df = df.append(tdf, ignore_index=True,
                                sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
             except:
                 pass
         df.columns = ['Player', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
                       '%OWN', '+/-', 'ID']
-        df.query('PROJ != "--"', inplace=True)  # Delete the players with "--"
+        df['POS'] = df['Player'].str.split(',').str[1]  # parse out the position, part 1
+        # if df['POS'].str.split().str[2] it contains the injury status, i think (Q, O, etc.)
+        df['POS'] = df['POS'].str.split().str[1]  # parse out the position (might be a better way of doing this)
+        df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
+        df.query('PROJ != "--"', inplace=True)  # Delete the players with "--", as these are not playing this week
         df['PROJ'] = df['PROJ'].fillna(0).astype('float')  #
-        col_order = ['Player', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
+        col_order = ['Player', 'POS', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
                       '%OWN', '+/-', 'ID'] # Changing col order for user UPDATE!!!!
         dfaa = df[col_order]  # there is a better way to do this
         # print(tabulate(dfaa, headers='keys', tablefmt='psg1'))
