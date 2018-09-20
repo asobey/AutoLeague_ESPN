@@ -7,6 +7,7 @@ from AutoLeague_ESPN.logic import Logic
 # temp imports for waivers
 from AutoLeague_ESPN.browse_waiver import Browse
 from AutoLeague_ESPN.parse_waiver import Parse
+from AutoLeague_ESPN.logic_waiver import Logic
 
 
 def import_yaml():
@@ -23,19 +24,18 @@ if __name__ == '__main__':
     priv_data = import_yaml()
     b = Browse(priv_data)
     p = Parse()
+    logic = Logic()
 
-    p.top_waiver(b.get_waiver_source())
-    # print(tabulate.tabulate(p.waiver.values(), headers='keys', tablefmt='psgl'))
-    # print(tabulate.tabulate(p.waiver.values(), headers='keys', tablefmt="orgtbl"))
-
-    # logic = Logic()
+    # p.table_from_source(b.driver.page_source)
+    # pickup_drop_pairs = logic.optimize(p.team, p.waiver)
+    #
+    # b.pickup_player(pickup_drop_pairs)  # Action: passes this a list of pairs
+    #                                     # (player IDs for the pickup and the drop of pickups from
+    #                                     # either free agency or waiver wire)
+    #
+    # p.table_from_source(b.driver.page_source)
     # logic.optimize(p.team)
-    #
-    # print('OPTIMAL POSITION CHART:')
-    # print(logic.optimal_position_chart)
-    #
     # logic.optimize_position_table()
-    # print('OPTIMAL POSITION TABLE:')
-    # print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
-    #
     # b.sort_team(p.team, logic.optimal_position_chart)
+
+

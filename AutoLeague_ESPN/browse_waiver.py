@@ -23,7 +23,6 @@ class Browse(object):
 
         # slot codes used to get the correct waiver page
         slot_id_lookup = {'QB': 0, 'RB': 2, 'RB/WR': 3, 'WR': 4, 'TE': 6, 'D/ST': 16, 'K': 17, 'FLEX': 23}
-        # Fix this at some point for a full waiver listing
         r = {}
 
         if position == 'none':

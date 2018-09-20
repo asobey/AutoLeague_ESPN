@@ -96,7 +96,8 @@ class Parse(object):
     def add_here_col(table):
         """This function simply adds a 'HERE' column. HERE is the slot position recognized by the weddriver when moving
         players around."""
-        table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18])[:len(table)]
+        table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 9, 10, 11, 12, 13, 15, 16,
+                          17, 18, 19, 20, 21, 22, 23, 24, 25, 26])[:len(table)-1]
         return table
 
 
