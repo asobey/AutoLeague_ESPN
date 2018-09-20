@@ -21,14 +21,22 @@ if __name__ == '__main__':
     priv_data = import_yaml()
     b = Browse(priv_data)
     p = Parse()
-    if priv_data['save_offline']:  # If True save page_source offline
-        b.save_source()
-        p.table_from_file(priv_data)
-    else:  # Else don't save
-        p.table_from_source(b.driver.page_source)
+    p.table_from_source(b.team_page_source_from_requests())
     p.print_table()
 
+    p.waiver_table_from_source(b.get_waiver_source())
+    print(tabulate(p.waiver['ALL'].nlargest(50, 'PROJ'), headers='keys', tablefmt='psg1'))
+
     logic = Logic()
+
+    # pickup_drop_pairs = logic.optimize(p.team, p.waiver)  # Eventually make this into "functional" programming?
+    #
+    # b.pickup_player(pickup_drop_pairs)  # Action: passes this a list of pairs
+    #                                     # (player IDs for the pickup and the drop of pickups from
+    #                                     # either free agency or waiver wire)
+
+    p.table_from_source(b.team_page_source_from_requests())
+
     logic.optimize(p.team)
 
     print('OPTIMAL POSITION CHART:')
@@ -38,4 +46,5 @@ if __name__ == '__main__':
     print('OPTIMAL POSITION TABLE:')
     print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
 
+    b.initialize_browser()
     b.sort_team(p.team, logic.optimal_position_chart)

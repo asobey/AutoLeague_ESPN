@@ -14,13 +14,13 @@ class Browse(object):
     def __init__(self, private_data):
         self.private_data = private_data
         self.homepage = self.private_data['homepage']
-        self.cookies = {'espn_s2': self.privateData['espn_s2'], 'SWID': self.privateData['SWID']}
+        self.cookies = {'espn_s2': self.private_data['espn_s2'], 'SWID': self.private_data['SWID']}
         self.driver = object
 
     def team_page_source_from_requests(self):
-        r = requests.get(self.privateData['homepage'],
+        r = requests.get(self.private_data['homepage'],
                          cookies=self.cookies)
-        return r
+        return r.content
 
     def initialize_browser(self):
         self.driver = webdriver.Chrome()
