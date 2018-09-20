@@ -14,6 +14,15 @@ class Browse(object):
     def __init__(self, private_data):
         self.private_data = private_data
         self.homepage = self.private_data['homepage']
+        self.cookies = {'espn_s2': self.privateData['espn_s2'], 'SWID': self.privateData['SWID']}
+        self.driver = object
+
+    def team_page_source_from_requests(self):
+        r = requests.get(self.privateData['homepage'],
+                         cookies=self.cookies)
+        return r
+
+    def initialize_browser(self):
         self.driver = webdriver.Chrome()
         self.driver.set_window_size(1100, 1080)  # width, length.
         self.driver.get(self.homepage)
@@ -122,7 +131,7 @@ class Browse(object):
     #     return opt_team_chart
 
     def sort_team(self, team_table, opt_team_chart):
-        """This funtion goes through the optimal team chart and calls the move function for each player change"""
+        """This function goes through the optimal team chart and calls the move function for each player change"""
         # opt_team_chart = self.handle_multi_spot_move(team_table, opt_team_chart)
 
         for key, value in opt_team_chart.items():
