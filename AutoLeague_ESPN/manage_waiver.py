@@ -26,7 +26,7 @@ if __name__ == '__main__':
     p = Parse()
     logic = Logic()
 
-    p.table_from_source(b.driver.page_source)
+    p.table_from_source(b.team_page_source_from_requests())
     p.waiver_table_from_source(b.get_waiver_source())
 
     # pickup_drop_pairs = logic.optimize(p.team, p.waiver)  # Eventually make this into "functional" programming?
@@ -36,8 +36,16 @@ if __name__ == '__main__':
     #                                     # either free agency or waiver wire)
     #
     # p.table_from_source(b.driver.page_source)
-    # logic.optimize(p.team)
-    # logic.optimize_position_table()
-    # b.sort_team(p.team, logic.optimal_position_chart)
+
+    logic.optimize(p.team)
+    print('OPTIMAL POSITION CHART:')
+    print(logic.optimal_position_chart)
+
+    logic.optimize_position_table()
+    print('OPTIMAL POSITION TABLE:')
+    print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
+
+    b.initialize_browser()
+    b.sort_team(p.team, logic.optimal_position_chart)
 
 
