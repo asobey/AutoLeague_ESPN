@@ -5,8 +5,8 @@ from tabulate import tabulate
 
 from AutoLeague_ESPN.logic import Logic
 # temp imports for waivers
-from AutoLeague_ESPN.browse_waiver import Browse
-from AutoLeague_ESPN.parse_waiver import Parse
+from AutoLeague_ESPN.browse import Browse
+from AutoLeague_ESPN.parse import Parse
 from AutoLeague_ESPN.logic_waiver import Logic
 
 
@@ -26,8 +26,10 @@ if __name__ == '__main__':
     p = Parse()
     logic = Logic()
 
-    # p.table_from_source(b.driver.page_source)
-    # pickup_drop_pairs = logic.optimize(p.team, p.waiver)
+    p.table_from_source(b.driver.page_source)
+    p.waiver_table_from_source(b.get_waiver_source())
+
+    # pickup_drop_pairs = logic.optimize(p.team, p.waiver)  # Eventually make this into "functional" programming?
     #
     # b.pickup_player(pickup_drop_pairs)  # Action: passes this a list of pairs
     #                                     # (player IDs for the pickup and the drop of pickups from

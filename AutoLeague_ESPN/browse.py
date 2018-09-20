@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 import time
 import os
 import yaml
+import requests
 
 
 class Browse(object):
