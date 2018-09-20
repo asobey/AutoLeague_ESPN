@@ -30,7 +30,8 @@ if __name__ == '__main__':
     logic = Logic()
 
     # pickup_drop_pairs = logic.optimize(p.team, p.waiver)  # Eventually make this into "functional" programming?
-    #
+    #[[54325451,254352454],[23454235,54354325]]
+
     # b.pickup_player(pickup_drop_pairs)  # Action: passes this a list of pairs
     #                                     # (player IDs for the pickup and the drop of pickups from
     #                                     # either free agency or waiver wire)
