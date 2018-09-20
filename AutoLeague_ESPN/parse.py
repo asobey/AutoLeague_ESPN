@@ -9,7 +9,9 @@ class Parse(object):
 
     def __init__(self):
         self.POSITIONS = ['QB', 'TE', 'K', 'D/ST', 'RB', 'WR']
+        self.WAIVER_POS = ['QB', 'RB', 'RB/WR', 'WR', 'TE', 'FLEX', 'K', 'D/ST', 'ALL']
         self.team = pd.DataFrame
+        self.waiver = {}
 
     def team_table(self, page_source=None):
         if page_source is not None:
@@ -69,6 +71,38 @@ class Parse(object):
         col_order = ['HERE', 'SLOT', 'POS', 'ID', 'PLAYER', 'PTS', 'AVG', 'LAST', 'PROJ', '%ST', '%OWN',
                      '+/-', 'OPRK', 'OPP', 'PRK', 'STATUS ET']  # Changing col order for user
         self.team = team_table[col_order]
+
+    def waiver_table_from_source(self, waiver_source_dict):
+        """Listing of "position" playerIds on the waiver. Excludes players not playing this week (BYE or real life FA)"""
+
+        df = pd.DataFrame()
+
+        for start_index in range(0, len(waiver_source_dict)):  #
+            try:  # fix this as it loses out on the last page i think
+                soup = BeautifulSoup(waiver_source_dict[start_index].content, 'html.parser')
+                table = soup.find('table', class_='playerTableTable')
+                tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+                tdf = tdf.iloc[2:, [0, 2, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16,
+                                    17]]  # Identify the columns you want to keep by deleting the useless columns
+                table_line = str(soup.find_all("td", {"class": "playertablePlayerName"}))
+                tdf['ID'] = list(map(int, re.findall('playername_(\d+)', table_line)))
+                df = df.append(tdf, ignore_index=True,
+                               sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
+            except:
+                pass
+        df.columns = ['Player', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
+                      '%OWN', '+/-', 'ID']
+        df['POS'] = df['Player'].str.split(',').str[1]  # parse out the position, part 1
+        # if df['POS'].str.split().str[2] it contains the injury status, i think (Q, O, etc.)
+        df['POS'] = df['POS'].str.split().str[1]  # parse out the position (might be a better way of doing this)
+        df['Player'] = df['Player'].str.split(',').str[0]  # keep just player name
+        df.query('PROJ != "--"', inplace=True)  # Delete the players with "--", as these are not playing this week
+        df['PROJ'] = df['PROJ'].fillna(0).astype('float')  #
+        col_order = ['Player', 'POS', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK',
+                     '%ST',
+                     '%OWN', '+/-', 'ID']  # Changing col order for user UPDATE!!!!
+        self.waiver['ALL'] = df[col_order]  # there is a better way to do this
+        # print(tabulate(self.waiver['ALL'], headers='keys', tablefmt='psg1'))
 
     @staticmethod
     def add_player_id(team_table, table_soup):
