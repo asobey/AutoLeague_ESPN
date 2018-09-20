@@ -63,6 +63,29 @@ class Browse(object):
             _PS.write(self.driver.page_source)
             print('.......DONE')
 
+    def get_waiver_source(self):
+        """Function to save all the waiver pages"""
+        cookies = {
+            'espn_s2': self.private_data['espn_s2'],
+            'SWID': self.private_data['SWID']
+        }
+
+        # slot codes used to get the correct waiver page
+        r = {}
+
+        parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
+                      'avail': 1, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
+        for ix, si in enumerate(range(0, 1000, 50)):  # check that this includes the last page
+            try:
+                parameters['startIndex'] = si
+                r[ix] = requests.get('http://games.espn.com/ffl/freeagency',  # fix the multi page issue
+                                          params=parameters,
+                                          cookies=cookies)
+            except:
+                print('Broke on', si, '!!!!')
+                return r
+        return r
+
     def id_to_here(self, from_id, here_slot):
         """"move by player ID to HERE slot"""
         print(f'moving..... ID: {from_id} to HERE slot: {here_slot}')
