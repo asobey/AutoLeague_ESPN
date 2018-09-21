@@ -79,17 +79,24 @@ class Parse(object):
 
         for start_index in range(0, len(waiver_source_dict)):  #
             try:  # fix this as it loses out on the last page i think
+                print('Parsing waiver page', start_index, '...')
                 soup = BeautifulSoup(waiver_source_dict[start_index].content, 'html.parser')
                 table = soup.find('table', class_='playerTableTable')
                 tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
                 tdf = tdf.iloc[2:, [0, 2, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16,
                                     17]]  # Identify the columns you want to keep by deleting the useless columns
                 table_line = str(soup.find_all("td", {"class": "playertablePlayerName"}))
-                tdf['ID'] = list(map(int, re.findall('playername_(\d+)', table_line)))
+                tdf['ID'] = list(map(int, re.findall('playername_(\d+)', table_line)))  # add the player ID
+                print(tabulate(tdf, headers='keys', tablefmt='psg1'))
                 df = df.append(tdf, ignore_index=True,
-                               sort=False)  # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
-            except:
+                               sort=False)
+                # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
+            except ValueError:
+                print('Looks like your cookies are not working properly')
+            except:  # need to fix this to clarify what the error is that I'm looking for
+                print('You ran into the last page of something, but that is ok for now')
                 pass
+        print(tabulate(df, headers='keys', tablefmt='psg1'))
         df.columns = ['Player', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
                       '%OWN', '+/-', 'ID']
         df['POS'] = df['Player'].str.split(',').str[1]  # parse out the position, part 1
