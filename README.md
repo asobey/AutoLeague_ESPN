@@ -17,8 +17,6 @@ GOALS:
 
 One required file that I do not have on GitHub is the username/password keeper. Please create this file and place it in the same directory to use this program. Follow the format in espn_creds_example.yaml to create the new file with filename: espn_creds.yaml.
 
-Currently only runs by using browser_functions.py
-
 #Desired Methods organized within Files (this is all still hypothetical)
 
 ###TeamManagement.py
@@ -94,3 +92,15 @@ Communication
     send msg to team
     
 Broswer.trade
+
+-------- Required Assets -------------
+yaml
+tabulate
+os
+requests
+selenium
+pandas 0.23.4
+re
+BeautifulSoup4
+
+chrome webdriver
