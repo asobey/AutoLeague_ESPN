@@ -87,6 +87,7 @@ class Browse(object):
                       'avail': 1, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
         for ix, si in enumerate(range(0, 1000, 50)):  # check that this includes the last page
             try:
+                print('Scraping waiver page', ix, '...')
                 parameters['startIndex'] = si
                 r[ix] = requests.get('http://games.espn.com/ffl/freeagency',  # fix the multi page issue
                                           params=parameters,
