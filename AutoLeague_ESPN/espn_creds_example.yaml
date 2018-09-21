@@ -17,7 +17,7 @@ homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&se
 login_by: cookies  # 'cookies' or 'creds'
 
 # COOKIES
-espn_s2: 'xxxxxxxxxxxxx'  # use quotes as showm
+espn_s2: xxxxxxxxxxxxx  # do not use quotes
 SWID: '{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXXX}'  # use quotes and brackets as shown
 
 # CREDS
