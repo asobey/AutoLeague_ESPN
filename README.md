@@ -99,8 +99,8 @@ tabulate
 os
 requests
 selenium
-pandas
+pandas 0.23.4
 re
-BeautifulSoup
+BeautifulSoup4
 
 chrome webdriver
