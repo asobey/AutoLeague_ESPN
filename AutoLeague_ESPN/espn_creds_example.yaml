@@ -8,7 +8,7 @@ save_offline : False  # If False, source_file_location and source_file_name is u
 source_file_location: '..\\offline_webpages\\'
 source_file_name: 'front_page_source'
 
-homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX # Your ESPN FF Homepage URL
+# Your ESPN FF Homepage URL: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX #
 # If you login to your ESPN FF homepage, just copy and paste the URL into the homepage definition.
 # It should look very similar to the above link. The first set of XXXXXX is the league ID. The second XXXX is season ID
 # which will be '2018' (or whatever this year is).
