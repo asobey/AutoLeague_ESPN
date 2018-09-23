@@ -13,12 +13,14 @@ class Browse(object):
 
     def __init__(self, private_data):
         self.private_data = private_data
-        self.homepage = self.private_data['homepage']
+        # self.homepage = self.private_data['homepage']
+        self.homepage = 'http://games.espn.com/ffl/clubhouse?leagueId={0}&teamId={1}&seasonId={2}'.format(
+            self.private_data['leagueid'], self.private_data['teamid'], self.private_data['seasonid'])
         self.cookies = {'espn_s2': self.private_data['espn_s2'], 'SWID': self.private_data['SWID']}
         self.driver = object
 
     def team_page_source_from_requests(self):
-        r = requests.get(self.private_data['homepage'],
+        r = requests.get(self.homepage,
                          cookies=self.cookies)
         return r.content
 
@@ -85,7 +87,7 @@ class Browse(object):
 
         parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
                       'avail': 1, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
-        for ix, si in enumerate(range(0, 1000, 50)):  # check that this includes the last page
+        for ix, si in enumerate(range(0, 100, 50)):  # check that this includes the last page
             try:
                 print('Scraping waiver page', ix, '...')
                 parameters['startIndex'] = si
@@ -95,6 +97,7 @@ class Browse(object):
             except:
                 print('Broke on', si, '!!!!')
                 return r
+        print('Note: only', len(r), 'pages of the waiver were parsed. Modify browse.py if you want greater depth')
         return r
 
     def id_to_here(self, from_id, here_slot):
