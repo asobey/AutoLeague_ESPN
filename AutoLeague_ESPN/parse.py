@@ -99,7 +99,7 @@ class Parse(object):
                 raise
             except:  # need to fix this to clarify what the error is that I'm looking for
                 print('You ran into the last page of something, but that is ok for now')
-                pass
+                break
         # print(tabulate(df, headers='keys', tablefmt='psg1'))
         df.columns = ['Player', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
                       '%OWN', '+/-', 'ID']
