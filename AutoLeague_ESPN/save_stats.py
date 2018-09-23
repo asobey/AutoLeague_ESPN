@@ -2,6 +2,8 @@
 
 import yaml
 import os
+from tabulate import tabulate
+import datetime
 
 from AutoLeague_ESPN.browse import Browse
 from AutoLeague_ESPN.parse import Parse
@@ -20,3 +22,10 @@ if __name__ == '__main__':
     priv_data = import_yaml()
     b = Browse(priv_data)
     p = Parse()
+
+    p.waiver_table_from_source(b.get_waiver_source('full'))
+    print(tabulate(p.waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
+
+    path = '..\\AutoLeague_ESPN'
+    p.waiver['ALL'].to_csv(os.path.join(path, datetime.date.today().isoformat() + '_waiver.csv'))  # Save to cvs and pickle
+    print('Data for', len(p.waiver['ALL']), 'players was stored to the CSV file in', path)
