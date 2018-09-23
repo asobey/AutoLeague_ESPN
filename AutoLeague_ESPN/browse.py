@@ -75,28 +75,26 @@ class Browse(object):
             _PS.write(self.driver.page_source)
             print('.......DONE')
 
-    def get_waiver_source(self):
+    def get_waiver_source(self, avail_request='available'):
         """Function to save all the waiver pages"""
         cookies = {
             'espn_s2': self.private_data['espn_s2'],
             'SWID': self.private_data['SWID']
         }
 
-        # slot codes used to get the correct waiver page
         r = {}
-
+        availability_lookup = {'available': 1, 'full': -1}
+        availability = availability_lookup[avail_request]  # adds the option to have a full player list, nnot just available players
         parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
-                      'avail': 1, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
-        for ix, si in enumerate(range(0, 100, 50)):  # check that this includes the last page
-            try:
-                print('Scraping waiver page', ix, '...')
-                parameters['startIndex'] = si
-                r[ix] = requests.get('http://games.espn.com/ffl/freeagency',  # fix the multi page issue
-                                          params=parameters,
-                                          cookies=cookies)
-            except:
-                print('Broke on', si, '!!!!')
-                return r
+                      'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
+        for ix, si in enumerate(range(0, 1000, 50)):  # Looks like si=1000 is the most ever used
+            # Need to find some way to stop this from completing all the loops, if it gets to the end
+            print('Scraping waiver page', ix, '...')
+            parameters['startIndex'] = si
+            r[ix] = requests.get('http://games.espn.com/ffl/freeagency',  # fix the multi page issue
+                                      params=parameters,
+                                      cookies=cookies)
+
         print('Note: only', len(r), 'pages of the waiver were parsed. Modify browse.py if you want greater depth')
         return r
 
