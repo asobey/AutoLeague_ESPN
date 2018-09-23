@@ -25,7 +25,7 @@ if __name__ == '__main__':
     p.print_table()
 
     p.waiver_table_from_source(b.get_waiver_source())
-    print(tabulate(p.waiver['ALL'].nlargest(50, 'PROJ'), headers='keys', tablefmt='psg1'))
+    print(tabulate(p.waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
 
     logic = Logic()
 
