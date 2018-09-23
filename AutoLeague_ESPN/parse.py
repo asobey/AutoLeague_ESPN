@@ -46,17 +46,20 @@ class Parse(object):
             raise Exception(f'full table not loaded, {len(team_table.columns)} columns exist')
         # Start of cleaning up the table
         team_table = team_table.fillna('--')  # Fill nan values with -- makes them able to index of of later
-        team_table[3][1, 13] = 'POS'  # need to set this early so nan value does not become index
+        team_table.loc[1, 3] = 'POS'  # need to set this early so nan value does not become index
         team_table.loc[1, 1] = 'PLAYER'
-        team_table = team_table.drop([2, 6, 11], axis=1).drop([0, 12, 13], axis=0)
+        print(tabulate(team_table, headers='keys', tablefmt='psg1'))
+        team_table = team_table.drop([2, 6, 11], axis=1)  # drops the unused columns
+        team_table = team_table.drop([0, 12, 13], axis=0)  # drops unused lines. Fix this, as line 12 and 13 will change based on the league settings
+        print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         # MAKE 1ST ROW COLUMN HEADERS AND DROP 1ST ROW
         team_table.columns = team_table.iloc[0]  # make 1st row the column headers
         team_table = team_table.drop([1]).reset_index(drop=True)  # drop 1st row (now column headers) and reindex
         # Change numeric value to numbers instead of strings. Does not affect non-numbers
         filled_rows = []
-        for i in team_table.index:
-            if team_table['OPP'][i] != '--':
-                filled_rows.append(i)
+        for i in team_table.index:  # removes any unused roster slots from the table
+            if team_table['OPP'][i] != '--':  # make sure this doesn't screw up on bye weeks
+                filled_rows.append(i)  # Makes a list of all the rows you want in the table
         numeric_cols = ['PRK', 'PTS', 'AVG', 'PROJ', '%ST', '%OWN', '+/-']
         for col in numeric_cols:
             team_table[col] = pd.to_numeric(team_table[col][filled_rows], errors='coerce')
@@ -87,16 +90,17 @@ class Parse(object):
                                     17]]  # Identify the columns you want to keep by deleting the useless columns
                 table_line = str(soup.find_all("td", {"class": "playertablePlayerName"}))
                 tdf['ID'] = list(map(int, re.findall('playername_(\d+)', table_line)))  # add the player ID
-                print(tabulate(tdf, headers='keys', tablefmt='psg1'))
+                # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
                 df = df.append(tdf, ignore_index=True,
                                sort=False)
                 # !!!! non-concatenation axis is not aligned. remove the "sort=false" to troubleshoot
             except ValueError:
                 print('Looks like your cookies are not working properly')
+                raise
             except:  # need to fix this to clarify what the error is that I'm looking for
                 print('You ran into the last page of something, but that is ok for now')
                 pass
-        print(tabulate(df, headers='keys', tablefmt='psg1'))
+        # print(tabulate(df, headers='keys', tablefmt='psg1'))
         df.columns = ['Player', 'Waiver Day', 'Team', 'Game Time', 'PRK', 'PTS', 'AVG', 'LAST', 'PROJ', 'OPRK', '%ST',
                       '%OWN', '+/-', 'ID']
         df['POS'] = df['Player'].str.split(',').str[1]  # parse out the position, part 1
