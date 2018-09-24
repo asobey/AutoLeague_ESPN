@@ -48,21 +48,15 @@ class Parse(object):
         team_table = team_table.fillna('--')  # Fill nan values with -- makes them able to index of of later
         team_table.loc[1, 3] = 'POS'  # need to set this early so nan value does not become index
         team_table.loc[1, 1] = 'PLAYER'
-        print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         team_table = team_table.drop([2, 6, 11], axis=1)  # drops the unused columns
-        team_table = team_table.drop([0, 12, 13], axis=0)  # drops unused lines. Fix this, as line 12 and 13 will change based on the league settings
-        print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         # MAKE 1ST ROW COLUMN HEADERS AND DROP 1ST ROW
-        team_table.columns = team_table.iloc[0]  # make 1st row the column headers
-        team_table = team_table.drop([1]).reset_index(drop=True)  # drop 1st row (now column headers) and reindex
-        # Change numeric value to numbers instead of strings. Does not affect non-numbers
-        filled_rows = []
-        for i in team_table.index:  # removes any unused roster slots from the table
-            if team_table['OPP'][i] != '--':  # make sure this doesn't screw up on bye weeks
-                filled_rows.append(i)  # Makes a list of all the rows you want in the table
+        team_table.columns = team_table.iloc[1]  # make 2nd row the column headers
+        team_table = team_table[team_table.PROJ != 'PROJ']  # Removes the second header row
+        team_table = team_table[team_table.PLAYER != '--']  # removes any unused roster slots from the table
+        team_table = team_table.reset_index(drop=True)  # reindex
+        # print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         numeric_cols = ['PRK', 'PTS', 'AVG', 'PROJ', '%ST', '%OWN', '+/-']
-        for col in numeric_cols:
-            team_table[col] = pd.to_numeric(team_table[col][filled_rows], errors='coerce')
+        team_table[numeric_cols] = team_table[numeric_cols].apply(pd.to_numeric, errors='coerce')
         # REMOVE TABS Â
         team_table = team_table.replace('Â', '', regex=True)
         # Add column methods 3X
