@@ -4,11 +4,12 @@ TO DO'S
 -Communication module:
     -shit talk
     -post game brag
--read in slot of league before creating team and opt_team
+-read in slot of league before creating team and opt_team ??
 -difference b/t waiver logic and team logic
--Thursday handling
+-Thursday handling (put an early player in the most restrictive position)
 -Player bye week handling
-- add roster handling when there isn't a RB/WR slot
+-Add roster handling when there isn't a RB/WR slot
+-Roster re-ordering with locked players
 
 
 TEST
