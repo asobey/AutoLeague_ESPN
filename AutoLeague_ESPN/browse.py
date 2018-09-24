@@ -87,7 +87,7 @@ class Browse(object):
         availability = availability_lookup[avail_request]  # adds the option to have a full player list, nnot just available players
         parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
                       'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
-        for ix, si in enumerate(range(0, 100, 50)):  # Looks like si=1000 is the most ever used
+        for ix, si in enumerate(range(0, 1000, 50)):  # Looks like si=1000 is the most ever used
             # Need to find some way to stop this from completing all the loops, if it gets to the end
             print('Scraping waiver page', ix, '...')
             parameters['startIndex'] = si
