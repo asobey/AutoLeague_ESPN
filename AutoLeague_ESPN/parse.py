@@ -45,16 +45,17 @@ class Parse(object):
         if len(team_table.columns) != 17:
             raise Exception(f'full table not loaded, {len(team_table.columns)} columns exist')
         # Start of cleaning up the table
-        team_table = team_table.fillna('--')  # Fill nan values with -- makes them able to index of of later
         team_table.loc[1, 3] = 'POS'  # need to set this early so nan value does not become index
         team_table.loc[1, 1] = 'PLAYER'
         team_table = team_table.drop([2, 6, 11], axis=1)  # drops the unused columns
         # MAKE 1ST ROW COLUMN HEADERS AND DROP 1ST ROW
         team_table.columns = team_table.iloc[1]  # make 2nd row the column headers
+        team_table = team_table.fillna('--')  # Fill nan values with -- makes them able to index of of later
         team_table = team_table[team_table.PROJ != 'PROJ']  # Removes the second header row
         team_table = team_table[team_table.PLAYER != '--']  # removes any unused roster slots from the table
         team_table = team_table.reset_index(drop=True)  # reindex
-        # print(tabulate(team_table, headers='keys', tablefmt='psg1'))
+        team_table.PROJ.loc[team_table.PROJ == '--'] = -1
+        print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         numeric_cols = ['PRK', 'PTS', 'AVG', 'PROJ', '%ST', '%OWN', '+/-']
         team_table[numeric_cols] = team_table[numeric_cols].apply(pd.to_numeric, errors='coerce')
         # REMOVE TABS Â
