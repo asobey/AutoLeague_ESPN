@@ -29,9 +29,7 @@ if __name__ == '__main__':
     parse.waiver_table_from_source(browse.get_waiver_source())
     print(tabulate(parse.waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
 
-
-
-    pickup_drop_pairs = logic.optimize_waiver(p.team, p.waiver)  # Eventually make this into "functional" programming?
+    pickup_drop_pairs = logic.optimize_waiver(parse.team, parse.waiver)  # Eventually make this into "functional" programming?
     #[[54325451,254352454],[23454235,54354325]]
     print(pickup_drop_pairs)
 

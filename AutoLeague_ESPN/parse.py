@@ -23,9 +23,9 @@ class Parse(object):
             except NotImplementedError:
                 print('Neither file nor page_source available to make table')
 
-    def print_table(self):
+    def print_table(self, table):
         """Simply prints table in nice format"""
-        print(tabulate(self.team, headers='keys', tablefmt='psql'))
+        print(tabulate(table, headers='keys', tablefmt='psql'))
 
     def table_from_file(self, private_data):
         """Create table from a offline source file."""
