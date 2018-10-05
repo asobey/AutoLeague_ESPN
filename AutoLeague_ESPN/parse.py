@@ -23,9 +23,9 @@ class Parse(object):
             except NotImplementedError:
                 print('Neither file nor page_source available to make table')
 
-    def print_table(self):
+    def print_table(self, table):
         """Simply prints table in nice format"""
-        print(tabulate(self.team, headers='keys', tablefmt='psql'))
+        print(tabulate(table, headers='keys', tablefmt='psql'))
 
     def table_from_file(self, private_data):
         """Create table from a offline source file."""
@@ -54,6 +54,7 @@ class Parse(object):
         team_table = team_table[team_table.PROJ != 'PROJ']  # Removes the second header row
         team_table = team_table[team_table.PLAYER != '--']  # removes any unused roster slots from the table
         team_table = team_table.reset_index(drop=True)  # reindex
+        team_table.PROJ.loc[team_table.PROJ == '--'] = 0
         # print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         numeric_cols = ['PRK', 'PTS', 'AVG', 'PROJ', '%ST', '%OWN', '+/-']
         team_table[numeric_cols] = team_table[numeric_cols].apply(pd.to_numeric, errors='coerce')
@@ -148,4 +149,4 @@ if __name__ == '__main__':
 
     p = Parse()
     p.table_from_file(priv_d)  # read table from source
-    p.print_table()
+    p.print_table(p.team)

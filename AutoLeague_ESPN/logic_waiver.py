@@ -169,7 +169,7 @@ if __name__ == '__main__':
         private_data = yaml.load(_private)
     p = Parse()
     p.table_from_file(private_data)
-    p.print_table()
+    p.print_table(p.team)
 
     logic = Logic()
     logic.optimize(p.team)

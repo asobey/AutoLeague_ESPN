@@ -19,15 +19,17 @@ def import_yaml():
 
 if __name__ == '__main__':
     priv_data = import_yaml()
-    b = Browse(priv_data)
-    p = Parse()
-    p.table_from_source(b.team_page_source_from_requests())
-    p.print_table()
-
-    p.waiver_table_from_source(b.get_waiver_source())
-    print(tabulate(p.waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
-
+    browse = Browse(priv_data)
+    parse = Parse()
     logic = Logic()
+
+    parse.table_from_source(browse.team_page_source_from_requests())
+    parse.print_table(parse.team)
+
+    parse.waiver_table_from_source(browse.get_waiver_source())
+    print(tabulate(parse.waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
+
+
 
     # pickup_drop_pairs = logic.optimize(p.team, p.waiver)  # Eventually make this into "functional" programming?
     #[[54325451,254352454],[23454235,54354325]]
@@ -36,9 +38,9 @@ if __name__ == '__main__':
     #                                     # (player IDs for the pickup and the drop of pickups from
     #                                     # either free agency or waiver wire)
 
-    p.table_from_source(b.team_page_source_from_requests())
+    parse.table_from_source(browse.team_page_source_from_requests())
 
-    logic.optimize(p.team)
+    logic.optimize(parse.team)
 
     print('OPTIMAL POSITION CHART:')
     print(logic.optimal_position_chart)
@@ -47,5 +49,6 @@ if __name__ == '__main__':
     print('OPTIMAL POSITION TABLE:')
     print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
 
-    b.initialize_browser()
-    b.sort_team(p.team, logic.optimal_position_chart)
+    browse.initialize_browser()
+    browse.sort_team(parse.team, logic.optimal_position_chart)
+

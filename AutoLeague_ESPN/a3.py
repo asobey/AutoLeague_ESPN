@@ -20,4 +20,4 @@ if __name__ == '__main__':
     p = Parse()
     # print(r.content)
     p.table_from_source(r.content)
-    p.print_table()
+    p.print_table(p.team)
