@@ -114,6 +114,8 @@ class Browse(object):
             except NotImplementedError:
                 print('Multi spot anomaly detected!')
             except:
+                move1 = self.driver.find_element_by_css_selector('#pncButtonMoveSelected_' + str(from_id))
+                move1.click()
                 print(f"--> Unable to click on slot {here_slot}'s HERE button!")
         except:
             print(f"--> Unable to click on {from_id}'s move button!")
