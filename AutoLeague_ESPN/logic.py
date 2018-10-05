@@ -22,6 +22,20 @@ class Logic(object):
         self.optimize_position_chart()
         self.handle_multi_spot_anomoly()
 
+    def optimize_waiver(self, team_table, waiver_table):
+        """something"""
+        player_pairs = [[16724, 5536], [23454235, 54354325]]  #temp assignment as an example
+        self.team_table = team_table
+        self.make_team_dic()
+        self.rank_team_dic('ESPN')
+        # self.add_multi_pos_chart()
+        # self.optimize_position_chart()
+        # self.handle_multi_spot_anomoly()
+
+        # for position in self.POSITIONS:
+
+        return player_pairs
+
     def make_team_dic(self):
         """Make a dictionary of the team_table separated by position"""
         for position in self.POSITIONS:  # Each position gets it's own table
