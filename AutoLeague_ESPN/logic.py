@@ -34,6 +34,25 @@ class Logic(object):
 
         # for position in self.POSITIONS:
 
+        # if waiver QBs is better than the QB roster slot
+        #     add waiver qb to pickup list
+        # if waiver Ks is better than the K roster slot
+        #     add waiver K to pickup list
+
+        # if waiver TEs is better than the TE roster slots
+        #     if old TE is better than FLEX
+        #         if old FLEX
+        #     else compare waiver TE to all roster FLEX
+        #     add waiver TE to pickup list
+
+        # Bench approach:
+        #   Max 1 QB only if main is Q, or D, or upcoming BYE
+        #   Max 1 K only if main is Q, or D, or upcoming BYE
+        #   Max 1 D/ST ... must choose this one with a heavier ranking based on forward OPRK
+        #   Max 2 TE
+        #   Max 3 RB
+        #   Max 3 WR --WR are most valuable FLEX
+
         return player_pairs
 
     def make_team_dic(self):
