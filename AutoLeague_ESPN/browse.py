@@ -87,7 +87,7 @@ class Browse(object):
         availability = availability_lookup[avail_request]  # adds the option to have a full player list, nnot just available players
         parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
                       'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
-        for ix, si in enumerate(range(0, 1000, 50)):  # Looks like si=1000 is the most ever used
+        for ix, si in enumerate(range(0, 100, 50)):  # Looks like si=1000 is the most ever used
             # Need to find some way to stop this from completing all the loops, if it gets to the end
             print('Scraping waiver page', ix, '...')
             parameters['startIndex'] = si
@@ -101,17 +101,24 @@ class Browse(object):
     def id_to_here(self, from_id, here_slot):
         """"move by player ID to HERE slot"""
         print(f'moving..... ID: {from_id} to HERE slot: {here_slot}')
-        move1 = self.driver.find_element_by_css_selector('#pncButtonMove_' + str(from_id))
-        move1.click()
         try:
-            here2 = self.driver.find_element_by_css_selector('#pncButtonHere_' + str(here_slot))
-            submit = self.driver.find_element_by_css_selector('#pncSaveRoster1')
-            time.sleep(.2)
-            here2.click()
-            time.sleep(.2)
-            submit.click()
-        except NotImplementedError:
-            print('Multi spot anomaly detected!')
+            move1 = self.driver.find_element_by_css_selector('#pncButtonMove_' + str(from_id))
+            move1.click()
+            try:
+                here2 = self.driver.find_element_by_css_selector('#pncButtonHere_' + str(here_slot))
+                submit = self.driver.find_element_by_css_selector('#pncSaveRoster1')
+                time.sleep(.2)
+                here2.click()
+                time.sleep(.2)
+                submit.click()
+            except NotImplementedError:
+                print('Multi spot anomaly detected!')
+            except:
+                print(f"--> Unable to click on slot {here_slot}'s HERE button!")
+        except:
+            print(f"--> Unable to click on {from_id}'s move button!")
+
+
 
     # #This probably needs to move to the logic module
     # @staticmethod
@@ -141,8 +148,8 @@ class Browse(object):
             if team_table['ID'].loc[team_table['HERE'] == key].item() == value:
                 print(f'Spot: {key} already filled with player: {value}')
             else:
-                print(
-                    f'+++++++++++++++++++++++++++++++++++++++++++++Player: {value} needs to be moved to: {key}++++++++')
+                # print(
+                #     f'++++++++++++++++++++++++++++++++++++++++++++ Player: {value} needs to be moved to: {key} ++++++++')
                 try:
                     self.id_to_here(value, key)
                 except NotImplementedError:
