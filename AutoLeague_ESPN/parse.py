@@ -17,15 +17,6 @@ class Parse(object):
         if page_source is not None:
             print('Using table from file.')
             self.table_from_source(page_source)
-        else:
-            try:
-                self.table_from_source(page_source)
-            except NotImplementedError:
-                print('Neither file nor page_source available to make table')
-
-    def print_table(self, table):
-        """Simply prints table in nice format"""
-        print(tabulate(table, headers='keys', tablefmt='psql'))
 
     def table_from_file(self, private_data):
         """Create table from a offline source file."""
@@ -33,7 +24,7 @@ class Parse(object):
         print(f'CWD: {os.getcwd()}')
         print(f'Opening page source from Source Path: {source_path}')
         _PS = open(source_path, 'r')
-        self.table_from_source(_PS)
+        return self.table_from_source(_PS)
 
     def table_from_source(self, page_source):
         """Create team table."""
@@ -56,13 +47,12 @@ class Parse(object):
         team_table = team_table[team_table.PLAYER != '--']  # removes any unused roster slots from the table
         team_table = team_table.reset_index(drop=True)  # reindex
         team_table.PROJ.loc[team_table.PROJ == '--'] = -1
-        print(tabulate(team_table, headers='keys', tablefmt='psg1'))
         numeric_cols = ['PRK', 'PTS', 'AVG', 'PROJ', '%ST', '%OWN', '+/-']
         team_table[numeric_cols] = team_table[numeric_cols].apply(pd.to_numeric, errors='coerce')
         # REMOVE TABS Â
         team_table = team_table.replace('Â', '', regex=True)
         # Add column methods 3X
-        team_table = self.add_position_col(team_table)
+        team_table = self.add_position_col(team_table, self.POSITIONS)
         team_table = self.add_player_id(team_table, _table_soup)
         team_table = self.add_here_col(team_table)
 
@@ -70,10 +60,11 @@ class Parse(object):
         col_order = ['HERE', 'SLOT', 'POS', 'ID', 'PLAYER', 'PTS', 'AVG', 'LAST', 'PROJ', '%ST', '%OWN',
                      '+/-', 'OPRK', 'OPP', 'PRK', 'STATUS ET']  # Changing col order for user
         self.team = team_table[col_order]
+        return self.team
 
     def waiver_table_from_source(self, waiver_source_dict):
-        """Listing of "position" playerIds on the waiver. Excludes players not playing this week (BYE or real life FA)"""
-
+        """Listing of "position" playerIds on the waiver. Excludes players not playing this week (BYE or real life
+        FA)"""
         df = pd.DataFrame()
 
         for start_index in range(0, len(waiver_source_dict)):  #
@@ -93,7 +84,7 @@ class Parse(object):
             except ValueError:
                 print('Looks like your cookies are not working properly')
                 raise
-            except:  # need to fix this to clarify what the error is that I'm looking for
+            except LookupError:  # need to fix this to clarify what the error is that I'm looking for
                 print('You ran into the last page of something, but that is ok for now')
                 break
         # print(tabulate(df, headers='keys', tablefmt='psg1'))
@@ -125,10 +116,11 @@ class Parse(object):
                     player_ids.pop(0)
         return team_table
 
-    def add_position_col(self, table):
+    @staticmethod
+    def add_position_col(table, positions):
         """This function finds the position of each player by parsing the 'PLAYER' column, then adds a 'POS' column with
         that value."""
-        for pos in self.POSITIONS:
+        for pos in positions:
             pos_true = table.index[table['PLAYER'].str.contains('\xa0' + pos, na=False)].values
             table.loc[pos_true, 'POS'] = pos  # This is how to correctly set value in df
         return table
@@ -136,10 +128,15 @@ class Parse(object):
     @staticmethod
     def add_here_col(table):
         """This function simply adds a 'HERE' column. HERE is the slot position recognized by the weddriver when moving
-        players around."""
+        players around. Need to make the HERE column more flexible with team"""
         table['HERE'] = ([0, 1, 2, 3, 4, 5, 6, 14, 7, 8, 9, 10, 11, 12, 13, 15, 16,
                           17, 18, 19, 20, 21, 22, 23, 24, 25, 26])[:len(table)]
         return table
+
+    @staticmethod
+    def print_table(table):
+        """Simply prints table in nice format"""
+        print(tabulate(table, headers='keys', tablefmt='psql'))
 
 
 if __name__ == '__main__':
@@ -149,5 +146,5 @@ if __name__ == '__main__':
         print(priv_d)
 
     p = Parse()
-    p.table_from_file(priv_d)  # read table from source
-    p.print_table()
+    team = p.table_from_file(priv_d)  # read table from source
+    p.print_table(team)

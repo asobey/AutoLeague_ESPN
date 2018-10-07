@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     parse.table_from_source(browse.team_page_source_from_requests())
 
-    logic.optimize(parse.team)
+    logic.optimize_team(parse.team)
 
     print('OPTIMAL POSITION CHART:')
     print(logic.optimal_position_chart)
