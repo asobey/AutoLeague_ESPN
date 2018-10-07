@@ -19,7 +19,7 @@ class Browse(object):
         self.cookies = {'espn_s2': self.private_data['espn_s2'], 'SWID': self.private_data['SWID']}
         self.driver = object
 
-    def team_page_source_from_requests(self):
+    def get_team_page_source(self):
         r = requests.get(self.homepage,
                          cookies=self.cookies)
         return r.content
@@ -75,29 +75,6 @@ class Browse(object):
             _PS.write(self.driver.page_source)
             print('.......DONE')
 
-    def get_waiver_source(self, avail_request='available'):
-        """Function to save all the waiver pages"""
-        cookies = {
-            'espn_s2': self.private_data['espn_s2'],
-            'SWID': self.private_data['SWID']
-        }
-
-        r = {}
-        availability_lookup = {'available': 1, 'full': -1}
-        availability = availability_lookup[avail_request]  # adds the option to have a full player list, nnot just available players
-        parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
-                      'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
-        for ix, si in enumerate(range(0, 100, 50)):  # Looks like si=1000 is the most ever used
-            # Need to find some way to stop this from completing all the loops, if it gets to the end
-            print('Scraping waiver page', ix, '...')
-            parameters['startIndex'] = si
-            r[ix] = requests.get('http://games.espn.com/ffl/freeagency',  # fix the multi page issue
-                                      params=parameters,
-                                      cookies=cookies)
-
-        print('Note: only', len(r), 'pages of the waiver were parsed. Modify browse.py if you want greater depth')
-        return r
-
     def id_to_here(self, from_id, here_slot):
         """"move by player ID to HERE slot"""
         print(f'moving..... ID: {from_id} to HERE slot: {here_slot}')
@@ -120,27 +97,6 @@ class Browse(object):
         except:
             print(f"--> Unable to click on {from_id}'s move button!")
 
-
-
-    # #This probably needs to move to the logic module
-    # @staticmethod
-    # def handle_multi_spot_move(self, team_table, opt_team_chart):
-    #      """The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true
-    # for WR1
-    #      and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot
-    # positions
-    #      with throw an exception at the end."""
-    #     for key, value in opt_team_chart.items():
-    #         if key == 1 and team_table['HERE'].loc[team_table['ID'] == value].item() == 2:
-    #             _temp1 = opt_team_chart[1]
-    #             opt_team_chart[1] = opt_team_chart[2]
-    #             opt_team_chart[2] = _temp1
-    #         elif key == 3 and team_table['HERE'].loc[team_table['ID'] == value].item() == 4:
-    #             _temp1 = opt_team_chart[3]
-    #             opt_team_chart[3] = opt_team_chart[4]
-    #             opt_team_chart[4] = _temp1
-    #     return opt_team_chart
-
     def sort_team(self, team_table, opt_team_chart):
         """This function goes through the optimal team chart and calls the move function for each player change"""
         # opt_team_chart = self.handle_multi_spot_move(team_table, opt_team_chart)
@@ -150,16 +106,35 @@ class Browse(object):
             if team_table['ID'].loc[team_table['HERE'] == key].item() == value:
                 print(f'Spot: {key} already filled with player: {value}')
             else:
-                # print(
-                #     f'++++++++++++++++++++++++++++++++++++++++++++ Player: {value} needs to be moved to: {key} ++++++++')
+                print(f'+++++++++++++++++++++++++++++++++++++++++ Player: {value} needs to be moved to: {key} ++++++++')
                 try:
                     self.id_to_here(value, key)
                 except NotImplementedError:
                     print(f'Unable to move {value}')
+
+    def get_waiver_source(self, avail_request='available'):
+        """Function to save all the waiver pages"""
+        cookies = {'espn_s2': self.private_data['espn_s2'], 'SWID': self.private_data['SWID']}
+        waiver_source_dict = {}
+        availability_lookup = {'available': 1, 'full': -1}
+        availability = availability_lookup[avail_request]  # adds the option to have a full player list, not just available players
+        parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
+                      'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
+        for ix, start_index in enumerate(range(0, 150, 50)):  # Looks like start_index=1000 is the most ever used
+            # Need to find some way to stop this from completing all the loops, if it gets to the end
+            print('Scraping waiver page:', ix, '...')
+            parameters['startIndex'] = start_index
+            waiver_source_dict[ix] = requests.get('http://games.espn.com/ffl/freeagency', params=parameters,
+                                                  cookies=cookies)  # Fix multipage issue
+        print('Note: only', len(waiver_source_dict), 'pages of the waiver were parsed. Modify browse.py if you want '
+                                                     'greater depth')
+        return waiver_source_dict
 
 
 if __name__ == '__main__':
     print('CWD: ', os.getcwd())  # can get rid of later. Should not hurt
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
         priv_data = yaml.load(_private)
-    b = Browse(priv_data)
+    browse = Browse(priv_data)
+    print(browse.cookies)
+    print(browse.get_waiver_source())

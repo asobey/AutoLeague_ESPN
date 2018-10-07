@@ -3,20 +3,18 @@
 # Fill in your username and password.
 # Rename file to: 'espn_creds.yaml'
 
-# Source File Locations
-save_offline : False  # If False, source_file_location and source_file_name is unnecessary.
-source_file_location: '..\\offline_webpages\\'
-source_file_name: 'front_page_source'
-
-# Your ESPN FF Homepage URL: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX #
+homepage: http://games.espn.com/ffl/clubhouse?leagueId=XXXXXX&teamId=XXXXXXXX&seasonId=XXXXXX  # Your ESPN FF Homepage URL
 # If you login to your ESPN FF homepage, just copy and paste the URL into the homepage definition.
 # It should look very similar to the above link. The first set of XXXXXX is the league ID. The second XXXX is season ID
 # which will be '2018' (or whatever this year is).
 
-# Either use cookies or credentials to login to ESPN homepage. Cookies is faster.
+# Either use cookies or credentials to login to ESPN homepage. Cookies is significantly faster and more reliable.
 login_by: cookies  # 'cookies' or 'creds'
 
 # COOKIES
+# To Find Cookies on Chrome: go to homepage (make sure logged in) ==> <Right Click> => <Inspect> ==>
+  # top tab: <Applications> ==> left menu: <Cookies> ==> under 'Cookies': <http://games.espn.com> ==>
+  # Copy and Paste cookies shown below
 espn_s2: xxxxxxxxxxxxx  # do not use quotes
 SWID: '{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXXX}'  # use quotes and brackets as shown
 

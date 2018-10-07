@@ -18,18 +18,21 @@ def import_yaml():
 
 
 if __name__ == '__main__':
-    priv_data = import_yaml()
+    priv_data = import_yaml()  # Bring in private credentials
+    # Initialize Required Classes
     browse = Browse(priv_data)
     parse = Parse()
     logic = Logic()
+    # Get Current Team
+    team = parse.table_from_source(browse.get_team_page_source())
+    parse.print_table(team)
+    # Get current Waiver
+    waiver = parse.waiver_table_from_source(browse.get_waiver_source())
+    print(tabulate(waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
 
-    parse.table_from_source(browse.team_page_source_from_requests())
-    parse.print_table(parse.team)
+    #team_ranked_internal = rank_internal_table(t)
 
-    parse.waiver_table_from_source(browse.get_waiver_source())
-    print(tabulate(parse.waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
-
-    pickup_drop_pairs = logic.optimize_waiver(parse.team, parse.waiver)  # Eventually make this into "functional" programming?
+    #pickup_drop_pairs = logic.optimize_waiver(parse.team, parse.waiver)  # Eventually make this into "functional" programming?
     #[[54325451,254352454],[23454235,54354325]]
     print(pickup_drop_pairs)
 
@@ -37,14 +40,11 @@ if __name__ == '__main__':
     #                                     # (player IDs for the pickup and the drop of pickups from
     #                                     # either free agency or waiver wire)
 
-    parse.table_from_source(browse.team_page_source_from_requests())
-
-    logic.optimize_team(parse.team)
-
+    # Optimize Team In Logic and Print
+    opt_pos_chart = logic.optimize_team(team)
     print('OPTIMAL POSITION CHART:')
-    print(logic.optimal_position_chart)
-
-    logic.optimize_position_table()
+    print(opt_pos_chart)
+    logic.optimize_position_table(team, opt_pos_chart)
     print('OPTIMAL POSITION TABLE:')
     print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
 

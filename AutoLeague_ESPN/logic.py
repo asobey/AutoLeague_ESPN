@@ -21,6 +21,7 @@ class Logic(object):
         self.ranked_dic_w_multispot = self.add_multi_pos_chart(ranked_dic)
         opt_pos_chart = self.optimize_position_chart(self.ranked_dic_w_multispot)
         self.optimal_position_chart = self.handle_multi_spot_anomoly(team_table, opt_pos_chart)
+        return self.optimal_position_chart
 
     @staticmethod
     def make_team_dic(team_table, positions):
@@ -81,7 +82,7 @@ class Logic(object):
     @staticmethod
     def optimize_position_chart(ranked_dic_w_multispot):
         """Create dictionary of optimized position chart. This method need to be more flexible with different teams"""
-        optimal_position_chart = {}
+        optimal_position_chart = {}  # Going to ignore rewrite recomendation as following code reads cleaner
         optimal_position_chart[0] = ranked_dic_w_multispot['QB']['ID'].iloc[0]
         optimal_position_chart[1] = ranked_dic_w_multispot['RB']['ID'].iloc[0]
         optimal_position_chart[2] = ranked_dic_w_multispot['RB']['ID'].iloc[1]
@@ -94,7 +95,8 @@ class Logic(object):
         optimal_position_chart[8] = ranked_dic_w_multispot['K']['ID'].iloc[0]
         return optimal_position_chart
 
-    def handle_multi_spot_anomoly(self, team_table, optimal_position_chart):
+    @staticmethod
+    def handle_multi_spot_anomoly(team_table, optimal_position_chart):
         """The ESPN website does not allow for player in RB1 slot to move to RB1 and vice-versa. This is also true for WR1
         and WR2. This function can only handle leagues with 2 RBs and/or 2 WR2. Two QB or any other multi spot positions
         with throw an exception at the end."""
@@ -111,16 +113,19 @@ class Logic(object):
                 optimal_position_chart[4] = temp_id
         return optimal_position_chart
 
-    def optimize_position_table(self):
+    @staticmethod
+    def optimize_position_table(team_table, optimal_position_chart):
         """Turn Optimal Position Chart into a easy to read table."""
+        optimal_position_table = pd.DataFrame()
         first = True
-        for key, value in self.optimal_position_chart.items():
+        for key, value in optimal_position_chart.items():
             if first:
-                self.optimal_position_table = self.team_table.loc[self.team_table['ID'] == value]
+                optimal_position_table = team_table.loc[team_table['ID'] == value]
                 first = False
             else:
-                self.optimal_position_table = self.optimal_position_table.append(self.team_table.loc[self.team_table[
-                                                                                                        'ID'] == value])
+                optimal_position_table = optimal_position_table.append(team_table.loc[team_table['ID'] == value])
+        return optimal_position_table
+
     def optimize_waiver(self, team_table, waiver_table):
         """something"""
         player_pairs = [[16724, 5536], [23454235, 54354325]]  #temp assignment as an example
@@ -150,10 +155,11 @@ class Logic(object):
         #   Max 2 TE
         #   Max 3 RB
         #   Max 3 WR --WR are most valuable FLEX
-
         return player_pairs
 
+
 if __name__ == '__main__':
+    from AutoLeague_ESPN.browse import Browse
     from AutoLeague_ESPN.parse import Parse
     import yaml
     import os
@@ -161,17 +167,18 @@ if __name__ == '__main__':
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
         private_data = yaml.load(_private)
     parse = Parse()
-    parse.table_from_file(private_data)
-    parse.print_table(parse.team)
+    browse = Browse(private_data)
+    team = parse.table_from_source(browse.get_team_page_source())
+    parse.print_table(team)
 
     logic = Logic()
-    logic.optimize_team(parse.team)
+    opt_pos_chart = logic.optimize_team(team)
 
     print('OPTIMAL POSITION CHART:')
-    print(logic.optimal_position_chart)
+    print(opt_pos_chart)
 
-    logic.optimize_position_table()
-    print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
+    opt_pos_table = logic.optimize_position_table(team, opt_pos_chart)
+    print(tabulate(opt_pos_table, headers='keys', tablefmt='psql'))
 
 """
 Logic:
