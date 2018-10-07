@@ -160,12 +160,12 @@ if __name__ == '__main__':
 
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
         private_data = yaml.load(_private)
-    p = Parse()
-    p.table_from_file(private_data)
-    p.print_table(p.team)
+    parse = Parse()
+    parse.table_from_file(private_data)
+    parse.print_table(parse.team)
 
     logic = Logic()
-    logic.optimize_team(p.team)
+    logic.optimize_team(parse.team)
 
     print('OPTIMAL POSITION CHART:')
     print(logic.optimal_position_chart)
