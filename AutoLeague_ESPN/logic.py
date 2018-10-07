@@ -1,7 +1,6 @@
 from tabulate import tabulate
 import pandas as pd
 
-
 class Logic(object):
 
     def __init__(self):
@@ -19,8 +18,8 @@ class Logic(object):
         self.team_dic = self.make_team_dic(team_table, self.POSITIONS)
         ranked_dic = self.rank_team_dic(self.team_dic, 'ESPN')
         self.ranked_dic_w_multispot = self.add_multi_pos_chart(ranked_dic)
-        opt_pos_chart = self.optimize_position_chart(self.ranked_dic_w_multispot)
-        self.optimal_position_chart = self.handle_multi_spot_anomoly(team_table, opt_pos_chart)
+        _optimal_position_chart = self.optimize_position_chart(self.ranked_dic_w_multispot)
+        self.optimal_position_chart = self.handle_multi_spot_anomoly(team_table, _optimal_position_chart)
         return self.optimal_position_chart
 
     @staticmethod
