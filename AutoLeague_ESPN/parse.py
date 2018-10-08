@@ -97,13 +97,17 @@ class Parse(object):
         """Listing of "position" playerIds on the waiver. Excludes players not playing this week (BYE or real life
         FA)"""
         df = pd.DataFrame()
-        waiver = {}
         for start_index in range(0, len(waiver_source_dict)):  #
             try:  # fix this as it loses out on the last page i think
                 print('Parsing waiver page', start_index+1, '...', end=' ', flush=True)
                 soup = BeautifulSoup(waiver_source_dict[start_index].content, 'html.parser')
                 table = soup.find('table', class_='playerTableTable')
                 tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
+                for index in tdf:
+                    if tdf[5][index] == '** BYE **':
+                        for col in list(range(8, 18))[::-1]:
+                            tdf.loc[index, col] = tdf.loc[index, col - 1]
+                            tdf.loc[index, 6] = '** BYE **'
                 tdf = tdf.iloc[2:, [0, 2, 5, 6, 8, 9, 10, 11, 13, 14, 15, 16,
                                     17]]  # Identify the columns you want to keep by deleting the useless columns
                 table_line = str(soup.find_all("td", {"class": "playertablePlayerName"}))

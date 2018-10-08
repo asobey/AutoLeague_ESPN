@@ -139,8 +139,6 @@ class Logic(object):
         internal_rank = [0] * len(table)  # Start by filling all rows with 0
         table['INTERNAL'] = internal_rank
         for i in table.index:
-            # if table['PROJ'][i] == -1:
-            #     pass
             last = table['LAST'][i]
             if last != -1:
                 pass
@@ -149,40 +147,54 @@ class Logic(object):
             elif last == -1 and table['AVG'][i] == -1:
                 last = 0  # No AVG or LAST so assign player. Either early in the season or player hasn't played much
             else:
-                print('LAST is not defined correctly for row:')
-                print(table.columns)
-                print(table[i])
-                print('Setting LAST to 0')
                 last = 0
-            table.loc[i, 'INTERNAL'] = (prk_adj-table['PRK'][i])/prk_adj*prk_wt + last*last_wt + \
-                table['PROJ'][i]*proj_wt + table['%ST'][i]*st_wt + table['%OWN'][i]*own_wt
+            proj = table['PROJ'][i]
+            if proj != -1:
+                pass
+            elif proj == -1 and table['AVG'][i] != -1:
+                proj = table['AVG'][i]
+            elif proj == -1 and table['AVG'][i] == -1:
+                proj = 0  # No AVG or LAST so assign player. Either early in the season or player hasn't played much
+            else:
+                proj = 0
+            table.loc[i, 'INTERNAL'] = (prk_adj-table['PRK'][i])/prk_adj*prk_wt + last*last_wt + proj*proj_wt + \
+                                       table['%ST'][i]*st_wt + table['%OWN'][i]*own_wt
         return table
 
-    def optimize_waiver(self, team_table, waiver_table, optimize_by):
+    def optimize_waiver(self, team_table, waiver_table, optimize_by='INTERNAL', threshold=1.01):
         """Single function calls several others to find best waiver players and compare to current roster"""
         player_pairs = [[16724, 5536], [23454235, 54354325]]  #temp assignment as an example
 
         worst_player_dictionary, worst_player_chart = self.worst_players_on_team(team_table, optimize_by)
-        worst_player_table = logic.table_from_chart(team, worst_player_chart)
+        worst_player_table = self.table_from_chart(team_table, worst_player_chart)
         print('WORST PLAYER TABLE:')
         print(tabulate(worst_player_table, headers='keys', tablefmt='psql'))
 
         waiver_best_dictionary, waiver_best_table = self.best_players_on_waiver(waiver_table, optimize_by)
-        waiver_best_table = logic.table_from_chart(waiver, waiver_best_table)
+        waiver_best_table = self.table_from_chart(waiver_table, waiver_best_table)
         print('BEST WAIVER TABLE:')
         print(tabulate(waiver_best_table, headers='keys', tablefmt='psql'))
 
+        trade_list_columns = ['pos', 'delta', 'drop_id', 'pickup_id']
+        trade_list = pd.DataFrame()
         for position in self.POSITIONS:
-            if worst_player_dictionary[position]['INTERNAL'].values[0] < waiver_best_dictionary[position]['INTERNAL'].values[0]:
+            if worst_player_dictionary[position]['INTERNAL'].values[0]*threshold < \
+                    waiver_best_dictionary[position]['INTERNAL'].values[0]:
+                delta = waiver_best_dictionary[position]['INTERNAL'].values[0] - \
+                        worst_player_dictionary[position]['INTERNAL'].values[0]*threshold
+                drop_id = worst_player_dictionary[position]['ID'].values[0]
+                pickup_id = waiver_best_dictionary[position]['ID'].values[0]
+                trade_list = trade_list.append(pd.DataFrame([[position, delta, drop_id, pickup_id]], columns=trade_list_columns))
+                #print(trade_list, headers='keys', tablefmt='psql'))
                 print('\033[96m' + '==================================================================================='
                                    '======================================================================' + '\033[0m')
                 print('RECOMMENDED ' + position + ' TRADE:')
                 print(tabulate(worst_player_dictionary[position], headers='keys', tablefmt='psql'))
                 print('for...')
                 print(tabulate(waiver_best_dictionary[position], headers='keys', tablefmt='psql'))
-
-        # for position in self.POSITIONS:
-
+        trade_list = trade_list.sort_values('delta', ascending=False)
+        print('TRADE LIST")')
+        print(tabulate(trade_list, headers='keys', tablefmt='psql'))
         # if waiver QBs is better than the QB roster slot
         #     add waiver qb to pickup list
         # if waiver Ks is better than the K roster slot
@@ -201,7 +213,7 @@ class Logic(object):
         #   Max 2 TE
         #   Max 3 RB
         #   Max 3 WR --WR are most valuable FLEX
-        return player_pairs
+        return trade_list
 
     def worst_players_on_team(self, team_table, rank_by):
         team_dic = self.make_team_dic(team_table, self.POSITIONS)
@@ -266,4 +278,4 @@ if __name__ == '__main__':
     print('WAIVER TABLE')
     parse.print_table(waiver.head(40))
 
-    logic.optimize_waiver(team, waiver, 'INTERNAL')
+    logic.optimize_waiver(team, waiver, 'INTERNAL', 1.05)

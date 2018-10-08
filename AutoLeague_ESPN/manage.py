@@ -23,31 +23,30 @@ if __name__ == '__main__':
     browse = Browse(priv_data)
     parse = Parse()
     logic = Logic()
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
+    print('\033[96m' + '===========TEAM MANAGEMENT=============' + '\033[0m')
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
     # Get Current Team
     team = parse.table_from_source(browse.get_team_page_source())
+    team = logic.add_internal_rank(team)
     parse.print_table(team)
     # Get current Waiver
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
+    print('\033[96m' + '==========WAIVER MANAGEMENT============' + '\033[0m')
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
     waiver = parse.waiver_table_from_source(browse.get_waiver_source())
-    print(tabulate(waiver['ALL'].nlargest(20, 'PROJ'), headers='keys', tablefmt='psg1'))
-
-    #team_ranked_internal = rank_internal_table(t)
-
-    #pickup_drop_pairs = logic.optimize_waiver(parse.team, parse.waiver)  # Eventually make this into "functional" programming?
-    #[[54325451,254352454],[23454235,54354325]]
-    #print(pickup_drop_pairs)
-
-    # b.pickup_player(pickup_drop_pairs)  # Action: passes this a list of pairs
-    #                                     # (player IDs for the pickup and the drop of pickups from
-    #                                     # either free agency or waiver wire)
+    waiver = logic.add_internal_rank(waiver)
+    print('WAIVER TABLE')
+    parse.print_table(waiver.head(40))
 
     # Optimize Team In Logic and Print
     opt_pos_chart = logic.optimize_team(team, 'ESPN_PROJ')
     print('OPTIMAL POSITION CHART:')
     print(opt_pos_chart)
-    logic.table_from_chart(team, opt_pos_chart)
+    opt_pos_table = logic.table_from_chart(team, opt_pos_chart)
     print('OPTIMAL POSITION TABLE:')
-    print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
-
+    print(tabulate(opt_pos_table, headers='keys', tablefmt='psql'))
     browse.initialize_browser()
     browse.sort_team(parse.team, logic.optimal_position_chart)
-
+    # Last argument is threshold (how much better a waiver player must be to trade)
+    logic.optimize_waiver(team, waiver, 'INTERNAL', 1.05)
