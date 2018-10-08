@@ -112,7 +112,7 @@ class Browse(object):
                 except NotImplementedError:
                     print(f'Unable to move {value}')
 
-    def get_waiver_source(self, avail_request='available'):
+    def get_waiver_source(self, pages=3, avail_request='available'):
         """Function to save all the waiver pages"""
         cookies = {'espn_s2': self.private_data['espn_s2'], 'SWID': self.private_data['SWID']}
         waiver_source_dict = {}
@@ -120,12 +120,13 @@ class Browse(object):
         availability = availability_lookup[avail_request]  # adds the option to have a full player list, not just available players
         parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
                       'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
-        for ix, start_index in enumerate(range(0, 150, 50)):  # Looks like start_index=1000 is the most ever used
+        for ix, start_index in enumerate(range(0, pages*50, 50)):  # Looks like start_index=1000 is the most ever used
             # Need to find some way to stop this from completing all the loops, if it gets to the end
-            print('Scraping waiver page:', ix, '...')
+            print('Scraping waiver page:', ix+1, '...', end=' ', flush=True)
             parameters['startIndex'] = start_index
             waiver_source_dict[ix] = requests.get('http://games.espn.com/ffl/freeagency', params=parameters,
                                                   cookies=cookies)  # Fix multipage issue
+        print()
         print('Note: only', len(waiver_source_dict), 'pages of the waiver were parsed. Modify browse.py if you want '
                                                      'greater depth')
         return waiver_source_dict

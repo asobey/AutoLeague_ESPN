@@ -1,22 +1,22 @@
 from tabulate import tabulate
 import pandas as pd
 
+
 class Logic(object):
 
     def __init__(self):
         self.POSITIONS = ['QB', 'K', 'D/ST', 'TE', 'RB', 'WR']
-        self.team_dic = {}
         self.ranked_dic = {}
         self.ranked_dic_w_multispot = {}
         self.optimal_position_chart = {}
         self.team_table = pd.DataFrame()
         self.optimal_position_table = pd.DataFrame()
 
-    def optimize_team(self, team_table):
+    def optimize_team(self, team_table, rank_by):
         """Single function calls several others to optimize team"""
         self.team_table = team_table
-        self.team_dic = self.make_team_dic(team_table, self.POSITIONS)
-        ranked_dic = self.rank_team_dic(self.team_dic, 'ESPN')
+        team_dic = self.make_team_dic(team_table, self.POSITIONS)
+        ranked_dic = self.rank_team_dic(team_dic, rank_by)
         self.ranked_dic_w_multispot = self.add_multi_pos_chart(ranked_dic)
         _optimal_position_chart = self.optimize_position_chart(self.ranked_dic_w_multispot)
         self.optimal_position_chart = self.handle_multi_spot_anomoly(team_table, _optimal_position_chart)
@@ -25,35 +25,37 @@ class Logic(object):
     @staticmethod
     def make_team_dic(team_table, positions):
         """Make a dictionary of the team_table separated by position"""
-        team_dic = {}
+        team_dictionary = {}
         for position in positions:  # Each position gets it's own table
-            pos_true = team_table.index[team_table['POS'].str.contains(position)].values  # list of true
+            pos_true_mask = team_table.index[team_table['POS'].str.contains(position)].values  # list of true
             # values by row number
-            team_dic[position] = team_table.loc[pos_true]
-        return team_dic
+            team_dictionary[position] = team_table.loc[pos_true_mask]
+        return team_dictionary
 
-    def rank_team_dic(self, team_dic, rank_by):
+    def rank_team_dic(self, team_dictionary, rank_by):
         """Takes team_dic and ranks players by position depending on method (i.e. ESPN, Yahoo, ect."""
-        if rank_by == 'ESPN':
-            return self.rank_team_dic_by_espn(team_dic)
-        elif rank_by == 'Yahoo':
+        if rank_by == 'ESPN_PROJ':
+            return self.rank_team_dic_by_column(team_dictionary, 'PROJ')
+        elif rank_by == 'INTERNAL':
+            return self.rank_team_dic_by_column(team_dictionary, 'INTERNAL')
+        elif rank_by == 'Yahoo_PROJ':
             raise ValueError('This ranking method does not exist yet!')
         else:
             raise ValueError('No ranking method selected for players')
 
     @staticmethod
-    def rank_team_dic_by_espn(team_dic):
+    def rank_team_dic_by_column(team_dictionary, rank_by_column):
         """Takes team_dic and ranks players by position according to ESPN projections"""
-        ranked_dic = {}
-        for position in team_dic:
+        ranked_dictionary = {}
+        for position in team_dictionary:
             try:
-                ranked_dic[position] = team_dic[position].sort_values('PROJ', ascending=False)
-                print(position + ': RANKED TABLE')
-                print(tabulate(ranked_dic[position], headers='keys', tablefmt='psql'))
+                ranked_dictionary[position] = team_dictionary[position].sort_values(rank_by_column, ascending=False)
+                print(position + ': RANKED TABLE BY COLUMN: ' + rank_by_column)
+                print(tabulate(ranked_dictionary[position].head(10), headers='keys', tablefmt='psql'))
             except ValueError:
                 print('FAILED!!!!!!!!!!!!!!!!!!!!!!...at: ' + str(position))
-                print(tabulate(ranked_dic[position], headers='keys', tablefmt='psql'))
-        return ranked_dic
+                print(tabulate(ranked_dictionary[position], headers='keys', tablefmt='psql'))
+        return ranked_dictionary
 
     @staticmethod
     def add_multi_pos_chart(ranked_dic):
@@ -79,7 +81,7 @@ class Logic(object):
         return r_dic
 
     @staticmethod
-    def optimize_position_chart(ranked_dic_w_multispot):
+    def optimize_position_chart(ranked_dic_w_multispot):  # chart is defined as dictionary pairs
         """Create dictionary of optimized position chart. This method need to be more flexible with different teams"""
         optimal_position_chart = {}  # Going to ignore rewrite recomendation as following code reads cleaner
         optimal_position_chart[0] = ranked_dic_w_multispot['QB']['ID'].iloc[0]
@@ -113,11 +115,11 @@ class Logic(object):
         return optimal_position_chart
 
     @staticmethod
-    def optimize_position_table(team_table, optimal_position_chart):
+    def table_from_chart(team_table, chart):  # chart is defined as dictionary pairs
         """Turn Optimal Position Chart into a easy to read table."""
         optimal_position_table = pd.DataFrame()
         first = True
-        for key, value in optimal_position_chart.items():
+        for key, value in chart.items():
             if first:
                 optimal_position_table = team_table.loc[team_table['ID'] == value]
                 first = False
@@ -125,14 +127,59 @@ class Logic(object):
                 optimal_position_table = optimal_position_table.append(team_table.loc[team_table['ID'] == value])
         return optimal_position_table
 
-    def optimize_waiver(self, team_table, waiver_table):
-        """something"""
+    @staticmethod
+    def add_internal_rank(table):
+        # Internal Rank Weightings
+        prk_wt = 50
+        prk_adj = 124
+        last_wt = 2
+        proj_wt = 5
+        st_wt = 1
+        own_wt = 1
+        internal_rank = [0] * len(table)  # Start by filling all rows with 0
+        table['INTERNAL'] = internal_rank
+        for i in table.index:
+            # if table['PROJ'][i] == -1:
+            #     pass
+            last = table['LAST'][i]
+            if last != -1:
+                pass
+            elif last == -1 and table['AVG'][i] != -1:
+                last = table['AVG'][i]
+            elif last == -1 and table['AVG'][i] == -1:
+                last = 0  # No AVG or LAST so assign player. Either early in the season or player hasn't played much
+            else:
+                print('LAST is not defined correctly for row:')
+                print(table.columns)
+                print(table[i])
+                print('Setting LAST to 0')
+                last = 0
+            table.loc[i, 'INTERNAL'] = (prk_adj-table['PRK'][i])/prk_adj*prk_wt + last*last_wt + \
+                table['PROJ'][i]*proj_wt + table['%ST'][i]*st_wt + table['%OWN'][i]*own_wt
+        return table
+
+    def optimize_waiver(self, team_table, waiver_table, optimize_by):
+        """Single function calls several others to find best waiver players and compare to current roster"""
         player_pairs = [[16724, 5536], [23454235, 54354325]]  #temp assignment as an example
-        #self.make_team_dic()
-        #self.rank_team_dic('ESPN')
-        # self.add_multi_pos_chart()
-        # self.optimize_position_chart()
-        # self.handle_multi_spot_anomoly()
+
+        worst_player_dictionary, worst_player_chart = self.worst_players_on_team(team_table, optimize_by)
+        worst_player_table = logic.table_from_chart(team, worst_player_chart)
+        print('WORST PLAYER TABLE:')
+        print(tabulate(worst_player_table, headers='keys', tablefmt='psql'))
+
+        waiver_best_dictionary, waiver_best_table = self.best_players_on_waiver(waiver_table, optimize_by)
+        waiver_best_table = logic.table_from_chart(waiver, waiver_best_table)
+        print('BEST WAIVER TABLE:')
+        print(tabulate(waiver_best_table, headers='keys', tablefmt='psql'))
+
+        for position in self.POSITIONS:
+            if worst_player_dictionary[position]['INTERNAL'].values[0] < waiver_best_dictionary[position]['INTERNAL'].values[0]:
+                print('\033[96m' + '==================================================================================='
+                                   '======================================================================' + '\033[0m')
+                print('RECOMMENDED ' + position + ' TRADE:')
+                print(tabulate(worst_player_dictionary[position], headers='keys', tablefmt='psql'))
+                print('for...')
+                print(tabulate(waiver_best_dictionary[position], headers='keys', tablefmt='psql'))
 
         # for position in self.POSITIONS:
 
@@ -156,6 +203,32 @@ class Logic(object):
         #   Max 3 WR --WR are most valuable FLEX
         return player_pairs
 
+    def worst_players_on_team(self, team_table, rank_by):
+        team_dic = self.make_team_dic(team_table, self.POSITIONS)
+        opt_pos_dic_internal = self.rank_team_dic(team_dic, rank_by)
+        worst_player_dictionary = {}
+        worst_player_chart = {}
+        for df in opt_pos_dic_internal:
+            worst_player_chart[df] = opt_pos_dic_internal[df].tail(1)['ID'].values[0]
+            worst_player_dictionary[df] = opt_pos_dic_internal[df].tail(1)
+            print(tabulate(opt_pos_dic_internal[df].tail(1), headers='keys', tablefmt='psql'))
+        print(worst_player_chart)
+        return worst_player_dictionary, worst_player_chart
+
+    def best_players_on_waiver(self, waiver_table, optimize_by):
+        waiver_best_dictionary = {}
+        waiver_best_chart = {}
+        waiver_dictionary = self.make_team_dic(waiver_table, self.POSITIONS)
+        ranked_waiver_dictionary = self.rank_team_dic(waiver_dictionary, optimize_by)
+        for df in ranked_waiver_dictionary:
+            #print('WAIVER WIRE BEST: ' + df)
+            #print(tabulate(ranked_waiver_dictionary[df].head(5), headers='keys', tablefmt='psql'))
+            waiver_best_chart[df] = ranked_waiver_dictionary[df].head(1)['ID'].values[0]
+            waiver_best_dictionary[df] = ranked_waiver_dictionary[df].head(1)
+
+        print(waiver_best_chart)
+        return waiver_best_dictionary, waiver_best_chart
+
 
 if __name__ == '__main__':
     from AutoLeague_ESPN.browse import Browse
@@ -165,32 +238,32 @@ if __name__ == '__main__':
 
     with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
         private_data = yaml.load(_private)
-    parse = Parse()
     browse = Browse(private_data)
+    parse = Parse()
+    logic = Logic()
+
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
+    print('\033[96m' + '==========TEAM MANAGEMENT============' + '\033[0m')
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
+
     team = parse.table_from_source(browse.get_team_page_source())
+    team = logic.add_internal_rank(team)
     parse.print_table(team)
 
-    logic = Logic()
-    opt_pos_chart = logic.optimize_team(team)
-
+    opt_pos_chart = logic.optimize_team(team, 'ESPN_PROJ')
     print('OPTIMAL POSITION CHART:')
     print(opt_pos_chart)
 
-    opt_pos_table = logic.optimize_position_table(team, opt_pos_chart)
+    opt_pos_table = logic.table_from_chart(team, opt_pos_chart)
     print(tabulate(opt_pos_table, headers='keys', tablefmt='psql'))
 
-"""
-Logic:
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
+    print('\033[96m' + '==========WAIVER MANAGEMENT============' + '\033[0m')
+    print('\033[96m' + '==========+++++++++++++++++============' + '\033[0m')
+    waiver = parse.waiver_table_from_source(browse.get_waiver_source())
 
--Take Top 
-    -QB
-    -2X RB
-    -2X WR
-    -TE
-    -D/ST
-    -K
-    -Remaining WR/RB
-    -Remaining WR/RB/TE
-    
-*Change order based on day played to add flexibility
-"""
+    waiver = logic.add_internal_rank(waiver)
+    print('WAIVER TABLE')
+    parse.print_table(waiver.head(40))
+
+    logic.optimize_waiver(team, waiver, 'INTERNAL')

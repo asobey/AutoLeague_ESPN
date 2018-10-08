@@ -34,17 +34,17 @@ if __name__ == '__main__':
 
     #pickup_drop_pairs = logic.optimize_waiver(parse.team, parse.waiver)  # Eventually make this into "functional" programming?
     #[[54325451,254352454],[23454235,54354325]]
-    print(pickup_drop_pairs)
+    #print(pickup_drop_pairs)
 
     # b.pickup_player(pickup_drop_pairs)  # Action: passes this a list of pairs
     #                                     # (player IDs for the pickup and the drop of pickups from
     #                                     # either free agency or waiver wire)
 
     # Optimize Team In Logic and Print
-    opt_pos_chart = logic.optimize_team(team)
+    opt_pos_chart = logic.optimize_team(team, 'ESPN_PROJ')
     print('OPTIMAL POSITION CHART:')
     print(opt_pos_chart)
-    logic.optimize_position_table(team, opt_pos_chart)
+    logic.table_from_chart(team, opt_pos_chart)
     print('OPTIMAL POSITION TABLE:')
     print(tabulate(logic.optimal_position_table, headers='keys', tablefmt='psql'))
 
