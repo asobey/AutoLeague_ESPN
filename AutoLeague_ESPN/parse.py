@@ -9,7 +9,6 @@ class Parse(object):
 
     def __init__(self):
         self.POSITIONS = ['QB', 'TE', 'K', 'D/ST', 'RB', 'WR']
-        self.WAIVER_POS = ['QB', 'RB', 'RB/WR', 'WR', 'TE', 'FLEX', 'K', 'D/ST', 'ALL']
         self.team = pd.DataFrame
         self.waiver = pd.DataFrame
 
@@ -97,9 +96,10 @@ class Parse(object):
         """Listing of "position" playerIds on the waiver. Excludes players not playing this week (BYE or real life
         FA)"""
         df = pd.DataFrame()
+        print('Parsing waiver page: ', end=' ', flush=True)
         for start_index in range(0, len(waiver_source_dict)):  #
             try:  # fix this as it loses out on the last page i think
-                print('Parsing waiver page', start_index+1, '...', end=' ', flush=True)
+                print(start_index+1, '...', end=' ', flush=True)
                 soup = BeautifulSoup(waiver_source_dict[start_index].content, 'html.parser')
                 table = soup.find('table', class_='playerTableTable')
                 tdf = pd.read_html(str(table), flavor='bs4')[0]  # returns a list of df's, grab first
@@ -119,6 +119,7 @@ class Parse(object):
                 print('Looks like your cookies are not working properly')
                 raise
             except LookupError:  # need to fix this to clarify what the error is that I'm looking for
+                print()
                 print('You ran into the last page of something, but that is ok for now')
                 break
         print()

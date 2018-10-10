@@ -120,9 +120,10 @@ class Browse(object):
         availability = availability_lookup[avail_request]  # adds the option to have a full player list, not just available players
         parameters = {'leagueId': self.private_data['leagueid'], 'teamID': self.private_data['teamid'],
                       'avail': availability, 'injury': 2, 'context': 'freeagency', 'view': 'overview'}
+        print('Scraping waiver page:', end=' ', flush=True)
         for ix, start_index in enumerate(range(0, pages*50, 50)):  # Looks like start_index=1000 is the most ever used
             # Need to find some way to stop this from completing all the loops, if it gets to the end
-            print('Scraping waiver page:', ix+1, '...', end=' ', flush=True)
+            print(ix+1, '...', end=' ', flush=True)
             parameters['startIndex'] = start_index
             waiver_source_dict[ix] = requests.get('http://games.espn.com/ffl/freeagency', params=parameters,
                                                   cookies=cookies)  # Fix multipage issue
