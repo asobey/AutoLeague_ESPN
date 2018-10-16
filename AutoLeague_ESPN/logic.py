@@ -132,8 +132,9 @@ class Logic(object):
         # Internal Rank Weightings
         prk_wt = 50
         prk_adj = 124
-        last_wt = 2
+        last_wt = 1
         proj_wt = 5
+        no_proj_wt = .5  # if no proj then average used with this weighting
         st_wt = 1
         own_wt = 1
         internal_rank = [0] * len(table)  # Start by filling all rows with 0
@@ -152,7 +153,7 @@ class Logic(object):
             if proj != -1:
                 pass
             elif proj == -1 and table['AVG'][i] != -1:
-                proj = table['AVG'][i]
+                proj = table['AVG'][i] * no_proj_wt
             elif proj == -1 and table['AVG'][i] == -1:
                 proj = 0  # No AVG or LAST so assign player. Either early in the season or player hasn't played much
             else:
