@@ -23,15 +23,19 @@ if __name__ == '__main__':
     b = Browse(priv_data)
     p = Parse()
 
-    p.waiver_table_from_source(b.get_waiver_source('full'))
-    print(tabulate(p.waiver['ALL'].nlargest(50, 'PROJ'), headers='keys', tablefmt='psg1'))
+    full_waiver = p.waiver_table_from_source(b.get_waiver_source(20, 'full'))
+    # print(tabulate(full_waiver.nlargest(50, 'PROJ'), headers='keys', tablefmt='psg1'))
 
     path = '..\\AutoLeague_ESPN'
-    p.waiver['ALL'].to_csv(os.path.join(path, datetime.date.today().isoformat() + '_waiver.csv'))  # Save to cvs and pickle
-    print('Data for', len(p.waiver['ALL']), 'players was stored to the CSV file in', path)
+    full_waiver.to_csv(os.path.join(path, datetime.date.today().isoformat() + '_waiver.csv'))  # Save to cvs and pickle
+    print('Data for', len(full_waiver), 'players was stored to the CSV file in', path)
+
+    print('=======ONLY FREE AGENT PLAYERS=============')
+    pos_true = full_waiver.index[full_waiver['Waiver Day'].str.contains('FA', na=False)].values
+    free_agent_waiver = full_waiver.loc[pos_true]  # This is how to correctly set value in df
+    print(tabulate(free_agent_waiver.nlargest(50, 'PROJ'), headers='keys', tablefmt='psg1'))
 
     print('=======ONLY WAIVER PLAYERS=============')
-    all_waivers = p.waiver['ALL']
-    pos_true = all_waivers.index[all_waivers['Waiver Day'].str.contains('WA', na=False)].values
-    free_waiver = all_waivers.loc[pos_true]  # This is how to correctly set value in df
+    pos_true = full_waiver.index[full_waiver['Waiver Day'].str.contains('WA', na=False)].values
+    free_waiver = full_waiver.loc[pos_true]  # This is how to correctly set value in df
     print(tabulate(free_waiver.nlargest(50, 'PROJ'), headers='keys', tablefmt='psg1'))
