@@ -7,12 +7,13 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 import re
-from tabulate import tabulate  # for troubleshooting
+from pathlib import Path
+# from tabulate import tabulate  # for troubleshooting
 
 
 def import_yaml():
     """This function opens the espn_creds.yaml file and returns its contents as privateData"""
-    with open(os.path.join('..\\AutoLeague_ESPN', 'espn_creds.yaml'), 'r') as _private:
+    with open('espn_creds.yaml') as _private:
         try:
             private_data = yaml.load(_private)
             return private_data
@@ -70,7 +71,7 @@ def waiver_table_from_source(waiver_source_dict):
         except LookupError:  # need to fix this to clarify what the error is that I'm looking for
             print()
             print('GENERIC ERROR or... You ran into the last page of something, but that is ok for now')
-            print(tabulate(tdf, headers='keys', tablefmt='psg1'))
+            # print(tabulate(tdf, headers='keys', tablefmt='psg1'))
             raise
             # break
     print()
@@ -108,7 +109,6 @@ def add_position_col(table, positions):
 if __name__ == '__main__':
 
     full_waiver = waiver_table_from_source(get_waiver_source(21))  # eventually this should be 21
-
-    path = '..\\AutoLeague_ESPN'
-    full_waiver.to_csv(os.path.join(path, datetime.date.today().isoformat() + '_waiver.csv'))  # Save to cvs and pickle
-    print('Data for', len(full_waiver), 'players was stored to the CSV file in', path)
+    save_file = Path(datetime.date.today().isoformat() + '_waiver.csv')
+    full_waiver.to_csv(save_file)  # Save to cvs
+    print('Data for', len(full_waiver), 'players was stored to the CSV file in', save_file)
