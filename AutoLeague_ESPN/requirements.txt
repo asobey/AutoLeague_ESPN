@@ -1,0 +1,10 @@
+yaml
+tabulate
+os
+requests
+selenium
+pandas
+re
+BeautifulSoup4
+lxml
+chromedriver
